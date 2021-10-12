@@ -66,12 +66,12 @@
 				F281F50E270D456D006EA470 /* AppDelegate.swift */,
 				F281F510270D456D006EA470 /* SceneDelegate.swift */,
 				F281F512270D456D006EA470 /* ViewController.swift */,
+				F281F528270D6979006EA470 /* JoinVC.swift */,
+				F281F526270D624B006EA470 /* WelcomeVC.swift */,
 				F281F514270D456D006EA470 /* Main.storyboard */,
 				F281F517270D456E006EA470 /* Assets.xcassets */,
 				F281F519270D456E006EA470 /* LaunchScreen.storyboard */,
 				F281F51C270D456E006EA470 /* Info.plist */,
-				F281F526270D624B006EA470 /* WelcomeVC.swift */,
-				F281F528270D6979006EA470 /* JoinVC.swift */,
 			);
 			path = "Youtube-Clone";
 			sourceTree = "<group>";

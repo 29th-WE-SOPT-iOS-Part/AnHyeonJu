@@ -20,8 +20,8 @@ class WelcomeVC: UIViewController {
     }
     
     func setNameInLabel(){
-        if let nme = name {
-            nameLabel.text = nme
+        if let userName = name {
+            nameLabel.text = userName
             nameLabel.sizeToFit()
         }
     }
