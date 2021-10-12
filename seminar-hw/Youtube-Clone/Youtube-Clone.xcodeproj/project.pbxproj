@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F281F50B270D456D006EA470 /* 29th-week1-hw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "29th-week1-hw.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F281F50B270D456D006EA470 /* Youtube-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F281F50E270D456D006EA470 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F281F510270D456D006EA470 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F281F512270D456D006EA470 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		F281F502270D456D006EA470 = {
 			isa = PBXGroup;
 			children = (
-				F281F50D270D456D006EA470 /* 29th-week1-hw */,
+				F281F50D270D456D006EA470 /* Youtube-Clone */,
 				F281F50C270D456D006EA470 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,12 +54,12 @@
 		F281F50C270D456D006EA470 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F281F50B270D456D006EA470 /* 29th-week1-hw.app */,
+				F281F50B270D456D006EA470 /* Youtube-Clone.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F281F50D270D456D006EA470 /* 29th-week1-hw */ = {
+		F281F50D270D456D006EA470 /* Youtube-Clone */ = {
 			isa = PBXGroup;
 			children = (
 				F281F524270D5A23006EA470 /* google.jpeg */,
@@ -73,15 +73,15 @@
 				F281F526270D624B006EA470 /* WelcomeVC.swift */,
 				F281F528270D6979006EA470 /* JoinVC.swift */,
 			);
-			path = "29th-week1-hw";
+			path = "Youtube-Clone";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F281F50A270D456D006EA470 /* 29th-week1-hw */ = {
+		F281F50A270D456D006EA470 /* Youtube-Clone */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F281F51F270D456E006EA470 /* Build configuration list for PBXNativeTarget "29th-week1-hw" */;
+			buildConfigurationList = F281F51F270D456E006EA470 /* Build configuration list for PBXNativeTarget "Youtube-Clone" */;
 			buildPhases = (
 				F281F507270D456D006EA470 /* Sources */,
 				F281F508270D456D006EA470 /* Frameworks */,
@@ -91,9 +91,9 @@
 			);
 			dependencies = (
 			);
-			name = "29th-week1-hw";
+			name = "Youtube-Clone";
 			productName = "29th-week1-hw";
-			productReference = F281F50B270D456D006EA470 /* 29th-week1-hw.app */;
+			productReference = F281F50B270D456D006EA470 /* Youtube-Clone.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -111,7 +111,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F281F506270D456D006EA470 /* Build configuration list for PBXProject "29th-week1-hw" */;
+			buildConfigurationList = F281F506270D456D006EA470 /* Build configuration list for PBXProject "Youtube-Clone" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -124,7 +124,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F281F50A270D456D006EA470 /* 29th-week1-hw */,
+				F281F50A270D456D006EA470 /* Youtube-Clone */,
 			);
 		};
 /* End PBXProject section */
@@ -303,7 +303,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5JQQ946A44;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "29th-week1-hw/Info.plist";
+				INFOPLIST_FILE = "Youtube-Clone/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -314,7 +314,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.-9th-week1-hw";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Youtube-Clone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -331,7 +331,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5JQQ946A44;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "29th-week1-hw/Info.plist";
+				INFOPLIST_FILE = "Youtube-Clone/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -342,7 +342,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.-9th-week1-hw";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Youtube-Clone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -353,7 +353,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F281F506270D456D006EA470 /* Build configuration list for PBXProject "29th-week1-hw" */ = {
+		F281F506270D456D006EA470 /* Build configuration list for PBXProject "Youtube-Clone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F281F51D270D456E006EA470 /* Debug */,
@@ -362,7 +362,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F281F51F270D456E006EA470 /* Build configuration list for PBXNativeTarget "29th-week1-hw" */ = {
+		F281F51F270D456E006EA470 /* Build configuration list for PBXNativeTarget "Youtube-Clone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F281F520270D456E006EA470 /* Debug */,
