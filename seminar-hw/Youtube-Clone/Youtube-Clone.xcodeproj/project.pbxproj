@@ -7,18 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F2492A68271815B400775417 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2492A67271815B400775417 /* SF-Pro-Display-Regular.otf */; };
 		F281F50F270D456D006EA470 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F281F50E270D456D006EA470 /* AppDelegate.swift */; };
 		F281F511270D456D006EA470 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F281F510270D456D006EA470 /* SceneDelegate.swift */; };
 		F281F513270D456D006EA470 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F281F512270D456D006EA470 /* ViewController.swift */; };
 		F281F516270D456D006EA470 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F281F514270D456D006EA470 /* Main.storyboard */; };
 		F281F518270D456E006EA470 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F281F517270D456E006EA470 /* Assets.xcassets */; };
 		F281F51B270D456E006EA470 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F281F519270D456E006EA470 /* LaunchScreen.storyboard */; };
-		F281F525270D5A23006EA470 /* google.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F281F524270D5A23006EA470 /* google.jpeg */; };
 		F281F527270D624B006EA470 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F281F526270D624B006EA470 /* WelcomeVC.swift */; };
 		F281F529270D6979006EA470 /* JoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F281F528270D6979006EA470 /* JoinVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F2492A67271815B400775417 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		F281F50B270D456D006EA470 /* Youtube-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F281F50E270D456D006EA470 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F281F510270D456D006EA470 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,7 +28,6 @@
 		F281F517270D456E006EA470 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F281F51A270D456E006EA470 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F281F51C270D456E006EA470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F281F524270D5A23006EA470 /* google.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = google.jpeg; sourceTree = "<group>"; };
 		F281F526270D624B006EA470 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		F281F528270D6979006EA470 /* JoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,7 +62,7 @@
 		F281F50D270D456D006EA470 /* Youtube-Clone */ = {
 			isa = PBXGroup;
 			children = (
-				F281F524270D5A23006EA470 /* google.jpeg */,
+				F2492A67271815B400775417 /* SF-Pro-Display-Regular.otf */,
 				F281F50E270D456D006EA470 /* AppDelegate.swift */,
 				F281F510270D456D006EA470 /* SceneDelegate.swift */,
 				F281F512270D456D006EA470 /* ViewController.swift */,
@@ -134,9 +134,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F281F525270D5A23006EA470 /* google.jpeg in Resources */,
 				F281F51B270D456E006EA470 /* LaunchScreen.storyboard in Resources */,
 				F281F518270D456E006EA470 /* Assets.xcassets in Resources */,
+				F2492A68271815B400775417 /* SF-Pro-Display-Regular.otf in Resources */,
 				F281F516270D456D006EA470 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
