@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ghe-o0-70G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Seb-d1-Obj">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -18,11 +18,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6up-jE-rIo">
-                                <rect key="frame" x="147" y="173" width="77" height="24.666666666666657"/>
+                                <rect key="frame" x="147" y="173" width="77" height="26.333333333333343"/>
                                 <attributedString key="attributedText">
                                     <fragment content="회원가입">
                                         <attributes>
-                                            <font key="NSFont" size="22" name=".AppleSDGothicNeoI-Medium"/>
+                                            <font key="NSFont" metaFont="system" size="22"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -68,7 +68,7 @@
                                         <fragment content="다음">
                                             <attributes>
                                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <font key="NSFont" size="14" name=".AppleSDGothicNeoI-Medium"/>
+                                                <font key="NSFont" metaFont="system" size="14"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -78,7 +78,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="guc-85-n4o" userLabel="비밀번호 표시">
-                                <rect key="frame" x="20.999999999999993" y="520" width="94.333333333333314" height="17.666666666666629"/>
+                                <rect key="frame" x="20.999999999999993" y="520" width="94.333333333333314" height="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="square" catalog="system">
                                     <attributedString key="attributedTitle">
@@ -91,7 +91,7 @@
                                         <fragment content="비밀번호">
                                             <attributes>
                                                 <color key="NSColor" systemColor="labelColor"/>
-                                                <font key="NSFont" size="13" name=".AppleSDGothicNeoI-Medium"/>
+                                                <font key="NSFont" metaFont="system"/>
                                             </attributes>
                                         </fragment>
                                         <fragment content=" ">
@@ -103,7 +103,7 @@
                                         <fragment content="표시">
                                             <attributes>
                                                 <color key="NSColor" systemColor="labelColor"/>
-                                                <font key="NSFont" size="13" name=".AppleSDGothicNeoI-Medium"/>
+                                                <font key="NSFont" metaFont="system"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -176,7 +176,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="로그인">
                                         <attributes>
-                                            <font key="NSFont" size="22" name=".AppleSDGothicNeoI-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="22"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -336,7 +336,7 @@
                                     </fragment>
                                     <fragment content="님">
                                         <attributes>
-                                            <font key="NSFont" size="26" name=".AppleSDGothicNeoI-Medium"/>
+                                            <font key="NSFont" metaFont="system" size="26"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -373,14 +373,14 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neZ-ew-KpE">
-                                <rect key="frame" x="112" y="507.00000000000006" width="165" height="30.666666666666686"/>
+                                <rect key="frame" x="112" y="507" width="165" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
                                         <fragment content="다른">
                                             <attributes>
                                                 <color key="NSColor" red="0.25882352941176467" green="0.52156862745098043" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="14" name=".AppleSDGothicNeoI-Medium"/>
+                                                <font key="NSFont" metaFont="system" size="14"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -394,7 +394,7 @@
                                         <fragment content="계정으로">
                                             <attributes>
                                                 <color key="NSColor" red="0.25882352941176467" green="0.52156862745098043" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="14" name=".AppleSDGothicNeoI-Medium"/>
+                                                <font key="NSFont" metaFont="system" size="14"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -408,7 +408,7 @@
                                         <fragment content="로그인하기">
                                             <attributes>
                                                 <color key="NSColor" red="0.25882352941176467" green="0.52156862745098043" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="14" name=".AppleSDGothicNeoI-Medium"/>
+                                                <font key="NSFont" metaFont="system" size="14"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -461,11 +461,122 @@
             </objects>
             <point key="canvasLocation" x="-956" y="83.497536945812811"/>
         </scene>
+        <!--Custom Tab Bar Controller-->
+        <scene sceneID="ioU-7m-XBh">
+            <objects>
+                <tabBarController storyboardIdentifier="CustomTabBarController" id="Seb-d1-Obj" customClass="CustomTabBarController" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CIx-q7-C6P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="5nH-y2-2Ux" kind="relationship" relationship="viewControllers" id="jOg-Yn-DMD"/>
+                        <segue destination="gLo-f3-VpC" kind="relationship" relationship="viewControllers" id="tvB-XR-rVM"/>
+                        <segue destination="Bbj-nH-ROk" kind="relationship" relationship="viewControllers" id="BcZ-F4-ri1"/>
+                        <segue destination="teX-53-Dvs" kind="relationship" relationship="viewControllers" id="rqw-zb-T9i"/>
+                        <segue destination="hl1-v3-1ss" kind="relationship" relationship="viewControllers" id="sLo-5f-Mlh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bWh-Zs-LIP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2649" y="83"/>
+        </scene>
+        <!--보관함-->
+        <scene sceneID="dM9-xK-Nsg">
+            <objects>
+                <viewController storyboardIdentifier="PinkVC" id="hl1-v3-1ss" customClass="PinkVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="09V-SF-191">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="uAK-87-8m3"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="보관함" image="LibraryIcon" selectedImage="LibraryIconFill" id="XK3-aO-zSY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpd-kt-gYQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4873" y="-248"/>
+        </scene>
+        <!--추가-->
+        <scene sceneID="arF-lh-Zni">
+            <objects>
+                <viewController storyboardIdentifier="YellowVC" id="Bbj-nH-ROk" customClass="YellowVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZFa-9O-auC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="oa1-Ja-4Ax"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="추가" image="plusCircleIcon" selectedImage="plusCircleIcon" id="dLY-0U-1rU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5HN-be-r9g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4169" y="-248"/>
+        </scene>
+        <!--구독-->
+        <scene sceneID="5LC-F0-T0t">
+            <objects>
+                <viewController storyboardIdentifier="GreenVC" id="teX-53-Dvs" customClass="GreenVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3pK-HI-1js">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Q0d-kg-Ys1"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="구독" image="subscriptionsIcon" selectedImage="subscriptionsIconFill" id="mml-JP-hpD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oom-3H-6jA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4679" y="409"/>
+        </scene>
+        <!--홈-->
+        <scene sceneID="RZc-Jo-pv4">
+            <objects>
+                <viewController storyboardIdentifier="OrangeVC" id="5nH-y2-2Ux" customClass="OrangeVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eBU-Ra-4I3" customClass="Orange">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3Hf-5P-C5t"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="홈" image="homeIcon" selectedImage="homeIconFill" id="pIq-oH-v0A"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cv8-f7-b8k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3391" y="-248"/>
+        </scene>
+        <!--Shorts-->
+        <scene sceneID="YKp-RS-x4T">
+            <objects>
+                <viewController storyboardIdentifier="PurpleVC" id="gLo-f3-VpC" customClass="PurpleVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2PO-2U-5pq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4qT-TT-DUH"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Shorts" image="shortsIcon" selectedImage="shortsIconFill" id="VcI-MG-bxX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mw1-AE-wiK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3812" y="399"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="LibraryIcon" width="32.333332061767578" height="32.333332061767578"/>
+        <image name="LibraryIconFill" width="32.333332061767578" height="32.333332061767578"/>
         <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
         <image name="google" width="118" height="40"/>
+        <image name="homeIcon" width="32.333332061767578" height="32.333332061767578"/>
+        <image name="homeIconFill" width="32.333332061767578" height="32.333332061767578"/>
+        <image name="plusCircleIcon" width="32.333332061767578" height="32.333332061767578"/>
+        <image name="shortsIcon" width="32.333332061767578" height="32.333332061767578"/>
+        <image name="shortsIconFill" width="22.333333969116211" height="28"/>
         <image name="square" catalog="system" width="128" height="114"/>
+        <image name="subscriptionsIcon" width="32.333332061767578" height="32.333332061767578"/>
+        <image name="subscriptionsIconFill" width="32.333332061767578" height="32.333332061767578"/>
         <namedColor name="Blue">
             <color red="0.25900000333786011" green="0.5220000147819519" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -477,6 +588,21 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
