@@ -364,6 +364,9 @@
                                     </attributedString>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchUpToGoTabBarView:" destination="ETG-39-wGr" eventType="touchUpInside" id="xKX-NG-4H2"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="google" translatesAutoresizingMaskIntoConstraints="NO" id="Phe-Ic-9Pt">
                                 <rect key="frame" x="128" y="248" width="118" height="40"/>
@@ -414,6 +417,9 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchUpToGoAnotherLoginView:" destination="ETG-39-wGr" eventType="touchUpInside" id="FJ3-QA-Isx"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="환영합니다!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btI-NF-mwm">
                                 <rect key="frame" x="114" y="358.66666666666669" width="146" height="30.333333333333314"/>
@@ -436,6 +442,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="anotherLoginBtn" destination="neZ-ew-KpE" id="zyo-ja-Nns"/>
+                        <outlet property="checkBtn" destination="QOr-Lh-1bG" id="7U9-hU-T02"/>
                         <outlet property="nameLabel" destination="y31-L7-U5f" id="Gym-Qx-YRg"/>
                     </connections>
                 </viewController>
