@@ -74,7 +74,6 @@
 		F281F50D270D456D006EA470 /* Youtube-Clone */ = {
 			isa = PBXGroup;
 			children = (
-				F2492A67271815B400775417 /* SF-Pro-Display-Regular.otf */,
 				F281F50E270D456D006EA470 /* AppDelegate.swift */,
 				F281F510270D456D006EA470 /* SceneDelegate.swift */,
 				F281F512270D456D006EA470 /* ViewController.swift */,
@@ -90,6 +89,7 @@
 				F2261FEF27198D9100D7AA70 /* YellowVC.swift */,
 				F2261FF127198DA900D7AA70 /* GreenVC.swift */,
 				F2261FF327198DC200D7AA70 /* PinkVC.swift */,
+				F2492A67271815B400775417 /* SF-Pro-Display-Regular.otf */,
 			);
 			path = "Youtube-Clone";
 			sourceTree = "<group>";
@@ -333,6 +333,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -361,6 +362,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
