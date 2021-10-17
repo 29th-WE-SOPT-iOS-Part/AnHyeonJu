@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Seb-d1-Obj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ghe-o0-70G">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -95,7 +95,7 @@
                                         <fragment content=" 비밀번호 표시">
                                             <attributes>
                                                 <color key="NSColor" systemColor="labelColor"/>
-                                                <font key="NSFont" size="12" name=".AppleSDGothicNeoI-Regular"/>
+                                                <font key="NSFont" metaFont="cellTitle"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
