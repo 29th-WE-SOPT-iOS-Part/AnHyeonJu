@@ -28,8 +28,9 @@ class WelcomeVC: UIViewController {
         self.present(tabBarController, animated: true, completion: nil)
     }
     
+    
     @IBAction func touchUpToGoAnotherLoginView(_ sender: Any) {
-        guard let anotherLoginVC = self.storyboard?.instantiateViewController(withIdentifier: "ViewController")as? ViewController else {return}
+        guard let anotherLoginVC = self.storyboard?.instantiateViewController(withIdentifier: "UINavigationVC")as? UINavigationVC else {return}
         
         anotherLoginVC.modalPresentationStyle = .fullScreen
         self.present(anotherLoginVC, animated: true, completion: nil)
@@ -38,7 +39,7 @@ class WelcomeVC: UIViewController {
     
     func setNameInLabel(){
         if let userName = name {
-            nameLabel.text = userName + "님"
+            nameLabel.text = userName + "님 환영합니다."
             nameLabel.sizeToFit()
         }
     }
