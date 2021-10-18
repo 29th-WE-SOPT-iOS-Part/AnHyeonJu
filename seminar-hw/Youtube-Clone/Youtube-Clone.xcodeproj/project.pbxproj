@@ -7,47 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F2261FEA27198D3C00D7AA70 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2261FE927198D3C00D7AA70 /* CustomTabBarController.swift */; };
-		F2261FEC27198D6300D7AA70 /* OrangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2261FEB27198D6300D7AA70 /* OrangeVC.swift */; };
-		F2261FEE27198D8100D7AA70 /* PurpleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2261FED27198D8100D7AA70 /* PurpleVC.swift */; };
-		F2261FF027198D9100D7AA70 /* YellowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2261FEF27198D9100D7AA70 /* YellowVC.swift */; };
-		F2261FF227198DA900D7AA70 /* GreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2261FF127198DA900D7AA70 /* GreenVC.swift */; };
-		F2261FF427198DC200D7AA70 /* PinkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2261FF327198DC200D7AA70 /* PinkVC.swift */; };
 		F2492A68271815B400775417 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2492A67271815B400775417 /* SF-Pro-Display-Regular.otf */; };
 		F27B0258271C5DA50034EFC4 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F27B0257271C5DA50034EFC4 /* SF-Pro-Display-Bold.otf */; };
 		F27B025A271C5DBA0034EFC4 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F27B0259271C5DBA0034EFC4 /* SF-Pro-Display-Semibold.otf */; };
-		F27B025C271C80280034EFC4 /* UINavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27B025B271C80280034EFC4 /* UINavigationVC.swift */; };
+		F27B0260271C83340034EFC4 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27B025F271C83340034EFC4 /* Tabbar.storyboard */; };
 		F281F50F270D456D006EA470 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F281F50E270D456D006EA470 /* AppDelegate.swift */; };
 		F281F511270D456D006EA470 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F281F510270D456D006EA470 /* SceneDelegate.swift */; };
-		F281F513270D456D006EA470 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F281F512270D456D006EA470 /* ViewController.swift */; };
 		F281F516270D456D006EA470 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F281F514270D456D006EA470 /* Main.storyboard */; };
 		F281F518270D456E006EA470 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F281F517270D456E006EA470 /* Assets.xcassets */; };
 		F281F51B270D456E006EA470 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F281F519270D456E006EA470 /* LaunchScreen.storyboard */; };
-		F281F527270D624B006EA470 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F281F526270D624B006EA470 /* WelcomeVC.swift */; };
-		F281F529270D6979006EA470 /* JoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F281F528270D6979006EA470 /* JoinVC.swift */; };
+		F2C1979F271D0FF5001EAB15 /* GreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C1979D271D0FF5001EAB15 /* GreenVC.swift */; };
+		F2C197A0271D0FF5001EAB15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C19795271D0FF4001EAB15 /* ViewController.swift */; };
+		F2C197A1271D0FF5001EAB15 /* UINavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C1979A271D0FF5001EAB15 /* UINavigationVC.swift */; };
+		F2C197A2271D0FF5001EAB15 /* JoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C19797271D0FF4001EAB15 /* JoinVC.swift */; };
+		F2C197A3271D0FF5001EAB15 /* OrangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C1979E271D0FF5001EAB15 /* OrangeVC.swift */; };
+		F2C197A4271D0FF5001EAB15 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C19798271D0FF5001EAB15 /* CustomTabBarController.swift */; };
+		F2C197A5271D0FF5001EAB15 /* PinkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C1979B271D0FF5001EAB15 /* PinkVC.swift */; };
+		F2C197A6271D0FF5001EAB15 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C19799271D0FF5001EAB15 /* WelcomeVC.swift */; };
+		F2C197A7271D0FF5001EAB15 /* YellowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C19796271D0FF4001EAB15 /* YellowVC.swift */; };
+		F2C197A8271D0FF5001EAB15 /* PurpleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C1979C271D0FF5001EAB15 /* PurpleVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F2261FE927198D3C00D7AA70 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
-		F2261FEB27198D6300D7AA70 /* OrangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeVC.swift; sourceTree = "<group>"; };
-		F2261FED27198D8100D7AA70 /* PurpleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleVC.swift; sourceTree = "<group>"; };
-		F2261FEF27198D9100D7AA70 /* YellowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowVC.swift; sourceTree = "<group>"; };
-		F2261FF127198DA900D7AA70 /* GreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenVC.swift; sourceTree = "<group>"; };
-		F2261FF327198DC200D7AA70 /* PinkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkVC.swift; sourceTree = "<group>"; };
 		F2492A67271815B400775417 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		F27B0257271C5DA50034EFC4 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
 		F27B0259271C5DBA0034EFC4 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
-		F27B025B271C80280034EFC4 /* UINavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationVC.swift; sourceTree = "<group>"; };
+		F27B025F271C83340034EFC4 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
 		F281F50B270D456D006EA470 /* Youtube-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F281F50E270D456D006EA470 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F281F510270D456D006EA470 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F281F512270D456D006EA470 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F281F515270D456D006EA470 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F281F517270D456E006EA470 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F281F51A270D456E006EA470 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F281F51C270D456E006EA470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F281F526270D624B006EA470 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
-		F281F528270D6979006EA470 /* JoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinVC.swift; sourceTree = "<group>"; };
+		F2C19795271D0FF4001EAB15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F2C19796271D0FF4001EAB15 /* YellowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowVC.swift; sourceTree = "<group>"; };
+		F2C19797271D0FF4001EAB15 /* JoinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinVC.swift; sourceTree = "<group>"; };
+		F2C19798271D0FF5001EAB15 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		F2C19799271D0FF5001EAB15 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		F2C1979A271D0FF5001EAB15 /* UINavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationVC.swift; sourceTree = "<group>"; };
+		F2C1979B271D0FF5001EAB15 /* PinkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkVC.swift; sourceTree = "<group>"; };
+		F2C1979C271D0FF5001EAB15 /* PurpleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleVC.swift; sourceTree = "<group>"; };
+		F2C1979D271D0FF5001EAB15 /* GreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenVC.swift; sourceTree = "<group>"; };
+		F2C1979E271D0FF5001EAB15 /* OrangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,23 +84,24 @@
 			children = (
 				F281F50E270D456D006EA470 /* AppDelegate.swift */,
 				F281F510270D456D006EA470 /* SceneDelegate.swift */,
-				F281F512270D456D006EA470 /* ViewController.swift */,
-				F281F528270D6979006EA470 /* JoinVC.swift */,
-				F281F526270D624B006EA470 /* WelcomeVC.swift */,
-				F281F514270D456D006EA470 /* Main.storyboard */,
 				F281F517270D456E006EA470 /* Assets.xcassets */,
+				F281F514270D456D006EA470 /* Main.storyboard */,
 				F281F519270D456E006EA470 /* LaunchScreen.storyboard */,
+				F2C1979A271D0FF5001EAB15 /* UINavigationVC.swift */,
+				F2C19795271D0FF4001EAB15 /* ViewController.swift */,
+				F2C19797271D0FF4001EAB15 /* JoinVC.swift */,
+				F2C19799271D0FF5001EAB15 /* WelcomeVC.swift */,
 				F281F51C270D456E006EA470 /* Info.plist */,
-				F2261FE927198D3C00D7AA70 /* CustomTabBarController.swift */,
-				F2261FEB27198D6300D7AA70 /* OrangeVC.swift */,
-				F2261FED27198D8100D7AA70 /* PurpleVC.swift */,
-				F2261FEF27198D9100D7AA70 /* YellowVC.swift */,
-				F2261FF127198DA900D7AA70 /* GreenVC.swift */,
-				F2261FF327198DC200D7AA70 /* PinkVC.swift */,
 				F27B0257271C5DA50034EFC4 /* SF-Pro-Display-Bold.otf */,
 				F27B0259271C5DBA0034EFC4 /* SF-Pro-Display-Semibold.otf */,
 				F2492A67271815B400775417 /* SF-Pro-Display-Regular.otf */,
-				F27B025B271C80280034EFC4 /* UINavigationVC.swift */,
+				F27B025F271C83340034EFC4 /* Tabbar.storyboard */,
+				F2C19798271D0FF5001EAB15 /* CustomTabBarController.swift */,
+				F2C1979E271D0FF5001EAB15 /* OrangeVC.swift */,
+				F2C1979C271D0FF5001EAB15 /* PurpleVC.swift */,
+				F2C19796271D0FF4001EAB15 /* YellowVC.swift */,
+				F2C1979D271D0FF5001EAB15 /* GreenVC.swift */,
+				F2C1979B271D0FF5001EAB15 /* PinkVC.swift */,
 			);
 			path = "Youtube-Clone";
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				F27B0258271C5DA50034EFC4 /* SF-Pro-Display-Bold.otf in Resources */,
 				F281F518270D456E006EA470 /* Assets.xcassets in Resources */,
 				F2492A68271815B400775417 /* SF-Pro-Display-Regular.otf in Resources */,
+				F27B0260271C83340034EFC4 /* Tabbar.storyboard in Resources */,
 				F281F516270D456D006EA470 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,18 +181,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2261FF427198DC200D7AA70 /* PinkVC.swift in Sources */,
-				F2261FF227198DA900D7AA70 /* GreenVC.swift in Sources */,
-				F2261FEC27198D6300D7AA70 /* OrangeVC.swift in Sources */,
-				F281F513270D456D006EA470 /* ViewController.swift in Sources */,
-				F2261FEE27198D8100D7AA70 /* PurpleVC.swift in Sources */,
-				F281F527270D624B006EA470 /* WelcomeVC.swift in Sources */,
-				F2261FEA27198D3C00D7AA70 /* CustomTabBarController.swift in Sources */,
-				F2261FF027198D9100D7AA70 /* YellowVC.swift in Sources */,
+				F2C197A3271D0FF5001EAB15 /* OrangeVC.swift in Sources */,
+				F2C197A6271D0FF5001EAB15 /* WelcomeVC.swift in Sources */,
+				F2C197A8271D0FF5001EAB15 /* PurpleVC.swift in Sources */,
+				F2C1979F271D0FF5001EAB15 /* GreenVC.swift in Sources */,
+				F2C197A4271D0FF5001EAB15 /* CustomTabBarController.swift in Sources */,
+				F2C197A1271D0FF5001EAB15 /* UINavigationVC.swift in Sources */,
+				F2C197A2271D0FF5001EAB15 /* JoinVC.swift in Sources */,
 				F281F50F270D456D006EA470 /* AppDelegate.swift in Sources */,
-				F281F529270D6979006EA470 /* JoinVC.swift in Sources */,
-				F27B025C271C80280034EFC4 /* UINavigationVC.swift in Sources */,
+				F2C197A0271D0FF5001EAB15 /* ViewController.swift in Sources */,
 				F281F511270D456D006EA470 /* SceneDelegate.swift in Sources */,
+				F2C197A5271D0FF5001EAB15 /* PinkVC.swift in Sources */,
+				F2C197A7271D0FF5001EAB15 /* YellowVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

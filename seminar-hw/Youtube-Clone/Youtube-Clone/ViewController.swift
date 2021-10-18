@@ -9,21 +9,21 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
+    // MARK: - Properties
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var signUpBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         nextBtn.isEnabled = false
         setTextField()
     }
     
-    //push 방식(네비게이션)
-    //JoinView로 이동하는 버튼 --> 회원가입
+    // MARK: - @IBAction
     @IBAction func touchUpToGoJoinView(_ sender: Any) {
         guard let joinVC = self.storyboard?.instantiateViewController(withIdentifier: "JoinVC")
             else {return}
@@ -32,8 +32,7 @@ class ViewController: UIViewController {
     }
     
     
-    //present 방식(모달)
-    //WelcomeView로 이동하는 버튼 --> 로그인 완료 & 데이터 전달
+    // MARK: - @IBAction
     @IBAction func touchUpToGoWelcomeView(_ sender: Any) {
         guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
         
@@ -43,7 +42,7 @@ class ViewController: UIViewController {
         self.present(welcomeVC, animated: true, completion: nil)
     }
     
-    
+    // MARK: - Custom Method
     @objc func textFieldDidChange(_ sender:Any?) -> Void {
         if (nameTextField.hasText) && (emailTextField.hasText) && (passwordTextField.hasText){
                 nextBtn.isEnabled = true
@@ -52,6 +51,7 @@ class ViewController: UIViewController {
             }
     }
     
+    // MARK: - Custom Method
     func setTextField() {
         self.nameTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for:.editingChanged)
         self.emailTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for:.editingChanged)

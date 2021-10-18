@@ -73,20 +73,16 @@
                                 <rect key="frame" x="129" y="110" width="118" height="40"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 표시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXe-aD-v6X">
-                                <rect key="frame" x="49" y="519.33333333333337" width="74" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="94O-XL-7aE"/>
-                                    <constraint firstAttribute="width" constant="75" id="A1H-CP-ENO"/>
-                                </constraints>
+                                <rect key="frame" x="48" y="519.33333333333337" width="75" height="15.666666666666629"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="guc-85-n4o" userLabel="비밀번호 표시">
-                                <rect key="frame" x="22" y="522.33333333333337" width="16" height="16"/>
+                                <rect key="frame" x="21" y="522.33333333333337" width="16" height="16"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="16" id="5Za-J0-0E8"/>
-                                    <constraint firstAttribute="width" constant="16" id="v1s-fM-t7y"/>
+                                    <constraint firstAttribute="width" constant="16" id="Jbu-kp-Gbl"/>
+                                    <constraint firstAttribute="height" constant="16" id="UDE-kC-bXy"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="square" catalog="system">
@@ -119,9 +115,9 @@
                             <constraint firstItem="ZcL-Fx-b6T" firstAttribute="trailing" secondItem="6up-jE-rIo" secondAttribute="trailing" constant="147" id="PHa-Os-Q7z"/>
                             <constraint firstItem="QXe-aD-v6X" firstAttribute="top" secondItem="Jxc-Q9-pAo" secondAttribute="bottom" constant="14" id="Pev-za-UEj"/>
                             <constraint firstItem="itz-99-8Fu" firstAttribute="leading" secondItem="ZcL-Fx-b6T" secondAttribute="leading" constant="129" id="UOJ-Oy-HqB"/>
-                            <constraint firstItem="6up-jE-rIo" firstAttribute="top" secondItem="itz-99-8Fu" secondAttribute="bottom" constant="23" id="ZjA-6m-uAt"/>
+                            <constraint firstItem="6up-jE-rIo" firstAttribute="top" secondItem="itz-99-8Fu" secondAttribute="bottom" constant="23" id="ZRq-ZF-t63"/>
                             <constraint firstItem="l2M-Hf-1Jj" firstAttribute="top" secondItem="Jxc-Q9-pAo" secondAttribute="bottom" constant="64" id="aUd-ls-hWF"/>
-                            <constraint firstItem="guc-85-n4o" firstAttribute="leading" secondItem="ZcL-Fx-b6T" secondAttribute="leading" constant="22" id="avH-BS-SxZ"/>
+                            <constraint firstItem="guc-85-n4o" firstAttribute="leading" secondItem="ZcL-Fx-b6T" secondAttribute="leading" constant="21" id="avH-BS-SxZ"/>
                             <constraint firstItem="ZcL-Fx-b6T" firstAttribute="trailing" secondItem="Jxc-Q9-pAo" secondAttribute="trailing" constant="22" id="cgC-9f-UV3"/>
                             <constraint firstItem="YXl-ax-rp2" firstAttribute="top" secondItem="PxX-oy-cgk" secondAttribute="bottom" constant="17" id="eNm-dG-uXM"/>
                             <constraint firstItem="QXe-aD-v6X" firstAttribute="leading" secondItem="guc-85-n4o" secondAttribute="trailing" constant="11" id="g80-hR-Dk4"/>
@@ -369,122 +365,11 @@
             </objects>
             <point key="canvasLocation" x="-956" y="83.497536945812811"/>
         </scene>
-        <!--Custom Tab Bar Controller-->
-        <scene sceneID="ioU-7m-XBh">
-            <objects>
-                <tabBarController storyboardIdentifier="CustomTabBarController" id="Seb-d1-Obj" customClass="CustomTabBarController" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CIx-q7-C6P">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="5nH-y2-2Ux" kind="relationship" relationship="viewControllers" id="jOg-Yn-DMD"/>
-                        <segue destination="gLo-f3-VpC" kind="relationship" relationship="viewControllers" id="tvB-XR-rVM"/>
-                        <segue destination="Bbj-nH-ROk" kind="relationship" relationship="viewControllers" id="BcZ-F4-ri1"/>
-                        <segue destination="teX-53-Dvs" kind="relationship" relationship="viewControllers" id="rqw-zb-T9i"/>
-                        <segue destination="hl1-v3-1ss" kind="relationship" relationship="viewControllers" id="sLo-5f-Mlh"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bWh-Zs-LIP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2649" y="83"/>
-        </scene>
-        <!--보관함-->
-        <scene sceneID="dM9-xK-Nsg">
-            <objects>
-                <viewController storyboardIdentifier="PinkVC" id="hl1-v3-1ss" customClass="PinkVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="09V-SF-191">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="uAK-87-8m3"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="보관함" image="LibraryIcon" selectedImage="LibraryIconFill" id="XK3-aO-zSY"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fpd-kt-gYQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4873" y="-248"/>
-        </scene>
-        <!--추가-->
-        <scene sceneID="arF-lh-Zni">
-            <objects>
-                <viewController storyboardIdentifier="YellowVC" id="Bbj-nH-ROk" customClass="YellowVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZFa-9O-auC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="oa1-Ja-4Ax"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="추가" image="plusCircleIcon" selectedImage="plusCircleIcon" id="dLY-0U-1rU"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5HN-be-r9g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4169" y="-248"/>
-        </scene>
-        <!--구독-->
-        <scene sceneID="5LC-F0-T0t">
-            <objects>
-                <viewController storyboardIdentifier="GreenVC" id="teX-53-Dvs" customClass="GreenVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3pK-HI-1js">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Q0d-kg-Ys1"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="구독" image="subscriptionsIcon" selectedImage="subscriptionsIconFill" id="mml-JP-hpD"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oom-3H-6jA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4679" y="409"/>
-        </scene>
-        <!--홈-->
-        <scene sceneID="RZc-Jo-pv4">
-            <objects>
-                <viewController storyboardIdentifier="OrangeVC" id="5nH-y2-2Ux" customClass="OrangeVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="eBU-Ra-4I3" customClass="Orange">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="3Hf-5P-C5t"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="홈" image="homeIcon" selectedImage="homeIconFill" id="pIq-oH-v0A"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Cv8-f7-b8k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3391" y="-248"/>
-        </scene>
-        <!--Shorts-->
-        <scene sceneID="YKp-RS-x4T">
-            <objects>
-                <viewController storyboardIdentifier="PurpleVC" id="gLo-f3-VpC" customClass="PurpleVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2PO-2U-5pq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="4qT-TT-DUH"/>
-                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Shorts" image="shortsIcon" selectedImage="shortsIconFill" id="VcI-MG-bxX"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mw1-AE-wiK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3812" y="399"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="LibraryIcon" width="32.333332061767578" height="32.333332061767578"/>
-        <image name="LibraryIconFill" width="32.333332061767578" height="32.333332061767578"/>
         <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
         <image name="google" width="118" height="40"/>
-        <image name="homeIcon" width="32.333332061767578" height="32.333332061767578"/>
-        <image name="homeIconFill" width="32.333332061767578" height="32.333332061767578"/>
-        <image name="plusCircleIcon" width="32.333332061767578" height="32.333332061767578"/>
-        <image name="shortsIcon" width="32.333332061767578" height="32.333332061767578"/>
-        <image name="shortsIconFill" width="22.333333969116211" height="28"/>
         <image name="square" catalog="system" width="128" height="114"/>
-        <image name="subscriptionsIcon" width="32.333332061767578" height="32.333332061767578"/>
-        <image name="subscriptionsIconFill" width="32.333332061767578" height="32.333332061767578"/>
         <namedColor name="Blue">
             <color red="0.25900000333786011" green="0.5220000147819519" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -496,21 +381,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

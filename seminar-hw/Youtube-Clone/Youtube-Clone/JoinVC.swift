@@ -9,12 +9,14 @@ import UIKit
 
 class JoinVC: UIViewController {
 
+    // MARK: - Properties
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var showPasswordBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         nextBtn.isEnabled = false
@@ -23,7 +25,7 @@ class JoinVC: UIViewController {
     }
     
     
-    //비밀번호 표시 버튼
+    // MARK: - @IBAction
     @IBAction func didTapViewPassword(_ sender: UIButton) {
         if passwordTextField.isSecureTextEntry {
             showPasswordBtn.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
@@ -34,9 +36,8 @@ class JoinVC: UIViewController {
         }
     }
     
-    
 
-    //present 방식(모달)
+    // MARK: - @IBAction
     @IBAction func touchUpToGoWelcomeView(_ sender: Any) {
         guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC")as? WelcomeVC else {return}
 
@@ -46,7 +47,7 @@ class JoinVC: UIViewController {
         self.present(welcomeVC, animated: true, completion: nil)
     }
     
-    
+    // MARK: - Custom Method
     @objc func textFieldDidChange(_ sender:Any?) -> Void {
         if (nameTextField.hasText) && (emailTextField.hasText) && (passwordTextField.hasText){
                 nextBtn.isEnabled = true
@@ -55,12 +56,12 @@ class JoinVC: UIViewController {
             }
     }
     
+    // MARK: - Custom Method
     func setTextField() {
         self.nameTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for:.editingChanged)
         self.emailTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for:.editingChanged)
         self.passwordTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for:.editingChanged)
     }
-
 
 
 }

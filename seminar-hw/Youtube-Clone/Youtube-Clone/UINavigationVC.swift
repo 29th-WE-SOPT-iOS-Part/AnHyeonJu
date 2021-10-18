@@ -9,9 +9,9 @@ import UIKit
 
 class UINavigationVC: UINavigationController {
 
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
 }

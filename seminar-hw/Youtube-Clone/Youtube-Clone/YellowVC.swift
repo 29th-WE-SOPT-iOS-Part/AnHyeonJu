@@ -9,9 +9,9 @@ import UIKit
 
 class YellowVC: UIViewController {
 
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
 }

@@ -9,12 +9,14 @@ import UIKit
 
 class CustomTabBarController: UITabBarController {
 
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setTabBar()
     }
     
+    // MARK: - Custom Method
     func setTabBar(){
         guard let orangeVC = self.storyboard?.instantiateViewController(identifier: "OrangeVC"),
               let purpleVC = self.storyboard?.instantiateViewController(identifier: "PurpleVC"),
@@ -44,9 +46,6 @@ class CustomTabBarController: UITabBarController {
         pinkVC.tabBarItem.selectedImage = UIImage(named: "libraryIconFill")
         
         setViewControllers([orangeVC, purpleVC, yellowVC, greenVC, pinkVC], animated: true)
-        
-
-        
         
     }
 
