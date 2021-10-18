@@ -82,20 +82,47 @@
 		F281F50D270D456D006EA470 /* Youtube-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				F283BAE1271D16C20022A5D9 /* Supporting Files */,
+				F283BAE0271D168B0022A5D9 /* Delegate */,
+				F2C197AE271D15E2001EAB15 /* Storyboards */,
+				F2C197AA271D152E001EAB15 /* View Controllers */,
+			);
+			path = "Youtube-Clone";
+			sourceTree = "<group>";
+		};
+		F283BAE0271D168B0022A5D9 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
 				F281F50E270D456D006EA470 /* AppDelegate.swift */,
 				F281F510270D456D006EA470 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		F283BAE1271D16C20022A5D9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				F281F517270D456E006EA470 /* Assets.xcassets */,
-				F281F514270D456D006EA470 /* Main.storyboard */,
-				F281F519270D456E006EA470 /* LaunchScreen.storyboard */,
-				F2C1979A271D0FF5001EAB15 /* UINavigationVC.swift */,
-				F2C19795271D0FF4001EAB15 /* ViewController.swift */,
-				F2C19797271D0FF4001EAB15 /* JoinVC.swift */,
-				F2C19799271D0FF5001EAB15 /* WelcomeVC.swift */,
 				F281F51C270D456E006EA470 /* Info.plist */,
 				F27B0257271C5DA50034EFC4 /* SF-Pro-Display-Bold.otf */,
 				F27B0259271C5DBA0034EFC4 /* SF-Pro-Display-Semibold.otf */,
 				F2492A67271815B400775417 /* SF-Pro-Display-Regular.otf */,
-				F27B025F271C83340034EFC4 /* Tabbar.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F2C197AA271D152E001EAB15 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F2C197AC271D1560001EAB15 /* Main */,
+				F2C197AB271D1542001EAB15 /* Tab */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F2C197AB271D1542001EAB15 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
 				F2C19798271D0FF5001EAB15 /* CustomTabBarController.swift */,
 				F2C1979E271D0FF5001EAB15 /* OrangeVC.swift */,
 				F2C1979C271D0FF5001EAB15 /* PurpleVC.swift */,
@@ -103,7 +130,28 @@
 				F2C1979D271D0FF5001EAB15 /* GreenVC.swift */,
 				F2C1979B271D0FF5001EAB15 /* PinkVC.swift */,
 			);
-			path = "Youtube-Clone";
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		F2C197AC271D1560001EAB15 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F2C1979A271D0FF5001EAB15 /* UINavigationVC.swift */,
+				F2C19795271D0FF4001EAB15 /* ViewController.swift */,
+				F2C19797271D0FF4001EAB15 /* JoinVC.swift */,
+				F2C19799271D0FF5001EAB15 /* WelcomeVC.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F2C197AE271D15E2001EAB15 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F281F514270D456D006EA470 /* Main.storyboard */,
+				F281F519270D456E006EA470 /* LaunchScreen.storyboard */,
+				F27B025F271C83340034EFC4 /* Tabbar.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
