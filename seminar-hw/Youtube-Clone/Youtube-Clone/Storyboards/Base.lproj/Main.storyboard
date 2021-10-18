@@ -26,13 +26,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회원가입" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6up-jE-rIo">
-                                <rect key="frame" x="147" y="173" width="81" height="26.333333333333343"/>
+                                <rect key="frame" x="147" y="173" width="81" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="CmS-6M-gRs"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름을 입력해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PxX-oy-cgk">
-                                <rect key="frame" x="22" y="327.33333333333331" width="331" height="48"/>
+                                <rect key="frame" x="22" y="325" width="331" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="YIU-fe-S0e"/>
                                 </constraints>
@@ -40,7 +43,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일 또는 휴대전화" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YXl-ax-rp2">
-                                <rect key="frame" x="22" y="392.33333333333331" width="331" height="48"/>
+                                <rect key="frame" x="22" y="390" width="331" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="w8x-7b-Ceo"/>
                                 </constraints>
@@ -48,7 +51,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jxc-Q9-pAo">
-                                <rect key="frame" x="22" y="457.33333333333331" width="331" height="48"/>
+                                <rect key="frame" x="22" y="455" width="331" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Ior-dS-pzr"/>
                                 </constraints>
@@ -56,7 +59,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2M-Hf-1Jj">
-                                <rect key="frame" x="22" y="569.33333333333337" width="331" height="42"/>
+                                <rect key="frame" x="22" y="567" width="331" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="1pp-M6-Pen"/>
                                 </constraints>
@@ -73,13 +76,13 @@
                                 <rect key="frame" x="129" y="110" width="118" height="40"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 표시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXe-aD-v6X">
-                                <rect key="frame" x="48" y="519.33333333333337" width="75" height="15.666666666666629"/>
+                                <rect key="frame" x="48" y="517" width="75" height="15.666666666666629"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="guc-85-n4o" userLabel="비밀번호 표시">
-                                <rect key="frame" x="21" y="522.33333333333337" width="16" height="16"/>
+                                <rect key="frame" x="21" y="520" width="16" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="16" id="Jbu-kp-Gbl"/>
                                     <constraint firstAttribute="height" constant="16" id="UDE-kC-bXy"/>
