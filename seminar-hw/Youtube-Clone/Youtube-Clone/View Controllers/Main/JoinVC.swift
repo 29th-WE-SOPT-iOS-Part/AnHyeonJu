@@ -20,8 +20,8 @@ class JoinVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nextBtn.isEnabled = false
-        
         setTextField()
+        hideKeyboard()
     }
     
     
@@ -58,10 +58,11 @@ class JoinVC: UIViewController {
     
     // MARK: - Custom Method
     func setTextField() {
-        self.nameTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for:.editingChanged)
-        self.emailTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for:.editingChanged)
-        self.passwordTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for:.editingChanged)
+        [nameTextField, emailTextField, passwordTextField].forEach{
+            $0?.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        }
     }
-
-
 }
+
+
+

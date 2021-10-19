@@ -21,7 +21,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         nextBtn.isEnabled = false
         setTextField()
+        hideKeyboard()
     }
+    
     
     // MARK: - @IBAction
     @IBAction func touchUpToGoJoinView(_ sender: Any) {
@@ -42,6 +44,7 @@ class ViewController: UIViewController {
         self.present(welcomeVC, animated: true, completion: nil)
     }
     
+    
     // MARK: - Custom Method
     @objc func textFieldDidChange(_ sender:Any?) -> Void {
         if (nameTextField.hasText) && (emailTextField.hasText) && (passwordTextField.hasText){
@@ -51,13 +54,26 @@ class ViewController: UIViewController {
             }
     }
     
+    
     // MARK: - Custom Method
     func setTextField() {
-        self.nameTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for:.editingChanged)
-        self.emailTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for:.editingChanged)
-        self.passwordTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for:.editingChanged)
+        [nameTextField, emailTextField, passwordTextField].forEach{
+            $0?.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+        }
     }
 
-
-
 }
+
+// MARK: UIViewController
+extension UIViewController {
+    func hideKeyboard(){
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
+    }
+}
+
