@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginVC: UIViewController {
     
     // MARK: - Properties
     @IBOutlet weak var nameTextField: UITextField!
@@ -27,10 +27,10 @@ class ViewController: UIViewController {
     
     // MARK: - @IBAction
     @IBAction func touchUpToGoJoinView(_ sender: Any) {
-        guard let joinVC = self.storyboard?.instantiateViewController(withIdentifier: "JoinVC")
+        guard let signupVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpVC")
             else {return}
         //네비게이션 방식
-        self.navigationController?.pushViewController(joinVC, animated: true)
+        self.navigationController?.pushViewController(signupVC, animated: true)
     }
     
     
@@ -38,7 +38,6 @@ class ViewController: UIViewController {
     @IBAction func touchUpToGoWelcomeView(_ sender: Any) {
         guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
         
-        //데이터 전달
         welcomeVC.name = nameTextField.text
         welcomeVC.modalPresentationStyle = .fullScreen
         self.present(welcomeVC, animated: true, completion: nil)
@@ -48,10 +47,10 @@ class ViewController: UIViewController {
     // MARK: - Custom Method
     @objc func textFieldDidChange(_ sender:Any?) -> Void {
         if (nameTextField.hasText) && (emailTextField.hasText) && (passwordTextField.hasText){
-                nextBtn.isEnabled = true
-            } else {
-                nextBtn.isEnabled = false
-            }
+            nextBtn.isEnabled = true
+        } else {
+            nextBtn.isEnabled = false
+        }
     }
     
     

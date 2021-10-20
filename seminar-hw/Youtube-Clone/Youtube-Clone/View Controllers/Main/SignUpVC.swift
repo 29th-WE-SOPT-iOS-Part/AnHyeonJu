@@ -7,7 +7,7 @@
 
 import UIKit
 
-class JoinVC: UIViewController {
+class SignUpVC: UIViewController {
 
     // MARK: - Properties
     @IBOutlet weak var nameTextField: UITextField!
