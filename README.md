@@ -8,7 +8,7 @@
 
 | 주차 | 내용 | 브랜치 | 과제 | 리드미 |
 |:------:|:------|:------:|:------:|:------:|
-|`1주차`| iOS 컴포넌트 이해, Xcode 기본 사용법, View 화면 전환| o | o | |
+|`1주차`| iOS 컴포넌트 이해, Xcode 기본 사용법, View 화면 전환| o | o |[📚link](https://github.com/29th-WE-SOPT-iOS-Part/AnHyeonJu/blob/main/seminar-hw/Youtube-Clone/README/README-week1-hw.md) |
 |`2주차`| AutoLayout, StackView, TabBarController | o | | |
 |`3주차`| ScrollView, TableView, CollectionView | | | |
 |`4주차`| Cocoapods & Networking, REST API | | | |
