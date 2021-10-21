@@ -24,6 +24,11 @@ class SignUpVC: UIViewController {
         hideKeyboard()
     }
     
+    // MARK: - Life Cycle
+    override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            setTextFieldEmpty()
+    }
     
     // MARK: - @IBAction
     @IBAction func didTapViewPassword(_ sender: UIButton) {
@@ -40,11 +45,11 @@ class SignUpVC: UIViewController {
     // MARK: - @IBAction
     @IBAction func touchUpToGoWelcomeView(_ sender: Any) {
         guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC")as? WelcomeVC else {return}
-
-        //데이터 전달
+        
         welcomeVC.name = nameTextField.text
         welcomeVC.modalPresentationStyle = .fullScreen
         self.present(welcomeVC, animated: true, completion: nil)
+
     }
     
     // MARK: - Custom Method
@@ -55,6 +60,14 @@ class SignUpVC: UIViewController {
                 nextBtn.isEnabled = false
             }
     }
+    
+    // MARK: - Custom Method
+    func setTextFieldEmpty() {
+        [nameTextField, emailTextField, passwordTextField].forEach {
+            $0.text = ""
+        }
+    }
+    
     
     // MARK: - Custom Method
     func setTextField() {

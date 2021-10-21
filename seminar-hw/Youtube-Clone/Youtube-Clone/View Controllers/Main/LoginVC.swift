@@ -24,15 +24,19 @@ class LoginVC: UIViewController {
         hideKeyboard()
     }
     
-    
-    // MARK: - @IBAction
-    @IBAction func touchUpToGoJoinView(_ sender: Any) {
-        guard let signupVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpVC")
-            else {return}
-        //네비게이션 방식
-        self.navigationController?.pushViewController(signupVC, animated: true)
+    // MARK: - Life Cycle
+    override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            setTextFieldEmpty()
     }
     
+    // MARK: - @IBAction    
+    @IBAction func touchUpToGoSignUpView(_ sender: Any) {
+        guard let signupVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpVC")
+            else {return}
+        
+        self.navigationController?.pushViewController(signupVC, animated: true)
+    }
     
     // MARK: - @IBAction
     @IBAction func touchUpToGoWelcomeView(_ sender: Any) {
@@ -50,6 +54,13 @@ class LoginVC: UIViewController {
             nextBtn.isEnabled = true
         } else {
             nextBtn.isEnabled = false
+        }
+    }
+    
+    // MARK: - Custom Method
+    func setTextFieldEmpty() {
+        [nameTextField, emailTextField, passwordTextField].forEach {
+            $0.text = ""
         }
     }
     

@@ -204,7 +204,7 @@
                                     <fontDescription key="titleFontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="touchUpToGoJoinView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y5v-OE-LyH"/>
+                                    <action selector="touchUpToGoSignUpView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ljN-U7-fDD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXa-8b-rQr">

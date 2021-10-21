@@ -15,6 +15,7 @@ class WelcomeVC: UIViewController {
     @IBOutlet weak var anotherLoginBtn: UIButton!
     var name : String?
     
+    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,10 +33,21 @@ class WelcomeVC: UIViewController {
     
     // MARK: - @IBAction
     @IBAction func touchUpToGoAnotherLoginView(_ sender: Any) {
-        guard let anotherLoginVC = self.storyboard?.instantiateViewController(withIdentifier: "UINavigationVC")as? UINavigationVC else {return}
         
-        anotherLoginVC.modalPresentationStyle = .fullScreen
-        self.present(anotherLoginVC, animated: true, completion: nil)
+// 이전 코드인데 혹시 몰라서 삭제를 안했습니다... popToRootViewController방식을 포기할 수도 있어서....!
+//        guard let anotherLoginVC = self.storyboard?.instantiateViewController(withIdentifier: "UINavigationVC")as? UINavigationVC else {return}
+//
+//        anotherLoginVC.modalPresentationStyle = .fullScreen
+//        self.present(anotherLoginVC, animated: true, completion: nil)
+
+        
+        guard let anotherLoginVC = self.presentingViewController as? UINavigationController else { return }
+                dismiss(animated: true) {
+                    anotherLoginVC.popToRootViewController(animated: true)
+                }
+        
+
+        
     }
     
     // MARK: - Custom Method
