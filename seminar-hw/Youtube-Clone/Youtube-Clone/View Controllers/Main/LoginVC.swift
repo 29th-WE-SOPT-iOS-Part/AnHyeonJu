@@ -16,6 +16,7 @@ class LoginVC: UIViewController {
     @IBOutlet weak var signUpBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
     
+    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +25,11 @@ class LoginVC: UIViewController {
         hideKeyboard()
     }
     
-    // MARK: - Life Cycle
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
             setTextFieldEmpty()
     }
+    
     
     // MARK: - @IBAction    
     @IBAction func touchUpToGoSignUpView(_ sender: Any) {
@@ -38,7 +39,6 @@ class LoginVC: UIViewController {
         self.navigationController?.pushViewController(signupVC, animated: true)
     }
     
-    // MARK: - @IBAction
     @IBAction func touchUpToGoWelcomeView(_ sender: Any) {
         guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
         
@@ -50,22 +50,15 @@ class LoginVC: UIViewController {
     
     // MARK: - Custom Method
     @objc func textFieldDidChange(_ sender:Any?) -> Void {
-        if (nameTextField.hasText) && (emailTextField.hasText) && (passwordTextField.hasText){
-            nextBtn.isEnabled = true
-        } else {
-            nextBtn.isEnabled = false
-        }
+        nextBtn.isEnabled = nameTextField.hasText && emailTextField.hasText && passwordTextField.hasText
     }
     
-    // MARK: - Custom Method
     func setTextFieldEmpty() {
         [nameTextField, emailTextField, passwordTextField].forEach {
             $0.text = ""
         }
     }
     
-    
-    // MARK: - Custom Method
     func setTextField() {
         [nameTextField, emailTextField, passwordTextField].forEach{
             $0?.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
@@ -76,13 +69,13 @@ class LoginVC: UIViewController {
 
 // MARK: UIViewController
 extension UIViewController {
-    func hideKeyboard(){
+    func hideKeyboard() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         
         view.addGestureRecognizer(tap)
     }
     
-    @objc func dismissKeyboard(){
+    @objc func dismissKeyboard() {
         view.endEditing(true)
     }
 }

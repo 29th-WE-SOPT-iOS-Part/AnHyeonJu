@@ -76,7 +76,7 @@
                                 <rect key="frame" x="129" y="110" width="118" height="40"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 표시" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXe-aD-v6X">
-                                <rect key="frame" x="48" y="517" width="75" height="21"/>
+                                <rect key="frame" x="49" y="517" width="74" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="N86-Ha-5ea"/>
                                     <constraint firstAttribute="height" constant="21" id="Rg0-NE-Le4"/>
@@ -86,7 +86,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="guc-85-n4o" userLabel="비밀번호 표시">
-                                <rect key="frame" x="21" y="520" width="16" height="16"/>
+                                <rect key="frame" x="22" y="520" width="16" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="16" id="Jbu-kp-Gbl"/>
                                     <constraint firstAttribute="height" constant="16" id="UDE-kC-bXy"/>
@@ -124,10 +124,10 @@
                             <constraint firstItem="itz-99-8Fu" firstAttribute="leading" secondItem="ZcL-Fx-b6T" secondAttribute="leading" constant="129" id="UOJ-Oy-HqB"/>
                             <constraint firstItem="6up-jE-rIo" firstAttribute="top" secondItem="itz-99-8Fu" secondAttribute="bottom" constant="23" id="ZRq-ZF-t63"/>
                             <constraint firstItem="l2M-Hf-1Jj" firstAttribute="top" secondItem="Jxc-Q9-pAo" secondAttribute="bottom" constant="64" id="aUd-ls-hWF"/>
-                            <constraint firstItem="guc-85-n4o" firstAttribute="leading" secondItem="ZcL-Fx-b6T" secondAttribute="leading" constant="21" id="avH-BS-SxZ"/>
                             <constraint firstItem="ZcL-Fx-b6T" firstAttribute="trailing" secondItem="Jxc-Q9-pAo" secondAttribute="trailing" constant="22" id="cgC-9f-UV3"/>
                             <constraint firstItem="YXl-ax-rp2" firstAttribute="top" secondItem="PxX-oy-cgk" secondAttribute="bottom" constant="17" id="eNm-dG-uXM"/>
                             <constraint firstItem="QXe-aD-v6X" firstAttribute="leading" secondItem="guc-85-n4o" secondAttribute="trailing" constant="11" id="g80-hR-Dk4"/>
+                            <constraint firstItem="guc-85-n4o" firstAttribute="leading" secondItem="PxX-oy-cgk" secondAttribute="leading" id="gtY-3T-5uF"/>
                             <constraint firstItem="guc-85-n4o" firstAttribute="top" secondItem="Jxc-Q9-pAo" secondAttribute="bottom" constant="17" id="mPo-3N-zLT"/>
                             <constraint firstItem="itz-99-8Fu" firstAttribute="top" secondItem="LzI-nW-MEh" secondAttribute="top" constant="110" id="pE5-gh-H1X"/>
                             <constraint firstItem="6up-jE-rIo" firstAttribute="leading" secondItem="ZcL-Fx-b6T" secondAttribute="leading" constant="147" id="qfH-dO-ldU"/>
@@ -193,32 +193,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIn-rR-v3r">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIn-rR-v3r">
                                 <rect key="frame" x="22" y="585" width="68" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="P5c-rW-nZ3"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
                                 <color key="tintColor" name="Blue"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="계정 만들기">
-                                    <fontDescription key="titleFontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="계정 만들기">
+                                    <color key="titleColor" name="Blue"/>
+                                </state>
                                 <connections>
                                     <action selector="touchUpToGoSignUpView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ljN-U7-fDD"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXa-8b-rQr">
-                                <rect key="frame" x="279" y="576" width="74" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="uxA-3M-8LX"/>
-                                </constraints>
-                                <color key="tintColor" name="Blue"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="다음">
-                                    <fontDescription key="titleFontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="touchUpToGoWelcomeView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ahz-Hh-YME"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YouTube도 이동하며 계속하세요.  앱 및 Safari에 서도 Google 서비스에 로그인 됩니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9WT-YP-d1F">
@@ -230,20 +217,31 @@
                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
                                 <color key="highlightedColor" systemColor="labelColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXa-8b-rQr">
+                                <rect key="frame" x="279" y="575" width="74" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="0eC-oI-UUC"/>
+                                    <constraint firstAttribute="height" constant="42" id="EjK-9j-WRC"/>
+                                </constraints>
+                                <color key="tintColor" name="Blue"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="다음">
+                                    <fontDescription key="titleFontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchUpToGoWelcomeView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ahz-Hh-YME"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gXa-8b-rQr" firstAttribute="leading" secondItem="bIn-rR-v3r" secondAttribute="trailing" constant="189" id="6pc-rb-VvR"/>
-                            <constraint firstAttribute="trailing" secondItem="bIn-rR-v3r" secondAttribute="trailing" constant="285" id="8C9-HO-7UY"/>
                             <constraint firstItem="bVc-Cb-n50" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="129" id="A0C-pz-73G"/>
                             <constraint firstItem="tyV-Li-jnE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="157" id="G4b-KU-Tox"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tyV-Li-jnE" secondAttribute="trailing" constant="157" id="Ggq-Y7-X9M"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uw7-uE-eIw" secondAttribute="trailing" constant="22" id="Hnn-jb-wfl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9WT-YP-d1F" secondAttribute="trailing" constant="44" id="Hs4-0x-caA"/>
-                            <constraint firstItem="gXa-8b-rQr" firstAttribute="top" secondItem="uw7-uE-eIw" secondAttribute="bottom" constant="64" id="LbH-WE-Nhz"/>
                             <constraint firstItem="7Jr-GC-hqJ" firstAttribute="top" secondItem="VEf-2n-9Zt" secondAttribute="bottom" constant="17" id="Nkf-yo-n04"/>
-                            <constraint firstItem="bIn-rR-v3r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="RA7-Sk-KNE"/>
                             <constraint firstItem="9WT-YP-d1F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="S50-Ho-VYO"/>
                             <constraint firstItem="bVc-Cb-n50" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="119" id="SYK-i2-ZRP"/>
                             <constraint firstItem="tyV-Li-jnE" firstAttribute="top" secondItem="bVc-Cb-n50" secondAttribute="bottom" constant="23" id="V6Q-Nn-egW"/>
@@ -251,12 +249,15 @@
                             <constraint firstItem="VEf-2n-9Zt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="eMu-nd-vq3"/>
                             <constraint firstItem="9WT-YP-d1F" firstAttribute="top" secondItem="tyV-Li-jnE" secondAttribute="bottom" constant="14" id="ebe-44-49z"/>
                             <constraint firstItem="bIn-rR-v3r" firstAttribute="top" secondItem="uw7-uE-eIw" secondAttribute="bottom" constant="73" id="fFo-15-lFn"/>
+                            <constraint firstItem="bIn-rR-v3r" firstAttribute="leading" secondItem="VEf-2n-9Zt" secondAttribute="leading" id="fQt-pB-70c"/>
+                            <constraint firstAttribute="trailing" secondItem="bIn-rR-v3r" secondAttribute="trailing" constant="285" id="fij-EF-1K1"/>
                             <constraint firstItem="VEf-2n-9Zt" firstAttribute="top" secondItem="9WT-YP-d1F" secondAttribute="bottom" constant="68" id="gNF-j8-huL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Jr-GC-hqJ" secondAttribute="trailing" constant="22" id="hfq-Z1-0hN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bVc-Cb-n50" secondAttribute="trailing" constant="128" id="j5a-A4-A3o"/>
                             <constraint firstItem="7Jr-GC-hqJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="qIg-IG-cFp"/>
                             <constraint firstItem="uw7-uE-eIw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="qfs-gm-AKJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VEf-2n-9Zt" secondAttribute="trailing" constant="22" id="xCT-vd-VFZ"/>
+                            <constraint firstItem="bIn-rR-v3r" firstAttribute="centerY" secondItem="gXa-8b-rQr" secondAttribute="centerY" id="ydd-4d-nTB"/>
                             <constraint firstItem="uw7-uE-eIw" firstAttribute="top" secondItem="7Jr-GC-hqJ" secondAttribute="bottom" constant="17" id="z6w-8R-On4"/>
                         </constraints>
                     </view>
@@ -353,10 +354,10 @@
             </objects>
             <point key="canvasLocation" x="1717.5999999999999" y="82.758620689655174"/>
         </scene>
-        <!--NavigationVC-->
+        <!--Navigation Controller-->
         <scene sceneID="WT4-Rh-G3h">
             <objects>
-                <navigationController storyboardIdentifier="UINavigationVC" automaticallyAdjustsScrollViewInsets="NO" id="ghe-o0-70G" customClass="UINavigationVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="UINavigationC" automaticallyAdjustsScrollViewInsets="NO" id="ghe-o0-70G" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DPd-Lz-qZi">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>

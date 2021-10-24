@@ -22,16 +22,16 @@ class WelcomeVC: UIViewController {
         setNameInLabel()
     }
     
+    
     // MARK: - @IBAction
     @IBAction func touchUpToGoTabBarView(_ sender: Any) {
         let tabbar = UIStoryboard.init(name: "Tabbar", bundle: nil)
-        guard let tabBarController = tabbar.instantiateViewController(withIdentifier: "CustomTabBarController")as? CustomTabBarController else {return}
+        guard let tabBarController = tabbar.instantiateViewController(withIdentifier: "MainTBC")as? MainTBC else {return}
         
         tabBarController.modalPresentationStyle = .fullScreen
         self.present(tabBarController, animated: true, completion: nil)
     }
     
-    // MARK: - @IBAction
     @IBAction func touchUpToGoAnotherLoginView(_ sender: Any) {
         
 // 이전 코드인데 혹시 몰라서 삭제를 안했습니다... popToRootViewController방식을 포기할 수도 있어서....!
@@ -40,18 +40,17 @@ class WelcomeVC: UIViewController {
 //        anotherLoginVC.modalPresentationStyle = .fullScreen
 //        self.present(anotherLoginVC, animated: true, completion: nil)
 
+//
+//        guard let anotherLoginVC = self.presentingViewController as? UINavigationController else { return }
+//                dismiss(animated: true) {
+//                    anotherLoginVC.popToRootViewController(animated: true)
+//                }
         
-        guard let anotherLoginVC = self.presentingViewController as? UINavigationController else { return }
-                dismiss(animated: true) {
-                    anotherLoginVC.popToRootViewController(animated: true)
-                }
-        
-
-        
+        self.dismiss(animated: true, completion: nil)
     }
     
     // MARK: - Custom Method
-    func setNameInLabel(){
+    func setNameInLabel() {
         if let userName = name {
             nameLabel.text = userName + "님 환영합니다."
             nameLabel.sizeToFit()

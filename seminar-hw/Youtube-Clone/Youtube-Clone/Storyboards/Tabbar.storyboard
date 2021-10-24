@@ -11,7 +11,7 @@
         <!--보관함-->
         <scene sceneID="okL-Sk-woV">
             <objects>
-                <viewController storyboardIdentifier="PinkVC" id="Ovy-Fv-0Td" customClass="PinkVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StoreVC" id="Ovy-Fv-0Td" customClass="StoreVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wkL-IR-Odw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
         <!--추가-->
         <scene sceneID="0ou-WY-5et">
             <objects>
-                <viewController storyboardIdentifier="YellowVC" id="pA1-4s-1uq" customClass="YellowVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlusVC" id="pA1-4s-1uq" customClass="PlusVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w2v-6i-XsT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,7 @@
         <!--구독-->
         <scene sceneID="sWo-MZ-NRZ">
             <objects>
-                <viewController storyboardIdentifier="GreenVC" id="IQo-we-Hey" customClass="GreenVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SubscribeVC" id="IQo-we-Hey" customClass="SubscribeVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m1u-RU-119">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,7 +59,7 @@
         <!--홈-->
         <scene sceneID="UjS-Si-Mqu">
             <objects>
-                <viewController storyboardIdentifier="OrangeVC" id="6fP-B5-shv" customClass="OrangeVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="6fP-B5-shv" customClass="HomeVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="poz-2g-7eR" customClass="Orange">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,7 +75,7 @@
         <!--Shorts-->
         <scene sceneID="O7r-RQ-6Ob">
             <objects>
-                <viewController storyboardIdentifier="PurpleVC" id="Bok-XD-spi" customClass="PurpleVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShortsVC" id="Bok-XD-spi" customClass="ShortsVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hO6-DI-dGu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,10 +88,10 @@
             </objects>
             <point key="canvasLocation" x="4721.739130434783" y="398.4375"/>
         </scene>
-        <!--Custom Tab Bar Controller-->
+        <!--MainTBC-->
         <scene sceneID="aFd-5V-ffm">
             <objects>
-                <tabBarController storyboardIdentifier="CustomTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="W7R-WM-YbF" customClass="CustomTabBarController" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTBC" automaticallyAdjustsScrollViewInsets="NO" id="W7R-WM-YbF" customClass="MainTBC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yiy-7k-5Oo">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

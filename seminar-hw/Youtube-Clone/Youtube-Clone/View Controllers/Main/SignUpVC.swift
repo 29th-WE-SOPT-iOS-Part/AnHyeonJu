@@ -16,6 +16,7 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var showPasswordBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
     
+    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +25,11 @@ class SignUpVC: UIViewController {
         hideKeyboard()
     }
     
-    // MARK: - Life Cycle
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
             setTextFieldEmpty()
     }
+    
     
     // MARK: - @IBAction
     @IBAction func didTapViewPassword(_ sender: UIButton) {
@@ -41,37 +42,33 @@ class SignUpVC: UIViewController {
         }
     }
     
-
-    // MARK: - @IBAction
     @IBAction func touchUpToGoWelcomeView(_ sender: Any) {
         guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC")as? WelcomeVC else {return}
         
         welcomeVC.name = nameTextField.text
         welcomeVC.modalPresentationStyle = .fullScreen
-        self.present(welcomeVC, animated: true, completion: nil)
-
+        
+        //샤라웃 투 지은님... 감사합니다...
+        self.present(welcomeVC, animated: true, completion: {
+            //confirmVC로 modal present와 동시에 navigation stack에서 signUpVC를 pop해줘서 rootVC로 돌아가게끔 해줍니다. (popViewController, popToRootViewController 모두 가능)
+            self.navigationController?.popToRootViewController(animated: true)
+        })
     }
+    
     
     // MARK: - Custom Method
     @objc func textFieldDidChange(_ sender:Any?) -> Void {
-        if (nameTextField.hasText) && (emailTextField.hasText) && (passwordTextField.hasText){
-                nextBtn.isEnabled = true
-            } else {
-                nextBtn.isEnabled = false
-            }
+        nextBtn.isEnabled = nameTextField.hasText && emailTextField.hasText && passwordTextField.hasText
     }
     
-    // MARK: - Custom Method
     func setTextFieldEmpty() {
         [nameTextField, emailTextField, passwordTextField].forEach {
             $0.text = ""
         }
     }
     
-    
-    // MARK: - Custom Method
     func setTextField() {
-        [nameTextField, emailTextField, passwordTextField].forEach{
+        [nameTextField, emailTextField, passwordTextField].forEach {
             $0?.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         }
     }
