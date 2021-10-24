@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ghe-o0-70G">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+        <array key="SF-Pro-Display-Semibold.otf">
+            <string>SFProDisplay-Semibold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Sign UpVC-->
+        <scene sceneID="IXJ-LE-cza">
+            <objects>
+                <viewController storyboardIdentifier="SignUpVC" id="GgB-Li-6O6" customClass="SignUpVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LzI-nW-MEh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회원가입" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6up-jE-rIo">
+                                <rect key="frame" x="147" y="173" width="81" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="CmS-6M-gRs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="22"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름을 입력해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PxX-oy-cgk">
+                                <rect key="frame" x="22" y="325" width="331" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="YIU-fe-S0e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일 또는 휴대전화" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YXl-ax-rp2">
+                                <rect key="frame" x="22" y="390" width="331" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="w8x-7b-Ceo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jxc-Q9-pAo">
+                                <rect key="frame" x="22" y="455" width="331" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Ior-dS-pzr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2M-Hf-1Jj">
+                                <rect key="frame" x="22" y="567" width="331" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="1pp-M6-Pen"/>
+                                </constraints>
+                                <color key="tintColor" name="Blue"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="다음">
+                                    <fontDescription key="titleFontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchUpToGoWelcomeView:" destination="GgB-Li-6O6" eventType="touchUpInside" id="dkP-Tb-0FD"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="google" translatesAutoresizingMaskIntoConstraints="NO" id="itz-99-8Fu">
+                                <rect key="frame" x="129" y="110" width="118" height="40"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 표시" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXe-aD-v6X">
+                                <rect key="frame" x="49" y="517" width="74" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="N86-Ha-5ea"/>
+                                    <constraint firstAttribute="height" constant="21" id="Rg0-NE-Le4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="guc-85-n4o" userLabel="비밀번호 표시">
+                                <rect key="frame" x="22" y="520" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="Jbu-kp-Gbl"/>
+                                    <constraint firstAttribute="height" constant="16" id="UDE-kC-bXy"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="square" catalog="system">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content=" 비밀번호 표시">
+                                            <attributes>
+                                                <color key="NSColor" systemColor="labelColor"/>
+                                                <font key="NSFont" metaFont="cellTitle"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <state key="selected" image="checkmark.square.fill" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="square" catalog="system"/>
+                                <connections>
+                                    <action selector="didTapViewPassword:" destination="GgB-Li-6O6" eventType="touchUpInside" id="HbA-Ld-rdk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZcL-Fx-b6T"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="l2M-Hf-1Jj" firstAttribute="leading" secondItem="ZcL-Fx-b6T" secondAttribute="leading" constant="22" id="3Tb-Ky-jxr"/>
+                            <constraint firstItem="Jxc-Q9-pAo" firstAttribute="leading" secondItem="ZcL-Fx-b6T" secondAttribute="leading" constant="22" id="8gR-Fj-4Fu"/>
+                            <constraint firstItem="ZcL-Fx-b6T" firstAttribute="trailing" secondItem="YXl-ax-rp2" secondAttribute="trailing" constant="22" id="AJn-gf-iPD"/>
+                            <constraint firstItem="YXl-ax-rp2" firstAttribute="leading" secondItem="ZcL-Fx-b6T" secondAttribute="leading" constant="22" id="F9m-hc-Rh5"/>
+                            <constraint firstItem="Jxc-Q9-pAo" firstAttribute="top" secondItem="YXl-ax-rp2" secondAttribute="bottom" constant="17" id="HDr-Id-Y52"/>
+                            <constraint firstItem="ZcL-Fx-b6T" firstAttribute="trailing" secondItem="QXe-aD-v6X" secondAttribute="trailing" constant="252" id="NDn-eE-aUy"/>
+                            <constraint firstItem="ZcL-Fx-b6T" firstAttribute="trailing" secondItem="PxX-oy-cgk" secondAttribute="trailing" constant="22" id="PGW-MK-lIi"/>
+                            <constraint firstItem="ZcL-Fx-b6T" firstAttribute="trailing" secondItem="6up-jE-rIo" secondAttribute="trailing" constant="147" id="PHa-Os-Q7z"/>
+                            <constraint firstItem="QXe-aD-v6X" firstAttribute="top" secondItem="Jxc-Q9-pAo" secondAttribute="bottom" constant="14" id="Pev-za-UEj"/>
+                            <constraint firstItem="itz-99-8Fu" firstAttribute="leading" secondItem="ZcL-Fx-b6T" secondAttribute="leading" constant="129" id="UOJ-Oy-HqB"/>
+                            <constraint firstItem="6up-jE-rIo" firstAttribute="top" secondItem="itz-99-8Fu" secondAttribute="bottom" constant="23" id="ZRq-ZF-t63"/>
+                            <constraint firstItem="l2M-Hf-1Jj" firstAttribute="top" secondItem="Jxc-Q9-pAo" secondAttribute="bottom" constant="64" id="aUd-ls-hWF"/>
+                            <constraint firstItem="ZcL-Fx-b6T" firstAttribute="trailing" secondItem="Jxc-Q9-pAo" secondAttribute="trailing" constant="22" id="cgC-9f-UV3"/>
+                            <constraint firstItem="YXl-ax-rp2" firstAttribute="top" secondItem="PxX-oy-cgk" secondAttribute="bottom" constant="17" id="eNm-dG-uXM"/>
+                            <constraint firstItem="QXe-aD-v6X" firstAttribute="leading" secondItem="guc-85-n4o" secondAttribute="trailing" constant="11" id="g80-hR-Dk4"/>
+                            <constraint firstItem="guc-85-n4o" firstAttribute="leading" secondItem="PxX-oy-cgk" secondAttribute="leading" id="gtY-3T-5uF"/>
+                            <constraint firstItem="guc-85-n4o" firstAttribute="top" secondItem="Jxc-Q9-pAo" secondAttribute="bottom" constant="17" id="mPo-3N-zLT"/>
+                            <constraint firstItem="itz-99-8Fu" firstAttribute="top" secondItem="LzI-nW-MEh" secondAttribute="top" constant="110" id="pE5-gh-H1X"/>
+                            <constraint firstItem="6up-jE-rIo" firstAttribute="leading" secondItem="ZcL-Fx-b6T" secondAttribute="leading" constant="147" id="qfH-dO-ldU"/>
+                            <constraint firstItem="PxX-oy-cgk" firstAttribute="leading" secondItem="ZcL-Fx-b6T" secondAttribute="leading" constant="22" id="qpk-Y8-IcD"/>
+                            <constraint firstItem="ZcL-Fx-b6T" firstAttribute="trailing" secondItem="itz-99-8Fu" secondAttribute="trailing" constant="128" id="rzB-8b-teq"/>
+                            <constraint firstItem="ZcL-Fx-b6T" firstAttribute="trailing" secondItem="l2M-Hf-1Jj" secondAttribute="trailing" constant="22" id="sqT-Jv-lb8"/>
+                            <constraint firstItem="PxX-oy-cgk" firstAttribute="top" secondItem="6up-jE-rIo" secondAttribute="bottom" constant="127.99999999999997" id="yUS-fw-Ebp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="YXl-ax-rp2" id="1og-AH-SbW"/>
+                        <outlet property="nameTextField" destination="PxX-oy-cgk" id="Y6t-Mc-aar"/>
+                        <outlet property="nextBtn" destination="l2M-Hf-1Jj" id="qHB-Wr-DQO"/>
+                        <outlet property="passwordTextField" destination="Jxc-Q9-pAo" id="cbf-c9-0qh"/>
+                        <outlet property="showPasswordBtn" destination="guc-85-n4o" id="u9i-8X-cq9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pv8-yK-Xme" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885.60000000000002" y="82.758620689655174"/>
+        </scene>
+        <!--LoginVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" id="BYZ-38-t0r" customClass="LoginVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="google" translatesAutoresizingMaskIntoConstraints="NO" id="bVc-Cb-n50">
+                                <rect key="frame" x="129" y="119" width="118" height="40"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyV-Li-jnE">
+                                <rect key="frame" x="157" y="182" width="61" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="zi8-V0-kwH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름을 입력해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VEf-2n-9Zt">
+                                <rect key="frame" x="22" y="334" width="331" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="CiD-rh-NHN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일 또는 휴대전화" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Jr-GC-hqJ">
+                                <rect key="frame" x="22" y="399" width="331" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="7DQ-9r-NZk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uw7-uE-eIw">
+                                <rect key="frame" x="22" y="464" width="331" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Me2-6x-5Ls"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIn-rR-v3r">
+                                <rect key="frame" x="22" y="585" width="68" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="P5c-rW-nZ3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                                <color key="tintColor" name="Blue"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="계정 만들기">
+                                    <color key="titleColor" name="Blue"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchUpToGoSignUpView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ljN-U7-fDD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YouTube도 이동하며 계속하세요.  앱 및 Safari에 서도 Google 서비스에 로그인 됩니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9WT-YP-d1F">
+                                <rect key="frame" x="44" y="220" width="287" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="287" id="0FI-UP-LWw"/>
+                                    <constraint firstAttribute="height" constant="46" id="4bu-Le-Wib"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                                <color key="highlightedColor" systemColor="labelColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXa-8b-rQr">
+                                <rect key="frame" x="279" y="575" width="74" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="0eC-oI-UUC"/>
+                                    <constraint firstAttribute="height" constant="42" id="EjK-9j-WRC"/>
+                                </constraints>
+                                <color key="tintColor" name="Blue"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="다음">
+                                    <fontDescription key="titleFontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchUpToGoWelcomeView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ahz-Hh-YME"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bVc-Cb-n50" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="129" id="A0C-pz-73G"/>
+                            <constraint firstItem="tyV-Li-jnE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="157" id="G4b-KU-Tox"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tyV-Li-jnE" secondAttribute="trailing" constant="157" id="Ggq-Y7-X9M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uw7-uE-eIw" secondAttribute="trailing" constant="22" id="Hnn-jb-wfl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9WT-YP-d1F" secondAttribute="trailing" constant="44" id="Hs4-0x-caA"/>
+                            <constraint firstItem="7Jr-GC-hqJ" firstAttribute="top" secondItem="VEf-2n-9Zt" secondAttribute="bottom" constant="17" id="Nkf-yo-n04"/>
+                            <constraint firstItem="9WT-YP-d1F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="S50-Ho-VYO"/>
+                            <constraint firstItem="bVc-Cb-n50" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="119" id="SYK-i2-ZRP"/>
+                            <constraint firstItem="tyV-Li-jnE" firstAttribute="top" secondItem="bVc-Cb-n50" secondAttribute="bottom" constant="23" id="V6Q-Nn-egW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gXa-8b-rQr" secondAttribute="trailing" constant="22" id="VbC-nO-ceK"/>
+                            <constraint firstItem="VEf-2n-9Zt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="eMu-nd-vq3"/>
+                            <constraint firstItem="9WT-YP-d1F" firstAttribute="top" secondItem="tyV-Li-jnE" secondAttribute="bottom" constant="14" id="ebe-44-49z"/>
+                            <constraint firstItem="bIn-rR-v3r" firstAttribute="top" secondItem="uw7-uE-eIw" secondAttribute="bottom" constant="73" id="fFo-15-lFn"/>
+                            <constraint firstItem="bIn-rR-v3r" firstAttribute="leading" secondItem="VEf-2n-9Zt" secondAttribute="leading" id="fQt-pB-70c"/>
+                            <constraint firstAttribute="trailing" secondItem="bIn-rR-v3r" secondAttribute="trailing" constant="285" id="fij-EF-1K1"/>
+                            <constraint firstItem="VEf-2n-9Zt" firstAttribute="top" secondItem="9WT-YP-d1F" secondAttribute="bottom" constant="68" id="gNF-j8-huL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Jr-GC-hqJ" secondAttribute="trailing" constant="22" id="hfq-Z1-0hN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bVc-Cb-n50" secondAttribute="trailing" constant="128" id="j5a-A4-A3o"/>
+                            <constraint firstItem="7Jr-GC-hqJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="qIg-IG-cFp"/>
+                            <constraint firstItem="uw7-uE-eIw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="qfs-gm-AKJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VEf-2n-9Zt" secondAttribute="trailing" constant="22" id="xCT-vd-VFZ"/>
+                            <constraint firstItem="bIn-rR-v3r" firstAttribute="centerY" secondItem="gXa-8b-rQr" secondAttribute="centerY" id="ydd-4d-nTB"/>
+                            <constraint firstItem="uw7-uE-eIw" firstAttribute="top" secondItem="7Jr-GC-hqJ" secondAttribute="bottom" constant="17" id="z6w-8R-On4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ghG-nO-gnd"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="7Jr-GC-hqJ" id="s4R-i0-wHv"/>
+                        <outlet property="nameTextField" destination="VEf-2n-9Zt" id="llT-oW-qUX"/>
+                        <outlet property="nextBtn" destination="gXa-8b-rQr" id="Nqs-kW-VsM"/>
+                        <outlet property="passwordTextField" destination="uw7-uE-eIw" id="lpk-FR-4ab"/>
+                        <outlet property="signUpBtn" destination="bIn-rR-v3r" id="Vkm-jV-hkc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13.6" y="83.497536945812811"/>
+        </scene>
+        <!--WelcomeVC-->
+        <scene sceneID="fW2-p9-Cp2">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeVC" id="ETG-39-wGr" customClass="WelcomeVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dWh-u0-lUs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOr-Lh-1bG">
+                                <rect key="frame" x="22" y="442" width="331" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="868-qi-cWE"/>
+                                </constraints>
+                                <color key="tintColor" name="Color"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="확인">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="Blue"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchUpToGoTabBarView:" destination="ETG-39-wGr" eventType="touchUpInside" id="xKX-NG-4H2"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="google" translatesAutoresizingMaskIntoConstraints="NO" id="Phe-Ic-9Pt">
+                                <rect key="frame" x="129" y="248" width="118" height="40"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neZ-ew-KpE">
+                                <rect key="frame" x="112" y="507" width="151" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="bCz-aA-APL"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다른 계정으로 로그인하기">
+                                    <fontDescription key="titleFontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="12"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchUpToGoAnotherLoginView:" destination="ETG-39-wGr" eventType="touchUpInside" id="FJ3-QA-Isx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000님      환영합니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y31-L7-U5f">
+                                <rect key="frame" x="123" y="311" width="128" height="78"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="9Gs-8h-rpp"/>
+                                    <constraint firstAttribute="height" constant="78" id="xgh-2r-XRV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jWE-gl-uBd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="neZ-ew-KpE" firstAttribute="leading" secondItem="jWE-gl-uBd" secondAttribute="leading" constant="112" id="1Su-zN-sCJ"/>
+                            <constraint firstItem="jWE-gl-uBd" firstAttribute="trailing" secondItem="neZ-ew-KpE" secondAttribute="trailing" constant="112" id="Iko-Xr-tbB"/>
+                            <constraint firstItem="Phe-Ic-9Pt" firstAttribute="top" secondItem="dWh-u0-lUs" secondAttribute="top" constant="248" id="L9x-0z-4Zz"/>
+                            <constraint firstItem="neZ-ew-KpE" firstAttribute="top" secondItem="QOr-Lh-1bG" secondAttribute="bottom" constant="23" id="P47-vz-nNF"/>
+                            <constraint firstItem="jWE-gl-uBd" firstAttribute="trailing" secondItem="Phe-Ic-9Pt" secondAttribute="trailing" constant="128" id="ZLe-q1-KBj"/>
+                            <constraint firstItem="jWE-gl-uBd" firstAttribute="trailing" secondItem="QOr-Lh-1bG" secondAttribute="trailing" constant="22" id="hNC-Rn-XX6"/>
+                            <constraint firstItem="y31-L7-U5f" firstAttribute="top" secondItem="Phe-Ic-9Pt" secondAttribute="bottom" constant="23" id="hm6-bX-oSH"/>
+                            <constraint firstItem="QOr-Lh-1bG" firstAttribute="leading" secondItem="jWE-gl-uBd" secondAttribute="leading" constant="22" id="jai-BD-D71"/>
+                            <constraint firstItem="Phe-Ic-9Pt" firstAttribute="leading" secondItem="jWE-gl-uBd" secondAttribute="leading" constant="129" id="pUJ-eh-4zk"/>
+                            <constraint firstItem="QOr-Lh-1bG" firstAttribute="top" secondItem="y31-L7-U5f" secondAttribute="bottom" constant="53" id="pYa-bS-WJ3"/>
+                            <constraint firstItem="y31-L7-U5f" firstAttribute="leading" secondItem="jWE-gl-uBd" secondAttribute="leading" constant="123" id="vHB-Bs-aYO"/>
+                            <constraint firstItem="jWE-gl-uBd" firstAttribute="trailing" secondItem="y31-L7-U5f" secondAttribute="trailing" constant="124" id="wSR-NS-ADE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="anotherLoginBtn" destination="neZ-ew-KpE" id="zyo-ja-Nns"/>
+                        <outlet property="checkBtn" destination="QOr-Lh-1bG" id="7U9-hU-T02"/>
+                        <outlet property="nameLabel" destination="y31-L7-U5f" id="Gym-Qx-YRg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="atu-tk-W3d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1717.5999999999999" y="82.758620689655174"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WT4-Rh-G3h">
+            <objects>
+                <navigationController storyboardIdentifier="UINavigationC" automaticallyAdjustsScrollViewInsets="NO" id="ghe-o0-70G" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DPd-Lz-qZi">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8hS-gd-SHC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zr2-Ed-FRm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-956" y="83.497536945812811"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
+        <image name="google" width="118" height="40"/>
+        <image name="square" catalog="system" width="128" height="114"/>
+        <namedColor name="Blue">
+            <color red="0.25900000333786011" green="0.5220000147819519" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
