@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RankingTableViewCell" id="KGk-i7-Jjw" customClass="RankingTableViewCell" customModule="_9th_week3_seminar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coovIcon" translatesAutoresizingMaskIntoConstraints="NO" id="KdY-3E-obs">
+                        <rect key="frame" x="16" y="9" width="62" height="62"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="KdY-3E-obs" secondAttribute="height" multiplier="1:1" id="Oay-wg-uBR"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9b-Zd-wEr">
+                        <rect key="frame" x="93" y="15" width="8" height="22"/>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전자예방접종증명서" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRn-J3-Mnl">
+                        <rect key="frame" x="111" y="42" width="94" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeu-gH-3w5">
+                        <rect key="frame" x="279" y="25" width="72" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="72" id="Ffh-KO-3lT"/>
+                            <constraint firstAttribute="height" constant="28" id="eCN-al-SwI"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Button" image="openButtonIcon"/>
+                        <buttonConfiguration key="configuration" style="plain" image="openButtonIcon"/>
+                    </button>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P3G-1Q-zGH">
+                        <rect key="frame" x="0.0" y="79" width="375" height="1"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="T1D-Zg-rwf"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="질병 관리청" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8d-sr-2SX">
+                        <rect key="frame" x="110" y="16" width="83" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="wRn-J3-Mnl" firstAttribute="leading" secondItem="KdY-3E-obs" secondAttribute="trailing" constant="33" id="61w-QE-jgx"/>
+                    <constraint firstItem="R9b-Zd-wEr" firstAttribute="leading" secondItem="KdY-3E-obs" secondAttribute="trailing" constant="15" id="BmI-WD-Rqr"/>
+                    <constraint firstItem="Z8d-sr-2SX" firstAttribute="leading" secondItem="R9b-Zd-wEr" secondAttribute="trailing" constant="9" id="L8G-bt-Le7"/>
+                    <constraint firstItem="KdY-3E-obs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="Lit-gm-AqC"/>
+                    <constraint firstAttribute="bottom" secondItem="P3G-1Q-zGH" secondAttribute="bottom" id="P6y-sj-VMU"/>
+                    <constraint firstItem="P3G-1Q-zGH" firstAttribute="top" secondItem="qeu-gH-3w5" secondAttribute="bottom" constant="26" id="W2S-RS-Loq"/>
+                    <constraint firstItem="P3G-1Q-zGH" firstAttribute="top" secondItem="R9b-Zd-wEr" secondAttribute="bottom" constant="42" id="c6r-6V-1ys"/>
+                    <constraint firstItem="wRn-J3-Mnl" firstAttribute="top" secondItem="Z8d-sr-2SX" secondAttribute="bottom" constant="4" id="hTj-n3-6wN"/>
+                    <constraint firstItem="P3G-1Q-zGH" firstAttribute="top" secondItem="wRn-J3-Mnl" secondAttribute="bottom" constant="22" id="mAQ-d8-Dcv"/>
+                    <constraint firstAttribute="trailing" secondItem="qeu-gH-3w5" secondAttribute="trailing" constant="24" id="nBa-ax-Zl4"/>
+                    <constraint firstAttribute="bottom" secondItem="KdY-3E-obs" secondAttribute="bottom" constant="9" id="nPZ-kd-fpY"/>
+                    <constraint firstItem="KdY-3E-obs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="vkd-3k-OER"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="appIconImageView" destination="KdY-3E-obs" id="W0D-EN-XSl"/>
+                <outlet property="openButton" destination="qeu-gH-3w5" id="D9V-ie-30d"/>
+                <outlet property="rankLabel" destination="R9b-Zd-wEr" id="POn-NF-BO9"/>
+                <outlet property="subTitleLabel" destination="wRn-J3-Mnl" id="CZf-DK-DQh"/>
+                <outlet property="titleLabel" destination="Z8d-sr-2SX" id="RAN-TN-jCu"/>
+            </connections>
+            <point key="canvasLocation" x="138.40579710144928" y="79.6875"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="coovIcon" width="63" height="63.5"/>
+        <image name="openButtonIcon" width="72" height="28"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
