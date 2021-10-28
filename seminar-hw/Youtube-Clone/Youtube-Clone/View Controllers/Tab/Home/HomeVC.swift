@@ -61,9 +61,6 @@ class HomeVC: UIViewController {
             HomeCollectionContentData(shortsImageName: "ggamju8", shortsTitleName: "DesignPart")
         ])
     }
-    
-    
-
 }
 
 // MARK: - Extension
@@ -84,8 +81,6 @@ extension HomeVC: UITableViewDataSource {
         cell.setData(rank: indexPath.row, appData: homeContentList[indexPath.row])
         return cell
     }
-    
-    
 }
 
 extension HomeVC: UICollectionViewDataSource {
@@ -117,7 +112,4 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
             return 0
         }
-    
-    
-    
 }

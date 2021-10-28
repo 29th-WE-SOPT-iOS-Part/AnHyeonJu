@@ -133,11 +133,11 @@
 			isa = PBXGroup;
 			children = (
 				F2C1979E271D0FF5001EAB15 /* HomeVC.swift */,
-				F2A34E302729981C00B78517 /* HomeTableViewCell.swift */,
 				F2A34E312729981C00B78517 /* HomeTableViewCell.xib */,
+				F2A34E302729981C00B78517 /* HomeTableViewCell.swift */,
 				F28A21EF2729A20500E0319E /* homeDataModel.swift */,
-				F259A3D0272A7E96002F0532 /* HomeCollectionViewCell.swift */,
 				F259A3D1272A7E96002F0532 /* HomeCollectionViewCell.xib */,
+				F259A3D0272A7E96002F0532 /* HomeCollectionViewCell.swift */,
 				F259A3D4272A81BC002F0532 /* homeCollectionDataModel.swift */,
 			);
 			path = Home;

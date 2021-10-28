@@ -111,7 +111,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BZV-MB-WOG">
-                                <rect key="frame" x="0.0" y="240" width="375" height="538"/>
+                                <rect key="frame" x="0.0" y="192" width="375" height="586"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="ozG-mU-f0w"/>
@@ -175,46 +175,19 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bZx-Xv-uk5">
-                                <rect key="frame" x="0.0" y="192" width="375" height="48"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="V61-3F-Jhm"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="L0s-A0-QYR">
-                                    <size key="itemSize" width="71" height="54"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nAd-im-3m9">
-                                        <rect key="frame" x="0.0" y="-3" width="71" height="54"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="obP-1u-vdz">
-                                            <rect key="frame" x="0.0" y="0.0" width="71" height="54"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="71" height="54"/>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Caw-Lj-Mda"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bZx-Xv-uk5" firstAttribute="leading" secondItem="Caw-Lj-Mda" secondAttribute="leading" id="8pV-eW-au6"/>
                             <constraint firstItem="ahl-sh-JwJ" firstAttribute="leading" secondItem="Caw-Lj-Mda" secondAttribute="leading" id="CvO-8Z-vtk"/>
+                            <constraint firstItem="BZV-MB-WOG" firstAttribute="top" secondItem="ASF-8p-ACg" secondAttribute="bottom" id="HPb-bB-qgE"/>
                             <constraint firstItem="BZV-MB-WOG" firstAttribute="trailing" secondItem="Caw-Lj-Mda" secondAttribute="trailing" id="MOZ-iM-ZAU"/>
                             <constraint firstItem="BZV-MB-WOG" firstAttribute="bottom" secondItem="Caw-Lj-Mda" secondAttribute="bottom" id="MXf-1Y-gDK"/>
                             <constraint firstItem="Caw-Lj-Mda" firstAttribute="trailing" secondItem="ahl-sh-JwJ" secondAttribute="trailing" id="Mio-6E-DSA"/>
                             <constraint firstItem="BZV-MB-WOG" firstAttribute="leading" secondItem="Caw-Lj-Mda" secondAttribute="leading" id="Oqh-n1-YGX"/>
-                            <constraint firstItem="bZx-Xv-uk5" firstAttribute="top" secondItem="ASF-8p-ACg" secondAttribute="bottom" id="Ysc-Th-CsN"/>
-                            <constraint firstItem="bZx-Xv-uk5" firstAttribute="trailing" secondItem="Caw-Lj-Mda" secondAttribute="trailing" id="cp2-Zt-Tdr"/>
                             <constraint firstItem="BZV-MB-WOG" firstAttribute="trailing" secondItem="Caw-Lj-Mda" secondAttribute="trailing" id="g1w-5w-fVW"/>
                             <constraint firstItem="ASF-8p-ACg" firstAttribute="leading" secondItem="Caw-Lj-Mda" secondAttribute="leading" id="hVU-bh-05W"/>
                             <constraint firstItem="ASF-8p-ACg" firstAttribute="top" secondItem="ahl-sh-JwJ" secondAttribute="bottom" id="iRe-uh-4wQ"/>
-                            <constraint firstItem="BZV-MB-WOG" firstAttribute="top" secondItem="bZx-Xv-uk5" secondAttribute="bottom" id="ic6-Rt-g23"/>
                             <constraint firstItem="ahl-sh-JwJ" firstAttribute="top" secondItem="Caw-Lj-Mda" secondAttribute="top" id="oSj-N3-mth"/>
                             <constraint firstItem="Caw-Lj-Mda" firstAttribute="trailing" secondItem="ASF-8p-ACg" secondAttribute="trailing" id="rq8-9B-kCw"/>
                             <constraint firstItem="BZV-MB-WOG" firstAttribute="leading" secondItem="Caw-Lj-Mda" secondAttribute="leading" id="xK8-i7-h4k"/>
