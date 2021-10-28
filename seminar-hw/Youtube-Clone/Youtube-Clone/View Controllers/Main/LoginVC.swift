@@ -67,7 +67,7 @@ class LoginVC: UIViewController {
 
 }
 
-// MARK: UIViewController
+// MARK: - Extension
 extension UIViewController {
     func hideKeyboard() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F2492A68271815B400775417 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2492A67271815B400775417 /* SF-Pro-Display-Regular.otf */; };
+		F259A3D2272A7E96002F0532 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F259A3D0272A7E96002F0532 /* HomeCollectionViewCell.swift */; };
+		F259A3D3272A7E96002F0532 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F259A3D1272A7E96002F0532 /* HomeCollectionViewCell.xib */; };
+		F259A3D5272A81BC002F0532 /* homeCollectionDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F259A3D4272A81BC002F0532 /* homeCollectionDataModel.swift */; };
 		F27B0258271C5DA50034EFC4 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F27B0257271C5DA50034EFC4 /* SF-Pro-Display-Bold.otf */; };
 		F27B025A271C5DBA0034EFC4 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F27B0259271C5DBA0034EFC4 /* SF-Pro-Display-Semibold.otf */; };
 		F27B0260271C83340034EFC4 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27B025F271C83340034EFC4 /* Tabbar.storyboard */; };
@@ -32,6 +35,9 @@
 
 /* Begin PBXFileReference section */
 		F2492A67271815B400775417 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		F259A3D0272A7E96002F0532 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		F259A3D1272A7E96002F0532 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		F259A3D4272A81BC002F0532 /* homeCollectionDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeCollectionDataModel.swift; sourceTree = "<group>"; };
 		F27B0257271C5DA50034EFC4 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
 		F27B0259271C5DBA0034EFC4 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
 		F27B025F271C83340034EFC4 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
@@ -130,6 +136,9 @@
 				F2A34E302729981C00B78517 /* HomeTableViewCell.swift */,
 				F2A34E312729981C00B78517 /* HomeTableViewCell.xib */,
 				F28A21EF2729A20500E0319E /* homeDataModel.swift */,
+				F259A3D0272A7E96002F0532 /* HomeCollectionViewCell.swift */,
+				F259A3D1272A7E96002F0532 /* HomeCollectionViewCell.xib */,
+				F259A3D4272A81BC002F0532 /* homeCollectionDataModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -238,6 +247,7 @@
 				F281F51B270D456E006EA470 /* LaunchScreen.storyboard in Resources */,
 				F27B0258271C5DA50034EFC4 /* SF-Pro-Display-Bold.otf in Resources */,
 				F281F518270D456E006EA470 /* Assets.xcassets in Resources */,
+				F259A3D3272A7E96002F0532 /* HomeCollectionViewCell.xib in Resources */,
 				F2A34E332729981C00B78517 /* HomeTableViewCell.xib in Resources */,
 				F2492A68271815B400775417 /* SF-Pro-Display-Regular.otf in Resources */,
 				F27B0260271C83340034EFC4 /* Tabbar.storyboard in Resources */,
@@ -252,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F259A3D5272A81BC002F0532 /* homeCollectionDataModel.swift in Sources */,
 				F2C197A3271D0FF5001EAB15 /* HomeVC.swift in Sources */,
 				F2C197A6271D0FF5001EAB15 /* WelcomeVC.swift in Sources */,
 				F2C197A8271D0FF5001EAB15 /* ShortsVC.swift in Sources */,
@@ -259,6 +270,7 @@
 				F2C197A4271D0FF5001EAB15 /* MainTBC.swift in Sources */,
 				F2C197A2271D0FF5001EAB15 /* SignUpVC.swift in Sources */,
 				F2A34E322729981C00B78517 /* HomeTableViewCell.swift in Sources */,
+				F259A3D2272A7E96002F0532 /* HomeCollectionViewCell.swift in Sources */,
 				F28A21F02729A20500E0319E /* homeDataModel.swift in Sources */,
 				F281F50F270D456D006EA470 /* AppDelegate.swift in Sources */,
 				F2C197A0271D0FF5001EAB15 /* LoginVC.swift in Sources */,
