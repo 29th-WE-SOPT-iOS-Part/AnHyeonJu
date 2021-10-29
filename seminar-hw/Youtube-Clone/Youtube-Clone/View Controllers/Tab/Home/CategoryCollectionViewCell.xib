@@ -22,14 +22,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="68" height="48"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tkA-hg-HWZ">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tkA-hg-HWZ">
                         <rect key="frame" x="0.0" y="0.0" width="68" height="48"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v3n-xo-N88">
-                                <rect key="frame" x="13" y="8" width="46" height="32"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v3n-xo-N88">
+                                <rect key="frame" x="0.0" y="0.0" width="68" height="48"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="전체" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iU-9U-qny">
-                                        <rect key="frame" x="11" y="8" width="25" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전체" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iU-9U-qny">
+                                        <rect key="frame" x="0.0" y="0.0" width="68" height="48"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -37,22 +37,30 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="0iU-9U-qny" firstAttribute="centerY" secondItem="v3n-xo-N88" secondAttribute="centerY" id="Krl-d7-F5G"/>
-                                    <constraint firstItem="0iU-9U-qny" firstAttribute="centerX" secondItem="v3n-xo-N88" secondAttribute="centerX" id="mc6-em-fWo"/>
+                                    <constraint firstAttribute="trailing" secondItem="0iU-9U-qny" secondAttribute="trailing" id="2Lx-7N-tnz"/>
+                                    <constraint firstAttribute="bottom" secondItem="0iU-9U-qny" secondAttribute="bottom" id="Jps-bs-cKI"/>
+                                    <constraint firstItem="0iU-9U-qny" firstAttribute="top" secondItem="v3n-xo-N88" secondAttribute="top" id="ljz-TC-3V5"/>
+                                    <constraint firstItem="0iU-9U-qny" firstAttribute="leading" secondItem="v3n-xo-N88" secondAttribute="leading" id="wtn-2o-QgW"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="v3n-xo-N88" secondAttribute="bottom" constant="8" id="9Ap-Ht-5po"/>
-                            <constraint firstItem="v3n-xo-N88" firstAttribute="leading" secondItem="tkA-hg-HWZ" secondAttribute="leading" constant="13" id="RTb-fv-sR4"/>
-                            <constraint firstItem="v3n-xo-N88" firstAttribute="top" secondItem="tkA-hg-HWZ" secondAttribute="top" constant="8" id="eVG-pl-peg"/>
-                            <constraint firstAttribute="trailing" secondItem="v3n-xo-N88" secondAttribute="trailing" constant="9" id="uX5-np-9dn"/>
+                            <constraint firstItem="v3n-xo-N88" firstAttribute="leading" secondItem="tkA-hg-HWZ" secondAttribute="leading" id="4HJ-iR-yku"/>
+                            <constraint firstAttribute="trailing" secondItem="v3n-xo-N88" secondAttribute="trailing" id="7kf-xN-2rv"/>
+                            <constraint firstAttribute="bottom" secondItem="v3n-xo-N88" secondAttribute="bottom" id="QoM-8V-t6t"/>
+                            <constraint firstItem="v3n-xo-N88" firstAttribute="top" secondItem="tkA-hg-HWZ" secondAttribute="top" id="VIN-t9-tTT"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="tkA-hg-HWZ" secondAttribute="bottom" id="BM0-tD-fx6"/>
+                <constraint firstItem="tkA-hg-HWZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="CFs-Y3-AbC"/>
+                <constraint firstAttribute="trailing" secondItem="tkA-hg-HWZ" secondAttribute="trailing" id="TjY-kO-qu9"/>
+                <constraint firstItem="tkA-hg-HWZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="rPy-ie-wgz"/>
+            </constraints>
             <size key="customSize" width="68" height="84"/>
             <connections>
                 <outlet property="borderView" destination="v3n-xo-N88" id="4a2-G7-Nnv"/>
