@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct HomeCollectionContentData {
+struct ShortsCollectionContentData {
     let shortsImageName: String
     let shortsTitleName: String
 

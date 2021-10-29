@@ -11,10 +11,12 @@ class HomeVC: UIViewController {
 
     // MARK: - Properties
     @IBOutlet weak var homeTableView: UITableView!
-    @IBOutlet weak var homeCollectionView: UICollectionView!
+    @IBOutlet weak var shortsCollectionView: UICollectionView!
+    @IBOutlet weak var categoryCollectionView: UICollectionView!
     
-    var homeContentList: [HomeContentData] = []
-    var homeCollectionContentList: [HomeCollectionContentData] = []
+    private var homeContentList: [HomeContentData] = []
+    private var shortsCollectionContentList: [ShortsCollectionContentData] = []
+    private var categoryList = [String]()
 
     
     // MARK: - Life Cycle
@@ -22,17 +24,25 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         initHomeContentList()
         initHomeCollectionContentList()
+        initCategoryCollectionContentList()
         registerXib()
         homeTableView.dataSource = self
         homeTableView.delegate = self
-        homeCollectionView.dataSource = self
-        homeCollectionView.delegate = self
+        shortsCollectionView.dataSource = self
+        shortsCollectionView.delegate = self
     }
     
     // MARK: - Custom Method
     func registerXib() {
         let xibName = UINib(nibName: HomeTableViewCell.identifier, bundle: nil)
-        homeTableView.register(xibName, forCellReuseIdentifier: HomeTableViewCell.identifier)        
+        homeTableView.register(xibName, forCellReuseIdentifier: HomeTableViewCell.identifier)
+        
+//        let xibName = UINib(nibName: ShortsCollectionViewCell.identifier, bundle: nil)
+//        homeTableView.register(xibName, forCellReuseIdentifier: HomeTableViewCell.identifier)
+//
+//        let xibName = UINib(nibName: HomeCategoryViewCell.identifier, bundle: nil)
+//        homeTableView.register(xibName, forCellReuseIdentifier: HomeTableViewCell.identifier)
+        
     }
     
     
@@ -50,17 +60,22 @@ class HomeVC: UIViewController {
     }
     
     func initHomeCollectionContentList() {
-        homeCollectionContentList.append(contentsOf: [
-            HomeCollectionContentData(shortsImageName: "ggamju1", shortsTitleName: "iOSPart"),
-            HomeCollectionContentData(shortsImageName: "ggamju2", shortsTitleName: "AndroidPart"),
-            HomeCollectionContentData(shortsImageName: "ggamju3", shortsTitleName: "ServerPart"),
-            HomeCollectionContentData(shortsImageName: "ggamju4", shortsTitleName: "WebPart"),
-            HomeCollectionContentData(shortsImageName: "ggamju5", shortsTitleName: "DesignPart"),
-            HomeCollectionContentData(shortsImageName: "ggamju6", shortsTitleName: "PlanPart"),
-            HomeCollectionContentData(shortsImageName: "ggamju7", shortsTitleName: "DesignPart"),
-            HomeCollectionContentData(shortsImageName: "ggamju8", shortsTitleName: "DesignPart")
+        shortsCollectionContentList.append(contentsOf: [
+            ShortsCollectionContentData(shortsImageName: "ggamju1", shortsTitleName: "iOSPart"),
+            ShortsCollectionContentData(shortsImageName: "ggamju2", shortsTitleName: "AndroidPart"),
+            ShortsCollectionContentData(shortsImageName: "ggamju3", shortsTitleName: "ServerPart"),
+            ShortsCollectionContentData(shortsImageName: "ggamju4", shortsTitleName: "WebPart"),
+            ShortsCollectionContentData(shortsImageName: "ggamju5", shortsTitleName: "DesignPart"),
+            ShortsCollectionContentData(shortsImageName: "ggamju6", shortsTitleName: "PlanPart"),
+            ShortsCollectionContentData(shortsImageName: "ggamju7", shortsTitleName: "DesignPart"),
+            ShortsCollectionContentData(shortsImageName: "ggamju8", shortsTitleName: "DesignPart")
         ])
     }
+    
+    func initCategoryCollectionContentList() {
+        categoryList.append(contentsOf: ["전체","오늘","이어서 시청하기","시청하지 않음","실시간","게시물"])
+    }
+    
 }
 
 // MARK: - Extension
@@ -85,13 +100,13 @@ extension HomeVC: UITableViewDataSource {
 
 extension HomeVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return homeCollectionContentList.count
+        return shortsCollectionContentList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as? HomeCollectionViewCell else {return UICollectionViewCell()}
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShortsCollectionViewCell.identifier, for: indexPath) as? ShortsCollectionViewCell else {return UICollectionViewCell()}
         
-        cell.setData(appName: homeCollectionContentList[indexPath.row].shortsTitleName, appImage: homeCollectionContentList[indexPath.row].makeImage())
+        cell.setData(appName: shortsCollectionContentList[indexPath.row].shortsTitleName, appImage: shortsCollectionContentList[indexPath.row].makeImage())
         return cell
     }
 }
@@ -102,14 +117,14 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-            return UIEdgeInsets.zero
-        }
+        return UIEdgeInsets.zero
+    }
         
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-            return 0
-        }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
         
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-            return 0
-        }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
 }

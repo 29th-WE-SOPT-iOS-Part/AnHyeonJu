@@ -7,10 +7,10 @@
 
 import UIKit
 
-class HomeCollectionViewCell: UICollectionViewCell {
+class ShortsCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Properties
-    static let identifier = "HomeCollectionViewCell"
+    static let identifier = "ShortsCollectionViewCell"
     @IBOutlet weak var shortsImageView: UIImageView!
     @IBOutlet weak var shortsNameLabel: UILabel!
     
