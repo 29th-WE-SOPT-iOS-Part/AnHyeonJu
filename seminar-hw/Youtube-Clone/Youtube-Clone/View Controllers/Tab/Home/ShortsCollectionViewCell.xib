@@ -14,7 +14,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ShortsCollectionViewCell" customModule="Youtube_Clone" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShortsCollectionViewCell" id="gTV-IL-0wX" customClass="ShortsCollectionViewCell" customModule="Youtube_Clone" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="72" height="104"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -28,7 +28,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOSPart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eL-k7-ieN">
-                        <rect key="frame" x="17" y="77" width="38.5" height="13"/>
+                        <rect key="frame" x="15" y="77" width="42" height="13"/>
                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="12"/>
                         <color key="textColor" red="0.37647058820000001" green="0.37647058820000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -44,6 +44,10 @@
                 <constraint firstItem="yqp-8E-QaV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="7" id="In6-YG-V2N"/>
                 <constraint firstItem="yqp-8E-QaV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="14" id="M7O-9h-VUV"/>
             </constraints>
+            <connections>
+                <outlet property="shortsCollectionView" destination="yqp-8E-QaV" id="DjT-JZ-T3i"/>
+                <outlet property="shortsNameLabel" destination="3eL-k7-ieN" id="ZpG-29-3vt"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="79.6875"/>
         </collectionViewCell>
     </objects>

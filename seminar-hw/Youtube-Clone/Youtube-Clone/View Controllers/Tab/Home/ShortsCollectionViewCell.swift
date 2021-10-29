@@ -11,7 +11,8 @@ class ShortsCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Properties
     static let identifier = "ShortsCollectionViewCell"
-    @IBOutlet weak var shortsImageView: UIImageView!
+    
+    @IBOutlet weak var shortsCollectionView: UIImageView!
     @IBOutlet weak var shortsNameLabel: UILabel!
     
     // MARK: - Life Cycle
@@ -22,7 +23,7 @@ class ShortsCollectionViewCell: UICollectionViewCell {
     // MARK: - Custom Method
     func setData(appName: String, appImage: UIImage?){
         shortsNameLabel.text = appName
-        shortsImageView.image = appImage
+        shortsCollectionView.image = appImage
     }
 
 }
