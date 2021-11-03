@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTableViewCell" id="KGk-i7-Jjw" customClass="HomeTableViewCell" customModule="Youtube_Clone" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="306"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="306"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wesoptiOSPart" translatesAutoresizingMaskIntoConstraints="NO" id="dhe-uW-uqk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="212"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wesoptProfile" translatesAutoresizingMaskIntoConstraints="NO" id="P3u-r5-wpU">
+                        <rect key="frame" x="12" y="223" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="P3u-r5-wpU" secondAttribute="height" multiplier="1:1" id="Y6A-7r-NdS"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moreMenuIcon" translatesAutoresizingMaskIntoConstraints="NO" id="0mr-yO-MgQ">
+                        <rect key="frame" x="349" y="219" width="26" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="0mr-yO-MgQ" secondAttribute="height" multiplier="1:1" id="fqj-ra-VhC"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1차 iOS 세미나 : iOS 컴포넌트 이해, Xcode 기본 사용법, View 화면전환" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAo-ND-GQN">
+                        <rect key="frame" x="60" y="224" width="270" height="36"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WE SOPT ・ 조회수 100만회 ・ 3주 전" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpE-hH-4eh">
+                        <rect key="frame" x="60" y="264" width="204.5" height="16"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="13"/>
+                        <color key="textColor" red="0.37647058823529411" green="0.37647058823529411" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="dhe-uW-uqk" secondAttribute="trailing" id="FaB-9H-4NL"/>
+                    <constraint firstItem="0mr-yO-MgQ" firstAttribute="top" secondItem="dhe-uW-uqk" secondAttribute="bottom" constant="7" id="S1W-4D-UNI"/>
+                    <constraint firstItem="P3u-r5-wpU" firstAttribute="top" secondItem="dhe-uW-uqk" secondAttribute="bottom" constant="11" id="Tjp-Oy-FdS"/>
+                    <constraint firstAttribute="trailing" secondItem="0mr-yO-MgQ" secondAttribute="trailing" id="TtG-Ld-tyX"/>
+                    <constraint firstAttribute="bottom" secondItem="gpE-hH-4eh" secondAttribute="bottom" constant="26" id="VIS-c7-Rme"/>
+                    <constraint firstItem="aAo-ND-GQN" firstAttribute="top" secondItem="dhe-uW-uqk" secondAttribute="bottom" constant="12" id="Z1z-QF-Bg9"/>
+                    <constraint firstItem="0mr-yO-MgQ" firstAttribute="leading" secondItem="aAo-ND-GQN" secondAttribute="trailing" constant="19" id="ZpO-Bz-mMt"/>
+                    <constraint firstItem="P3u-r5-wpU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="awe-lY-7kp"/>
+                    <constraint firstItem="aAo-ND-GQN" firstAttribute="leading" secondItem="P3u-r5-wpU" secondAttribute="trailing" constant="12" id="dx8-KQ-AYP"/>
+                    <constraint firstAttribute="bottom" secondItem="P3u-r5-wpU" secondAttribute="bottom" constant="47" id="eDf-U7-dqR"/>
+                    <constraint firstItem="dhe-uW-uqk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fFr-4y-lWU"/>
+                    <constraint firstItem="gpE-hH-4eh" firstAttribute="leading" secondItem="aAo-ND-GQN" secondAttribute="leading" id="o7x-6z-MrF"/>
+                    <constraint firstItem="dhe-uW-uqk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="zAS-Eb-lyl"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="moreMenuImageView" destination="0mr-yO-MgQ" id="ziz-m4-GGf"/>
+                <outlet property="profileImageView" destination="P3u-r5-wpU" id="Pdp-gs-Wcf"/>
+                <outlet property="subTitleLabel" destination="gpE-hH-4eh" id="q4c-iK-vWf"/>
+                <outlet property="thumbnailImageView" destination="dhe-uW-uqk" id="LU3-op-Q3x"/>
+                <outlet property="titleLabel" destination="aAo-ND-GQN" id="wm9-xU-3Ez"/>
+            </connections>
+            <point key="canvasLocation" x="131.15942028985509" y="89.732142857142847"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="moreMenuIcon" width="26" height="26"/>
+        <image name="wesoptProfile" width="36" height="36"/>
+        <image name="wesoptiOSPart" width="375.5" height="212"/>
+    </resources>
+</document>

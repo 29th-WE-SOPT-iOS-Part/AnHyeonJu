@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="W7R-WM-YbF">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="W7R-WM-YbF">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--보관함-->
         <scene sceneID="okL-Sk-woV">
             <objects>
                 <viewController storyboardIdentifier="StoreVC" id="Ovy-Fv-0Td" customClass="StoreVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wkL-IR-Odw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="EQz-WD-tEJ"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="보관함" image="LibraryIcon" selectedImage="libraryIconFill" id="DlI-Tg-p16"/>
                 </viewController>
@@ -29,10 +35,10 @@
             <objects>
                 <viewController storyboardIdentifier="PlusVC" id="pA1-4s-1uq" customClass="PlusVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w2v-6i-XsT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="3ia-g0-zYD"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="추가" image="plusCircleIcon" selectedImage="plusCircleIcon" id="bgD-9C-Tzz"/>
                 </viewController>
@@ -45,10 +51,10 @@
             <objects>
                 <viewController storyboardIdentifier="SubscribeVC" id="IQo-we-Hey" customClass="SubscribeVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m1u-RU-119">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="RAS-cp-07Q"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="구독" image="subscriptionsIcon" selectedImage="subscriptionsIconFill" id="5Sv-Wz-oyC"/>
                 </viewController>
@@ -60,27 +66,204 @@
         <scene sceneID="UjS-Si-Mqu">
             <objects>
                 <viewController storyboardIdentifier="HomeVC" id="6fP-B5-shv" customClass="HomeVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="poz-2g-7eR" customClass="Orange">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <view key="view" contentMode="scaleToFill" id="poz-2g-7eR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahl-sh-JwJ">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="premiumLogo" translatesAutoresizingMaskIntoConstraints="NO" id="jYv-fS-9M4">
+                                        <rect key="frame" x="16" y="12" width="96" height="20"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notificationIcon" translatesAutoresizingMaskIntoConstraints="NO" id="vrF-pg-V3y">
+                                        <rect key="frame" x="243" y="6" width="32" height="32"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SearchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="pKR-sn-nb3">
+                                        <rect key="frame" x="285" y="6" width="32" height="32"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wesoptProfile" translatesAutoresizingMaskIntoConstraints="NO" id="BPk-w3-p1s">
+                                        <rect key="frame" x="335" y="10" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="BPk-w3-p1s" secondAttribute="height" multiplier="1:1" id="pF9-Ix-VAy"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windowSharingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="W4g-jp-oDW">
+                                        <rect key="frame" x="201" y="6" width="32" height="32"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="W4g-jp-oDW" secondAttribute="bottom" constant="6" id="0ya-YK-3MB"/>
+                                    <constraint firstItem="W4g-jp-oDW" firstAttribute="top" secondItem="ahl-sh-JwJ" secondAttribute="top" constant="6" id="3H0-zo-xtX"/>
+                                    <constraint firstItem="vrF-pg-V3y" firstAttribute="leading" secondItem="W4g-jp-oDW" secondAttribute="trailing" constant="10" id="3Vp-BA-r1K"/>
+                                    <constraint firstItem="BPk-w3-p1s" firstAttribute="leading" secondItem="pKR-sn-nb3" secondAttribute="trailing" constant="18" id="AFD-6t-iY7"/>
+                                    <constraint firstAttribute="bottom" secondItem="pKR-sn-nb3" secondAttribute="bottom" constant="6" id="Anj-JC-nPk"/>
+                                    <constraint firstAttribute="trailing" secondItem="BPk-w3-p1s" secondAttribute="trailing" constant="16" id="BbB-kW-0Bu"/>
+                                    <constraint firstItem="BPk-w3-p1s" firstAttribute="top" secondItem="ahl-sh-JwJ" secondAttribute="top" constant="10" id="D73-yF-llG"/>
+                                    <constraint firstAttribute="bottom" secondItem="vrF-pg-V3y" secondAttribute="bottom" constant="6" id="D7t-eR-nBb"/>
+                                    <constraint firstItem="pKR-sn-nb3" firstAttribute="leading" secondItem="vrF-pg-V3y" secondAttribute="trailing" constant="10" id="HAw-nL-zDF"/>
+                                    <constraint firstItem="vrF-pg-V3y" firstAttribute="top" secondItem="ahl-sh-JwJ" secondAttribute="top" constant="6" id="Iip-uI-WXx"/>
+                                    <constraint firstAttribute="bottom" secondItem="BPk-w3-p1s" secondAttribute="bottom" constant="10" id="OLg-MS-eKu"/>
+                                    <constraint firstAttribute="width" constant="375" id="QFH-4M-7QK"/>
+                                    <constraint firstItem="jYv-fS-9M4" firstAttribute="leading" secondItem="ahl-sh-JwJ" secondAttribute="leading" constant="16" id="Rtp-Tj-GLO"/>
+                                    <constraint firstItem="pKR-sn-nb3" firstAttribute="top" secondItem="ahl-sh-JwJ" secondAttribute="top" constant="6" id="fPN-vq-xzB"/>
+                                    <constraint firstItem="jYv-fS-9M4" firstAttribute="top" secondItem="ahl-sh-JwJ" secondAttribute="top" constant="12" id="jJS-p9-UHz"/>
+                                    <constraint firstAttribute="bottom" secondItem="jYv-fS-9M4" secondAttribute="bottom" constant="12" id="oyZ-83-GNb"/>
+                                    <constraint firstAttribute="height" constant="44" id="wdR-HO-3dN"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ASF-8p-ACg" userLabel="Shorts Collection View">
+                                <rect key="frame" x="0.0" y="88" width="375" height="104"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="104" id="AUF-0Q-fYe"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tLI-v2-x9T">
+                                    <size key="itemSize" width="72" height="104"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShortsCollectionViewCell" id="J5b-SK-Kz7" customClass="ShortsCollectionViewCell" customModule="Youtube_Clone" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="104"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="i2J-Sj-eME">
+                                            <rect key="frame" x="0.0" y="0.0" width="72" height="104"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6jv-vL-8f4">
+                                                    <rect key="frame" x="7" y="14" width="57" height="57"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="6jv-vL-8f4" secondAttribute="height" multiplier="1:1" id="YTG-G9-JfS"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOSPart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUD-F3-eg0">
+                                                    <rect key="frame" x="16.333333333333332" y="76" width="38.666666666666671" height="14"/>
+                                                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="12"/>
+                                                    <color key="textColor" red="0.37647058823529411" green="0.37647058823529411" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="gUD-F3-eg0" secondAttribute="bottom" constant="14" id="DBd-oJ-LaI"/>
+                                                <constraint firstItem="gUD-F3-eg0" firstAttribute="top" secondItem="6jv-vL-8f4" secondAttribute="bottom" constant="5" id="Hor-XN-cv0"/>
+                                                <constraint firstItem="6jv-vL-8f4" firstAttribute="top" secondItem="i2J-Sj-eME" secondAttribute="top" constant="14" id="Qcp-uP-TEC"/>
+                                                <constraint firstItem="gUD-F3-eg0" firstAttribute="centerX" secondItem="6jv-vL-8f4" secondAttribute="centerX" id="TEe-gH-wEy"/>
+                                                <constraint firstItem="6jv-vL-8f4" firstAttribute="leading" secondItem="i2J-Sj-eME" secondAttribute="leading" constant="7" id="hP1-5p-eHP"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="shortsImageView" destination="6jv-vL-8f4" id="Dx6-2p-ZH8"/>
+                                            <outlet property="shortsNameLabel" destination="gUD-F3-eg0" id="nj2-22-HOF"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eL9-Gn-ORv">
+                                <rect key="frame" x="0.0" y="192" width="375" height="48"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="jy4-bl-3yr"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Sq0-SV-s3J">
+                                    <size key="itemSize" width="57" height="47"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewCell" id="5QR-mv-cPm" customClass="CategoryCollectionViewCell" customModule="Youtube_Clone" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.66666666666666663" width="57" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="F67-BN-LWM">
+                                            <rect key="frame" x="0.0" y="0.0" width="57" height="47"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" id="Ids-mr-I80">
+                                                    <rect key="frame" x="8" y="6.333333333333333" width="42" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전체" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlK-wz-PC6">
+                                                    <rect key="frame" x="16.666666666666668" y="13" width="25.000000000000004" height="17"/>
+                                                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ids-mr-I80" firstAttribute="centerY" secondItem="zlK-wz-PC6" secondAttribute="centerY" id="6JV-6B-03t"/>
+                                                <constraint firstItem="Ids-mr-I80" firstAttribute="centerX" secondItem="zlK-wz-PC6" secondAttribute="centerX" id="tb0-Pn-nAT"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="57" height="47"/>
+                                        <connections>
+                                            <outlet property="borderView" destination="Ids-mr-I80" id="PJ7-WK-ZjF"/>
+                                            <outlet property="categoryLabel" destination="zlK-wz-PC6" id="tV7-Of-TNC"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BZV-MB-WOG">
+                                <rect key="frame" x="0.0" y="240" width="375" height="538"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="ozG-mU-f0w"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTableViewCell" id="Y1R-cb-144" customClass="HomeTableViewCell" customModule="Youtube_Clone" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y1R-cb-144" id="rYH-Qu-y1R">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Caw-Lj-Mda"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ahl-sh-JwJ" firstAttribute="leading" secondItem="Caw-Lj-Mda" secondAttribute="leading" id="CvO-8Z-vtk"/>
+                            <constraint firstItem="eL9-Gn-ORv" firstAttribute="trailing" secondItem="Caw-Lj-Mda" secondAttribute="trailing" id="HnV-RX-Ezb"/>
+                            <constraint firstItem="BZV-MB-WOG" firstAttribute="trailing" secondItem="Caw-Lj-Mda" secondAttribute="trailing" id="MOZ-iM-ZAU"/>
+                            <constraint firstItem="eL9-Gn-ORv" firstAttribute="top" secondItem="ASF-8p-ACg" secondAttribute="bottom" id="MVU-B5-iWh"/>
+                            <constraint firstItem="BZV-MB-WOG" firstAttribute="bottom" secondItem="Caw-Lj-Mda" secondAttribute="bottom" id="MXf-1Y-gDK"/>
+                            <constraint firstItem="Caw-Lj-Mda" firstAttribute="trailing" secondItem="ahl-sh-JwJ" secondAttribute="trailing" id="Mio-6E-DSA"/>
+                            <constraint firstItem="eL9-Gn-ORv" firstAttribute="leading" secondItem="Caw-Lj-Mda" secondAttribute="leading" id="OAn-0H-qMJ"/>
+                            <constraint firstItem="BZV-MB-WOG" firstAttribute="leading" secondItem="Caw-Lj-Mda" secondAttribute="leading" id="Oqh-n1-YGX"/>
+                            <constraint firstItem="BZV-MB-WOG" firstAttribute="top" secondItem="eL9-Gn-ORv" secondAttribute="bottom" id="WC6-Co-LaD"/>
+                            <constraint firstItem="BZV-MB-WOG" firstAttribute="trailing" secondItem="Caw-Lj-Mda" secondAttribute="trailing" id="g1w-5w-fVW"/>
+                            <constraint firstItem="ASF-8p-ACg" firstAttribute="leading" secondItem="Caw-Lj-Mda" secondAttribute="leading" id="hVU-bh-05W"/>
+                            <constraint firstItem="ASF-8p-ACg" firstAttribute="top" secondItem="ahl-sh-JwJ" secondAttribute="bottom" id="iRe-uh-4wQ"/>
+                            <constraint firstItem="ahl-sh-JwJ" firstAttribute="top" secondItem="Caw-Lj-Mda" secondAttribute="top" id="oSj-N3-mth"/>
+                            <constraint firstItem="Caw-Lj-Mda" firstAttribute="trailing" secondItem="ASF-8p-ACg" secondAttribute="trailing" id="rq8-9B-kCw"/>
+                            <constraint firstItem="BZV-MB-WOG" firstAttribute="leading" secondItem="Caw-Lj-Mda" secondAttribute="leading" id="xK8-i7-h4k"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="홈" image="homeIcon" selectedImage="homeIconFill" id="xQA-zw-J4c"/>
+                    <connections>
+                        <outlet property="categoryCollectionView" destination="eL9-Gn-ORv" id="9yz-S9-jyw"/>
+                        <outlet property="homeTableView" destination="BZV-MB-WOG" id="76G-fH-7z8"/>
+                        <outlet property="shortsCollectionView" destination="ASF-8p-ACg" id="H0C-u1-KvJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J5i-AE-2cM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4300" y="-248.4375"/>
+            <point key="canvasLocation" x="4298.3999999999996" y="-249.01477832512316"/>
         </scene>
         <!--Shorts-->
         <scene sceneID="O7r-RQ-6Ob">
             <objects>
                 <viewController storyboardIdentifier="ShortsVC" id="Bok-XD-spi" customClass="ShortsVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hO6-DI-dGu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="BbT-2p-G6u"/>
-                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Shorts" image="shortsIcon" selectedImage="shortsIconFill" id="aCG-rN-3Gl"/>
                 </viewController>
@@ -98,13 +281,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
-                    <connections>
-                        <segue destination="6fP-B5-shv" kind="relationship" relationship="viewControllers" id="fQ4-bo-cs8"/>
-                        <segue destination="Bok-XD-spi" kind="relationship" relationship="viewControllers" id="DH9-TC-lai"/>
-                        <segue destination="pA1-4s-1uq" kind="relationship" relationship="viewControllers" id="oEJ-Fx-3K0"/>
-                        <segue destination="IQo-we-Hey" kind="relationship" relationship="viewControllers" id="SdN-Qk-JUS"/>
-                        <segue destination="Ovy-Fv-0Td" kind="relationship" relationship="viewControllers" id="aty-2Z-y3b"/>
-                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wn6-od-PWf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -113,28 +289,21 @@
     </scenes>
     <resources>
         <image name="LibraryIcon" width="32.333332061767578" height="32.333332061767578"/>
-        <image name="homeIcon" width="32.5" height="32.5"/>
-        <image name="homeIconFill" width="32.5" height="32.5"/>
-        <image name="libraryIconFill" width="32.5" height="32.5"/>
-        <image name="plusCircleIcon" width="32.5" height="32.5"/>
-        <image name="shortsIcon" width="32.5" height="32.5"/>
-        <image name="shortsIconFill" width="22.5" height="28"/>
-        <image name="subscriptionsIcon" width="32.5" height="32.5"/>
-        <image name="subscriptionsIconFill" width="32.5" height="32.5"/>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="SearchIcon" width="32.333332061767578" height="32"/>
+        <image name="homeIcon" width="32.333332061767578" height="32.333332061767578"/>
+        <image name="homeIconFill" width="32.333332061767578" height="32.333332061767578"/>
+        <image name="libraryIconFill" width="32.333332061767578" height="32.333332061767578"/>
+        <image name="notificationIcon" width="32.333332061767578" height="32"/>
+        <image name="plusCircleIcon" width="32.333332061767578" height="32.333332061767578"/>
+        <image name="premiumLogo" width="96.333335876464844" height="20"/>
+        <image name="shortsIcon" width="32.333332061767578" height="32.333332061767578"/>
+        <image name="shortsIconFill" width="22.333333969116211" height="28"/>
+        <image name="subscriptionsIcon" width="32.333332061767578" height="32.333332061767578"/>
+        <image name="subscriptionsIconFill" width="32.333332061767578" height="32.333332061767578"/>
+        <image name="wesoptProfile" width="36" height="36"/>
+        <image name="windowSharingIcon" width="32.333332061767578" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
