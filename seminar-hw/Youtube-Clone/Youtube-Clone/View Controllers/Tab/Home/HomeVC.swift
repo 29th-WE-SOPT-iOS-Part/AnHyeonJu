@@ -32,6 +32,7 @@ class HomeVC: UIViewController {
         categoryCollectionView.dataSource = self
     }
     
+    
     // MARK: - Custom Method
     func registerXib() {
         let xibName = UINib(nibName: HomeTableViewCell.identifier, bundle: nil)
@@ -45,17 +46,16 @@ class HomeVC: UIViewController {
         
     }
     
-    
     func initDataList() {
         homeContentList.append(contentsOf: [
-            HomeContentData(titleName: "1차 iOS 세미나 : iOS 컴포넌트 이해, Xcode 기본 사용법, View 화면전환"),
-            HomeContentData(titleName: "2차 iOS 세미나 : AutoLayout, StackView, TabBarController"),
-            HomeContentData(titleName: "3차 iOS 세미나 : ScrollView, Delegate Pattern, TableView, CollectionView"),
-            HomeContentData(titleName: "4차 iOS 세미나 : Cocoapods & Networking, REST API"),
-            HomeContentData(titleName: "5차 iOS 세미나 : 디자인 합동 세미나"),
-            HomeContentData(titleName: "6차 iOS 세미나 : 서버 합동 세미나 + 솝커톤"),
-            HomeContentData(titleName: "7차 iOS 세미나 : Animation과 제스쳐, 데이터 전달 심화"),
-            HomeContentData(titleName: "8차 iOS 세미나 : 협업 시 도움이 되는 팁과 라이브러리 사용")
+            HomeContentData(thumbNailImageName: "wesoptiOSPart", profileImageName: "wesoptProfile", titleName: "1차 iOS 세미나 : iOS 컴포넌트 이해, Xcode 기본 사용법, View 화면전환", subTitleName: "WE SOPT ・ 10만뷰 ・ 3주"),
+            HomeContentData(thumbNailImageName: "wesoptServerPart", profileImageName: "wesoptProfile", titleName: "2차 iOS 세미나 : AutoLayout, StackView, TabBarController", subTitleName: "WE SOPT ・ 50만뷰 ・ 5주"),
+            HomeContentData(thumbNailImageName: "wesoptDesignPart", profileImageName: "wesoptProfile", titleName: "3차 iOS 세미나 : ScrollView, Delegate Pattern, TableView, CollectionView", subTitleName: "WE SOPT ・ 30만뷰 ・ 1주"),
+            HomeContentData(thumbNailImageName: "wesoptWebPart", profileImageName: "wesoptProfile", titleName: "4차 iOS 세미나 : Cocoapods & Networking, REST API", subTitleName: "WE SOPT ・ 1만뷰 ・ 5주"),
+            HomeContentData(thumbNailImageName: "wesoptPlanPart", profileImageName: "wesoptProfile", titleName: "5차 iOS 세미나 : 디자인 합동 세미나", subTitleName: "WE SOPT ・ 3만뷰 ・ 5주"),
+            HomeContentData(thumbNailImageName: "wesoptAndroidPart", profileImageName: "wesoptProfile", titleName: "6차 iOS 세미나 : 서버 합동 세미나 + 솝커톤", subTitleName: "WE SOPT ・ 200만뷰 ・ 4주"),
+            HomeContentData(thumbNailImageName: "wesoptiOSPart", profileImageName: "wesoptProfile", titleName: "7차 iOS 세미나 : Animation과 제스쳐, 데이터 전달 심화", subTitleName: "WE SOPT ・ 30만뷰 ・ 8주"),
+            HomeContentData(thumbNailImageName: "wesoptiOSPart", profileImageName: "wesoptProfile", titleName: "8차 iOS 세미나 : 협업 시 도움이 되는 팁과 라이브러리 사용", subTitleName: "WE SOPT ・ 40만뷰 ・ 7주")
         ])
         
         shortsCollectionContentList.append(contentsOf: [
@@ -81,13 +81,13 @@ class HomeVC: UIViewController {
 
 }
 
+
 // MARK: - Extension
 extension HomeVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 306
     }
 }
-
 
 extension HomeVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -132,7 +132,6 @@ extension HomeVC: UICollectionViewDataSource {
         }
     }
 }
-
 
 extension HomeVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

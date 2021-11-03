@@ -15,10 +15,12 @@ class ShortsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var shortsCollectionView: UIImageView!
     @IBOutlet weak var shortsNameLabel: UILabel!
     
+    
     // MARK: - Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
     
     // MARK: - Custom Method
     func setData(appName: String, appImage: UIImage?){

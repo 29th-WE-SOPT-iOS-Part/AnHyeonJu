@@ -30,9 +30,10 @@ class HomeTableViewCell: UITableViewCell {
     
     // MARK: - Custom Method
     func setData(rank: Int, appData: HomeContentData) {
-//        thumbnailImageView.image = appData.makeImage()
+        thumbnailImageView.image = appData.makeThumbNailImage()
+        profileImageView.image = appData.makeProfileImage()
         titleLabel.text = appData.titleName
-//        subTitleLabel.text = appData.subTitleName
+        subTitleLabel.text = appData.subTitleName
     }
     
 }

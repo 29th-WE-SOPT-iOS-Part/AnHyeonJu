@@ -8,11 +8,19 @@
 import UIKit
 
 struct HomeContentData {
+    
+    let thumbNailImageName: String
+    let profileImageName: String
     let titleName: String
-//    let subTitleName: String
-//    let thumbnailImageName: String
-//
-//    func makeImage() -> UIImage? {
-//        return UIImage(named: thumbnailImageName)
-//    }
+    let subTitleName: String
+
+    func makeThumbNailImage() -> UIImage? {
+        return UIImage(named: thumbNailImageName)
+    }
+    
+    func makeProfileImage() -> UIImage? {
+        return UIImage(named: profileImageName)
+    }
+        
+    
 }
