@@ -33,8 +33,7 @@ class LoginVC: UIViewController {
     
     // MARK: - @IBAction    
     @IBAction func touchUpToGoSignUpView(_ sender: Any) {
-        guard let signupVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpVC")
-            else {return}
+        guard let signupVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpVC") else {return}
         
         self.navigationController?.pushViewController(signupVC, animated: true)
     }

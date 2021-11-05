@@ -13,6 +13,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var homeTableView: UITableView!
     @IBOutlet weak var shortsCollectionView: UICollectionView!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
+    @IBOutlet weak var profileBtn: UIButton!
     
     var homeContentList: [HomeContentData] = []
     var shortsCollectionContentList: [ShortsCollectionContentData] = []
@@ -30,6 +31,16 @@ class HomeVC: UIViewController {
         shortsCollectionView.delegate = self
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
+    }
+    
+    
+    // MARK: - @IBAction
+    @IBAction func touchUpToGoLoginView(_ sender: Any) {
+        let loginStoryBoard = UIStoryboard.init(name:"Main", bundle: nil)
+        guard let navigationVC = loginStoryBoard.instantiateViewController(withIdentifier: "NavigationVC") as? NavigationVC else {return}
+        
+        navigationVC.modalPresentationStyle = .fullScreen
+        self.present(navigationVC, animated: true, completion: nil)
     }
     
     

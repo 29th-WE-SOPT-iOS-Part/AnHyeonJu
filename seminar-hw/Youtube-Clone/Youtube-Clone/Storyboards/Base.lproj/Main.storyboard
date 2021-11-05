@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ghe-o0-70G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ghe-o0-70G">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -354,10 +354,11 @@
             </objects>
             <point key="canvasLocation" x="1717.5999999999999" y="82.758620689655174"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--NavigationVC-->
         <scene sceneID="WT4-Rh-G3h">
             <objects>
-                <navigationController storyboardIdentifier="UINavigationC" automaticallyAdjustsScrollViewInsets="NO" id="ghe-o0-70G" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zr2-Ed-FRm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="NavigationVC" automaticallyAdjustsScrollViewInsets="NO" id="ghe-o0-70G" customClass="NavigationVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DPd-Lz-qZi">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -368,7 +369,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8hS-gd-SHC"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zr2-Ed-FRm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-956" y="83.497536945812811"/>
         </scene>

@@ -33,6 +33,7 @@
 		F2C197A6271D0FF5001EAB15 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C19799271D0FF5001EAB15 /* WelcomeVC.swift */; };
 		F2C197A7271D0FF5001EAB15 /* PlusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C19796271D0FF4001EAB15 /* PlusVC.swift */; };
 		F2C197A8271D0FF5001EAB15 /* ShortsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C1979C271D0FF5001EAB15 /* ShortsVC.swift */; };
+		F2C6FF0B273542A40020E10F /* NavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C6FF0A273542A30020E10F /* NavigationVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		F2C1979C271D0FF5001EAB15 /* ShortsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortsVC.swift; sourceTree = "<group>"; };
 		F2C1979D271D0FF5001EAB15 /* SubscribeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeVC.swift; sourceTree = "<group>"; };
 		F2C1979E271D0FF5001EAB15 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		F2C6FF0A273542A30020E10F /* NavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 		F2C197AC271D1560001EAB15 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				F2C6FF0A273542A30020E10F /* NavigationVC.swift */,
 				F2C19795271D0FF4001EAB15 /* LoginVC.swift */,
 				F2C19797271D0FF4001EAB15 /* SignUpVC.swift */,
 				F2C19799271D0FF5001EAB15 /* WelcomeVC.swift */,
@@ -272,6 +275,7 @@
 				F25C6FF1272B864400967EBE /* CategoryCollectionViewCell.swift in Sources */,
 				F259A3D5272A81BC002F0532 /* shortsCollectionDataModel.swift in Sources */,
 				F2C197A3271D0FF5001EAB15 /* HomeVC.swift in Sources */,
+				F2C6FF0B273542A40020E10F /* NavigationVC.swift in Sources */,
 				F2C197A6271D0FF5001EAB15 /* WelcomeVC.swift in Sources */,
 				F2C197A8271D0FF5001EAB15 /* ShortsVC.swift in Sources */,
 				F2C1979F271D0FF5001EAB15 /* SubscribeVC.swift in Sources */,

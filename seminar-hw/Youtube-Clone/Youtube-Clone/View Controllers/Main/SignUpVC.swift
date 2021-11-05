@@ -50,7 +50,7 @@ class SignUpVC: UIViewController {
         
         //샤라웃 투 지은님... 감사합니다...
         self.present(welcomeVC, animated: true, completion: {
-            //confirmVC로 modal present와 동시에 navigation stack에서 signUpVC를 pop해줘서 rootVC로 돌아가게끔 해줍니다. (popViewController, popToRootViewController 모두 가능)
+            //WelcomeVC로 modal present와 동시에 navigation stack에서 signUpVC를 pop해줘서 rootVC로 돌아가게끔 해줍니다. (popViewController, popToRootViewController 모두 가능)
             self.navigationController?.popToRootViewController(animated: true)
         })
     }
