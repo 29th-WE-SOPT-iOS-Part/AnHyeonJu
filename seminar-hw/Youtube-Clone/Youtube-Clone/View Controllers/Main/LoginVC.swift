@@ -39,9 +39,13 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func touchUpToGoWelcomeView(_ sender: Any) {
+        requestLogin()
+        getUserData()
+        //simplealert의 값이 확인이면 화면전환
+        
         guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
         
-        welcomeVC.name = nameTextField.text
+//        welcomeVC.name = nameTextField.text
         welcomeVC.modalPresentationStyle = .fullScreen
         self.present(welcomeVC, animated: true, completion: nil)
     }
@@ -63,6 +67,14 @@ class LoginVC: UIViewController {
             $0?.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         }
     }
+    
+    func simpleAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "확인", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
 
 }
 
@@ -79,3 +91,46 @@ extension UIViewController {
     }
 }
 
+extension LoginVC {
+    func requestLogin() { //statuscode가 200이였다면 담아져 있는 개체는 LoginResponseData지만 실살 Any타입이라 형변환을 해야한다.
+        UserSignService.shared.login(email: emailTextField.text ?? "",
+                                     password: passwordTextField.text ?? "") { responseData in
+            switch  responseData {
+            case .success(let loginResponse):
+                guard let response = loginResponse as? LoginResponsData else { return }
+                if let userData = response.data {
+                    self.simpleAlert(title: "로그인", message: "로그인 성공")}
+            case .requestErr(let msg):
+                print("requestERR \(msg)")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+    }
+    
+    func getUserData() {
+        UserSignService.shared.readUserData(userId: 2) { responseData in
+            switch  responseData {
+            case .success(let loginResponse):
+                guard let response = loginResponse as? LoginResponsData else { return }
+                //WelcomeVC 선언
+                guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
+                if let userData = response.data { //이름바꾸기 WelcomeVC
+                    welcomeVC.name = userData.name
+                }
+            case .requestErr(let msg):
+                print("requestERR \(msg)")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+    }
+}
