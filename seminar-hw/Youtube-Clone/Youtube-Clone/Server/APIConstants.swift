@@ -14,6 +14,9 @@ struct APIConstants {
     //MARK: - Feature URL(Login)
     static let loginURL = baseURL + "/user/login"
     
-    //GET방식을 위한 코드 추가
+    //MARK: - Feature URL(SignUp)
+    static let signupURL = baseURL + "/user/signup"
+    
+    //MARK: - Feature URL(Login)
     static let readUserURL = baseURL + "/user/"
 }
