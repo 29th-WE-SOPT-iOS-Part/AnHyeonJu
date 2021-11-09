@@ -65,7 +65,6 @@ class LoginVC: UIViewController {
     //성공일 경우 alert 함수
     func successAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
         let okAction = UIAlertAction(title: "확인", style: .default,  handler: { (action) in
             guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
             
@@ -80,7 +79,9 @@ class LoginVC: UIViewController {
     //실패시 alert 함수
     func failAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+        
+        let okAction = UIAlertAction(title: "확인", style: .default)
+        
         alert.addAction(okAction)
         present(alert, animated: true)
     }
@@ -91,10 +92,8 @@ class LoginVC: UIViewController {
 extension UIViewController {
     func hideKeyboard() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        
         view.addGestureRecognizer(tap)
     }
-    
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
@@ -114,12 +113,10 @@ extension LoginVC {
             case .requestErr(let msg):
                 print("requestERR \(msg)")
                 
-            case .pathErr(let fail):
+            case .pathErr(let loginResponse):
                 print("pathErr")
-                guard let response = fail as? LoginResponseData else { return }
-                if response.data != nil {
-                    self.failAlert(title: "로그인", message: response.message)
-                }
+                guard let response = loginResponse as? LoginResponseData else { return }
+                self.failAlert(title: "로그인", message: response.message)
                 
             case .serverErr:
                 print("serverErr")
