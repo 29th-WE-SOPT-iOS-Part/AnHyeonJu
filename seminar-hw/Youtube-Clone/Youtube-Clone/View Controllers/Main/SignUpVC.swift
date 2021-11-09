@@ -70,8 +70,8 @@ class SignUpVC: UIViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "확인", style: .default,  handler: { (action) in
             guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC")as? WelcomeVC else {return}
-            
-            welcomeVC.name = self.nameTextField.text
+            //도전과제
+//            welcomeVC.name = self.nameTextField.text
             welcomeVC.modalPresentationStyle = .fullScreen
             
             //샤라웃 투 지은님... 감사합니다...
@@ -106,6 +106,7 @@ extension SignUpVC {
             case .success(let signupResponse):
                 guard let response = signupResponse as? SignUpResponseData else { return }
                 if response.data != nil {
+                    UserDefaults.standard.set(self.nameTextField.text, forKey: "name")
                     self.successAlert(title: "회원가입", message: response.message)
                 }
                 

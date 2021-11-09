@@ -40,7 +40,7 @@ class LoginVC: UIViewController {
     
     @IBAction func touchUpToGoWelcomeView(_ sender: Any) {
         requestLogin()
-        getUserData()
+//        getUserData()
         
     }
     
@@ -68,7 +68,9 @@ class LoginVC: UIViewController {
         let okAction = UIAlertAction(title: "확인", style: .default,  handler: { (action) in
             guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
             
-            welcomeVC.name = self.nameTextField.text
+            
+            //도전과제
+//            welcomeVC.name = self.nameTextField.text
             welcomeVC.modalPresentationStyle = .fullScreen
             self.present(welcomeVC, animated: true, completion: nil)
         })
@@ -102,11 +104,12 @@ extension UIViewController {
 extension LoginVC {
     func requestLogin() { //statuscode가 200이였다면 담아져 있는 개체는 LoginResponseData지만 실살 Any타입이라 형변환을 해야한다.
         UserLoginService.shared.login(email: emailTextField.text ?? "",
-                                     password: passwordTextField.text ?? "") { responseData in
+                                      password: passwordTextField.text ?? "") { [self] responseData in
             switch  responseData {
             case .success(let loginResponse):
                 guard let response = loginResponse as? LoginResponseData else { return }
                 if response.data != nil {
+                    UserDefaults.standard.set(self.nameTextField.text, forKey: "name")
                     self.successAlert(title: "로그인", message: response.message)
                 }
                 
@@ -126,25 +129,25 @@ extension LoginVC {
         }
     }
     
-    func getUserData() {
-        UserLoginService.shared.readUserData(userId: 2) { responseData in
-            switch  responseData {
-            case .success(let loginResponse):
-                guard let response = loginResponse as? LoginResponseData else { return }
-                //WelcomeVC 선언
-                guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
-                if let userData = response.data { //이름바꾸기 WelcomeVC
-                    welcomeVC.name = userData.name
-                }
-            case .requestErr(let msg):
-                print("requestERR \(msg)")
-            case .pathErr:
-                print("pathErr")
-            case .serverErr:
-                print("serverErr")
-            case .networkFail:
-                print("networkFail")
-            }
-        }
-    }
+//    func getUserData() {
+//        UserLoginService.shared.readUserData(userId: 2) { responseData in
+//            switch  responseData {
+//            case .success(let loginResponse):
+//                guard let response = loginResponse as? LoginResponseData else { return }
+//                //WelcomeVC 선언
+//                guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
+//                if let userData = response.data { //이름바꾸기 WelcomeVC
+//                    welcomeVC.name = userData.name
+//                }
+//            case .requestErr(let msg):
+//                print("requestERR \(msg)")
+//            case .pathErr:
+//                print("pathErr")
+//            case .serverErr:
+//                print("serverErr")
+//            case .networkFail:
+//                print("networkFail")
+//            }
+//        }
+//    }
 }
