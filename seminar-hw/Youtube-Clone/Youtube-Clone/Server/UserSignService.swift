@@ -60,11 +60,11 @@ struct UserSignService {
                       completion: @escaping (NetworkResult<Any>) -> (Void)){
         //요청할 url
         let url = APIConstants.readUserURL + "\(userId)"
-        
+
         let header: HTTPHeaders = [
             "Content-Type" : "application/json"
         ]
-        
+
         let dataRquest = AF.request(url,
                                      method: .get,
                                      encoding: JSONEncoding.default,
@@ -81,7 +81,7 @@ struct UserSignService {
                 completion(.networkFail)
             }
         }
-        
+
     }
     
     

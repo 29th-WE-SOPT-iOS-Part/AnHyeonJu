@@ -41,13 +41,13 @@ class LoginVC: UIViewController {
     @IBAction func touchUpToGoWelcomeView(_ sender: Any) {
         requestLogin()
         getUserData()
-        //simplealert의 값이 확인이면 화면전환
         
-        guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
-        
-//        welcomeVC.name = nameTextField.text
-        welcomeVC.modalPresentationStyle = .fullScreen
-        self.present(welcomeVC, animated: true, completion: nil)
+
+//        guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
+//
+////        welcomeVC.name = nameTextField.text
+//        welcomeVC.modalPresentationStyle = .fullScreen
+//        self.present(welcomeVC, animated: true, completion: nil)
     }
     
     
@@ -71,7 +71,7 @@ class LoginVC: UIViewController {
     func simpleAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        let okAction = UIAlertAction(title: "확인", style: .default)
+        let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: true)
     }
@@ -98,8 +98,9 @@ extension LoginVC {
             switch  responseData {
             case .success(let loginResponse):
                 guard let response = loginResponse as? LoginResponsData else { return }
-                if let userData = response.data {
+                if response.data != nil {
                     self.simpleAlert(title: "로그인", message: "로그인 성공")}
+                
             case .requestErr(let msg):
                 print("requestERR \(msg)")
             case .pathErr:
