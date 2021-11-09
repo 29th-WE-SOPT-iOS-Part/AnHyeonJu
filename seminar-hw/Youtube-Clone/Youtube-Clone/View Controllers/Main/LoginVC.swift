@@ -42,12 +42,6 @@ class LoginVC: UIViewController {
         requestLogin()
         getUserData()
         
-
-//        guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
-//
-////        welcomeVC.name = nameTextField.text
-//        welcomeVC.modalPresentationStyle = .fullScreen
-//        self.present(welcomeVC, animated: true, completion: nil)
     }
     
     
@@ -68,14 +62,29 @@ class LoginVC: UIViewController {
         }
     }
     
-    func simpleAlert(title: String, message: String) {
+    //성공일 경우 alert 함수
+    func successAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
+        let okAction = UIAlertAction(title: "확인", style: .default,  handler: { (action) in
+            guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
+            
+            welcomeVC.name = self.nameTextField.text
+            welcomeVC.modalPresentationStyle = .fullScreen
+            self.present(welcomeVC, animated: true, completion: nil)
+        })
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+    
+    //실패시 alert 함수
+    func failAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: true)
     }
-
+    
 }
 
 // MARK: - Extension
@@ -97,14 +106,21 @@ extension LoginVC {
                                      password: passwordTextField.text ?? "") { responseData in
             switch  responseData {
             case .success(let loginResponse):
-                guard let response = loginResponse as? LoginResponsData else { return }
+                guard let response = loginResponse as? LoginResponseData else { return }
                 if response.data != nil {
-                    self.simpleAlert(title: "로그인", message: "로그인 성공")}
+                    self.successAlert(title: "로그인", message: response.message)
+                }
                 
             case .requestErr(let msg):
                 print("requestERR \(msg)")
-            case .pathErr:
+                
+            case .pathErr(let fail):
                 print("pathErr")
+                guard let response = fail as? LoginResponseData else { return }
+                if response.data != nil {
+                    self.failAlert(title: "로그인", message: response.message)
+                }
+                
             case .serverErr:
                 print("serverErr")
             case .networkFail:
@@ -117,7 +133,7 @@ extension LoginVC {
         UserSignService.shared.readUserData(userId: 2) { responseData in
             switch  responseData {
             case .success(let loginResponse):
-                guard let response = loginResponse as? LoginResponsData else { return }
+                guard let response = loginResponse as? LoginResponseData else { return }
                 //WelcomeVC 선언
                 guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
                 if let userData = response.data { //이름바꾸기 WelcomeVC

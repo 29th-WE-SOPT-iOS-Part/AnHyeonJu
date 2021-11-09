@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - LoginResponsData
-struct LoginResponsData: Codable {
+struct LoginResponseData: Codable {
     let status: Int
     let success: Bool
     let message: String

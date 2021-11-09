@@ -89,20 +89,31 @@ struct UserSignService {
     private func judgeLoginStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
         switch statusCode {
         case 200: return isValidLoginData(data: data)
-        case 400: return .pathErr
+        case 400: return isUsedPathErrData(data: data)
         case 500: return .serverErr
         default: return .networkFail
         }
     }
     
+    
     //원하는 데이터를 decoding하기 
     private func isValidLoginData(data: Data) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
         // JSON데이터를 LoginResponseData 구조체로 데이터를 변환
-        guard let decodedData = try? decoder.decode(LoginResponsData.self, from: data)
-            else {return .pathErr}
+        guard let decodedData = try? decoder.decode(LoginResponseData.self, from: data)
+            else {return .pathErr(data)}
         // 그 데이터를 NerworkResult success 파라미터로 전달
         return .success(decodedData)
+    }
+    
+    
+    //400 pathErr의 경우 메시지 경우 나눌때 사용
+    private func isUsedPathErrData(data: Data) -> NetworkResult<Any> {
+        let decoder = JSONDecoder()
+        // JSON데이터를 LoginResponseData 구조체로 데이터를 변환
+        guard let decodedData = try? decoder.decode(LoginResponseData.self, from: data)
+            else {return .pathErr(data)}
+        return .pathErr(decodedData)
     }
     
 }
