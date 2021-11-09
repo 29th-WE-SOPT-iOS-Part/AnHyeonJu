@@ -8,10 +8,10 @@
 import Foundation
 import Alamofire
 
-struct UserSignService {
+struct UserLoginService {
     
     //싱글톤 객체를 선언하여, 앱 어디에서든 접근 할 수 있도록 추가
-    static let shared = UserSignService()
+    static let shared = UserLoginService()
     
     //로그인 통신 할 함수 정의
     func login(email: String,
@@ -19,7 +19,7 @@ struct UserSignService {
                completion: @escaping (NetworkResult<Any>) -> (Void)) {
         
         //통신할 API주소
-        let url = APIConstants.loginURL
+        let loginUrl = APIConstants.loginURL
         
         //요청 헤더
         let header: HTTPHeaders = [
@@ -33,7 +33,7 @@ struct UserSignService {
         ]
         
         //encoding(통신할 API주소, HTTP Method, 요청 바디, () , 요청 헤더)
-        let dataRequest = AF.request(url,
+        let dataRequest = AF.request(loginUrl,
                                      method: .post,
                                      parameters: body,
                                      encoding: JSONEncoding.default,

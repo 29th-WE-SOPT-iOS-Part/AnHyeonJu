@@ -45,17 +45,6 @@ class SignUpVC: UIViewController {
     @IBAction func touchUpToGoWelcomeView(_ sender: Any) {
         requestSignUp()
         
-//        guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC")as? WelcomeVC else {return}
-//
-//        welcomeVC.name = nameTextField.text
-//        welcomeVC.modalPresentationStyle = .fullScreen
-//
-//        //샤라웃 투 지은님... 감사합니다...
-//        self.present(welcomeVC, animated: true, completion: {
-//            //WelcomeVC로 modal present와 동시에 navigation stack에서 signUpVC를 pop해줘서 rootVC로 돌아가게끔 해줍니다. (popViewController, popToRootViewController 모두 가능)
-//            self.navigationController?.popToRootViewController(animated: true)
-//        })
-        
     }
     
     
@@ -80,11 +69,16 @@ class SignUpVC: UIViewController {
     func successAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "확인", style: .default,  handler: { (action) in
-            guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
+            guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC")as? WelcomeVC else {return}
             
             welcomeVC.name = self.nameTextField.text
             welcomeVC.modalPresentationStyle = .fullScreen
-            self.present(welcomeVC, animated: true, completion: nil)
+            
+            //샤라웃 투 지은님... 감사합니다...
+            self.present(welcomeVC, animated: true, completion: {
+                //WelcomeVC로 modal present와 동시에 navigation stack에서 signUpVC를 pop해줘서 rootVC로 돌아가게끔 해줍니다. (popViewController, popToRootViewController 모두 가능)
+                self.navigationController?.popToRootViewController(animated: true)
+            })
         })
         alert.addAction(okAction)
         present(alert, animated: true)
@@ -102,17 +96,15 @@ class SignUpVC: UIViewController {
 }
 
 // MARK: - Extension
-
-
 extension SignUpVC {
     func requestSignUp() { //statuscode가 200이였다면 담아져 있는 개체는 LoginResponseData지만 실살 Any타입이라 형변환을 해야한다.
-        UserSignService.shared.login(email: emailTextField.text ?? "",
+        UserLoginService.shared.login(email: emailTextField.text ?? "",
                                      password: passwordTextField.text ?? "") { responseData in
             switch  responseData {
             case .success(let loginResponse):
                 guard let response = loginResponse as? LoginResponseData else { return }
                 if response.data != nil {
-                    self.successAlert(title: "로그인", message: response.message)
+                    self.successAlert(title: "회원가입", message: response.message)
                 }
                 
             case .requestErr(let msg):
@@ -121,7 +113,7 @@ extension SignUpVC {
             case .pathErr(let loginResponse):
                 print("pathErr")
                 guard let response = loginResponse as? LoginResponseData else { return }
-                self.failAlert(title: "로그인", message: response.message)
+                self.failAlert(title: "회원가입", message: response.message)
                 
             case .serverErr:
                 print("serverErr")

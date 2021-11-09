@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		421171BDF9D1AEA96D0A1BED /* Pods_Youtube_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56FFDC75825A62710E51DA24 /* Pods_Youtube_Clone.framework */; };
+		F2077CE0273A5E41003D7FDE /* UserSignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2077CDF273A5E41003D7FDE /* UserSignUpService.swift */; };
+		F2077CE2273A5F2B003D7FDE /* SignUpResponseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2077CE1273A5F2B003D7FDE /* SignUpResponseDataModel.swift */; };
 		F2492A68271815B400775417 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2492A67271815B400775417 /* SF-Pro-Display-Regular.otf */; };
 		F259A3D2272A7E96002F0532 /* ShortsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F259A3D0272A7E96002F0532 /* ShortsCollectionViewCell.swift */; };
 		F259A3D3272A7E96002F0532 /* ShortsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F259A3D1272A7E96002F0532 /* ShortsCollectionViewCell.xib */; };
@@ -38,13 +40,15 @@
 		F2C6FF102735774F0020E10F /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C6FF0F2735774F0020E10F /* APIConstants.swift */; };
 		F2C6FF1227358D940020E10F /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C6FF1127358D940020E10F /* NetworkResult.swift */; };
 		F2C6FF1427358DED0020E10F /* LoginResponseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C6FF1327358DED0020E10F /* LoginResponseDataModel.swift */; };
-		F2C6FF1627358E2E0020E10F /* UserSignService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C6FF1527358E2E0020E10F /* UserSignService.swift */; };
+		F2C6FF1627358E2E0020E10F /* UserLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C6FF1527358E2E0020E10F /* UserLoginService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		56FFDC75825A62710E51DA24 /* Pods_Youtube_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youtube_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61D89D7086BC3D9328A74A61 /* Pods-Youtube-Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youtube-Clone.release.xcconfig"; path = "Target Support Files/Pods-Youtube-Clone/Pods-Youtube-Clone.release.xcconfig"; sourceTree = "<group>"; };
 		897925996AC5E91AF3826F36 /* Pods-Youtube-Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youtube-Clone.debug.xcconfig"; path = "Target Support Files/Pods-Youtube-Clone/Pods-Youtube-Clone.debug.xcconfig"; sourceTree = "<group>"; };
+		F2077CDF273A5E41003D7FDE /* UserSignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignUpService.swift; sourceTree = "<group>"; };
+		F2077CE1273A5F2B003D7FDE /* SignUpResponseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponseDataModel.swift; sourceTree = "<group>"; };
 		F2492A67271815B400775417 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		F259A3D0272A7E96002F0532 /* ShortsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F259A3D1272A7E96002F0532 /* ShortsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShortsCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -77,7 +81,7 @@
 		F2C6FF0F2735774F0020E10F /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		F2C6FF1127358D940020E10F /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		F2C6FF1327358DED0020E10F /* LoginResponseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseDataModel.swift; sourceTree = "<group>"; };
-		F2C6FF1527358E2E0020E10F /* UserSignService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignService.swift; sourceTree = "<group>"; };
+		F2C6FF1527358E2E0020E10F /* UserLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,7 +237,9 @@
 				F2C6FF0F2735774F0020E10F /* APIConstants.swift */,
 				F2C6FF1127358D940020E10F /* NetworkResult.swift */,
 				F2C6FF1327358DED0020E10F /* LoginResponseDataModel.swift */,
-				F2C6FF1527358E2E0020E10F /* UserSignService.swift */,
+				F2C6FF1527358E2E0020E10F /* UserLoginService.swift */,
+				F2077CE1273A5F2B003D7FDE /* SignUpResponseDataModel.swift */,
+				F2077CDF273A5E41003D7FDE /* UserSignUpService.swift */,
 			);
 			path = Server;
 			sourceTree = "<group>";
@@ -361,15 +367,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F25C6FF1272B864400967EBE /* CategoryCollectionViewCell.swift in Sources */,
-				F2C6FF1627358E2E0020E10F /* UserSignService.swift in Sources */,
+				F2C6FF1627358E2E0020E10F /* UserLoginService.swift in Sources */,
 				F259A3D5272A81BC002F0532 /* shortsCollectionDataModel.swift in Sources */,
 				F2C6FF1427358DED0020E10F /* LoginResponseDataModel.swift in Sources */,
 				F2C197A3271D0FF5001EAB15 /* HomeVC.swift in Sources */,
+				F2077CE2273A5F2B003D7FDE /* SignUpResponseDataModel.swift in Sources */,
 				F2C6FF0B273542A40020E10F /* NavigationVC.swift in Sources */,
 				F2C197A6271D0FF5001EAB15 /* WelcomeVC.swift in Sources */,
 				F2C197A8271D0FF5001EAB15 /* ShortsVC.swift in Sources */,
 				F2C1979F271D0FF5001EAB15 /* SubscribeVC.swift in Sources */,
 				F2C197A4271D0FF5001EAB15 /* MainTBC.swift in Sources */,
+				F2077CE0273A5E41003D7FDE /* UserSignUpService.swift in Sources */,
 				F2C197A2271D0FF5001EAB15 /* SignUpVC.swift in Sources */,
 				F2A34E322729981C00B78517 /* HomeTableViewCell.swift in Sources */,
 				F259A3D2272A7E96002F0532 /* ShortsCollectionViewCell.swift in Sources */,

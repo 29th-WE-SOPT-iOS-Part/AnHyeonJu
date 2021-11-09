@@ -101,7 +101,7 @@ extension UIViewController {
 
 extension LoginVC {
     func requestLogin() { //statuscode가 200이였다면 담아져 있는 개체는 LoginResponseData지만 실살 Any타입이라 형변환을 해야한다.
-        UserSignService.shared.login(email: emailTextField.text ?? "",
+        UserLoginService.shared.login(email: emailTextField.text ?? "",
                                      password: passwordTextField.text ?? "") { responseData in
             switch  responseData {
             case .success(let loginResponse):
@@ -127,7 +127,7 @@ extension LoginVC {
     }
     
     func getUserData() {
-        UserSignService.shared.readUserData(userId: 2) { responseData in
+        UserLoginService.shared.readUserData(userId: 2) { responseData in
             switch  responseData {
             case .success(let loginResponse):
                 guard let response = loginResponse as? LoginResponseData else { return }
