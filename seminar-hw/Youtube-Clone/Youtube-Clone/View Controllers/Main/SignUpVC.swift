@@ -98,11 +98,13 @@ class SignUpVC: UIViewController {
 // MARK: - Extension
 extension SignUpVC {
     func requestSignUp() { //statuscode가 200이였다면 담아져 있는 개체는 LoginResponseData지만 실살 Any타입이라 형변환을 해야한다.
-        UserLoginService.shared.login(email: emailTextField.text ?? "",
+        UserSignUpService.shared.signUp(email: emailTextField.text ?? "",
+                                        name: nameTextField.text ?? "",
                                      password: passwordTextField.text ?? "") { responseData in
             switch  responseData {
-            case .success(let loginResponse):
-                guard let response = loginResponse as? LoginResponseData else { return }
+                
+            case .success(let signupResponse):
+                guard let response = signupResponse as? SignUpResponseData else { return }
                 if response.data != nil {
                     self.successAlert(title: "회원가입", message: response.message)
                 }
@@ -110,9 +112,10 @@ extension SignUpVC {
             case .requestErr(let msg):
                 print("requestERR \(msg)")
                 
-            case .pathErr(let loginResponse):
+            case .pathErr(let signupResponse):
                 print("pathErr")
-                guard let response = loginResponse as? LoginResponseData else { return }
+                //여기서 이메일이 같으면 --> 근데 서버 보내면 받을떄 저절로 오지 않ㄴ나..?
+                guard let response = signupResponse as? SignUpResponseData else { return }
                 self.failAlert(title: "회원가입", message: response.message)
                 
             case .serverErr:
