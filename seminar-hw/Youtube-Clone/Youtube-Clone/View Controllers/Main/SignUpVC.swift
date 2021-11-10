@@ -65,18 +65,12 @@ class SignUpVC: UIViewController {
         }
     }
     
-    //성공일 경우 alert 함수
     func successAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "확인", style: .default,  handler: { (action) in
             guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC")as? WelcomeVC else {return}
-            //도전과제
-//            welcomeVC.name = self.nameTextField.text
             welcomeVC.modalPresentationStyle = .fullScreen
-            
-            //샤라웃 투 지은님... 감사합니다...
             self.present(welcomeVC, animated: true, completion: {
-                //WelcomeVC로 modal present와 동시에 navigation stack에서 signUpVC를 pop해줘서 rootVC로 돌아가게끔 해줍니다. (popViewController, popToRootViewController 모두 가능)
                 self.navigationController?.popToRootViewController(animated: true)
             })
         })
@@ -84,41 +78,34 @@ class SignUpVC: UIViewController {
         present(alert, animated: true)
     }
     
-    //실패시 alert 함수
     func failAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
         let okAction = UIAlertAction(title: "확인", style: .default)
-        
         alert.addAction(okAction)
         present(alert, animated: true)
+        setTextFieldEmpty()
     }
 }
 
 // MARK: - Extension
 extension SignUpVC {
-    func requestSignUp() { //statuscode가 200이였다면 담아져 있는 개체는 LoginResponseData지만 실살 Any타입이라 형변환을 해야한다.
+    func requestSignUp() {
         UserSignUpService.shared.signUp(email: emailTextField.text ?? "",
                                         name: nameTextField.text ?? "",
                                      password: passwordTextField.text ?? "") { responseData in
             switch  responseData {
-                
             case .success(let signupResponse):
                 guard let response = signupResponse as? SignUpResponseData else { return }
                 if response.data != nil {
                     UserDefaults.standard.set(self.nameTextField.text, forKey: "name")
                     self.successAlert(title: "회원가입", message: response.message)
                 }
-                
             case .requestErr(let msg):
                 print("requestERR \(msg)")
-                
             case .pathErr(let signupResponse):
                 print("pathErr")
-                //여기서 이메일이 같으면 --> 근데 서버 보내면 받을떄 저절로 오지 않ㄴ나..?
                 guard let response = signupResponse as? SignUpResponseData else { return }
                 self.failAlert(title: "회원가입", message: response.message)
-                
             case .serverErr:
                 print("serverErr")
             case .networkFail:

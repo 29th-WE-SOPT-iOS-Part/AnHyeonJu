@@ -54,37 +54,6 @@ struct UserLoginService {
         }
     }
     
-    //GET 방식을 위한 코드 추가
-    //GET,POST의 차이는 바디의 유무
-//    func readUserData(userId: Int,
-//                      completion: @escaping (NetworkResult<Any>) -> (Void)){
-//        //요청할 url
-//        let url = APIConstants.readUserURL + "\(userId)"
-//
-//        let header: HTTPHeaders = [
-//            "Content-Type" : "application/json"
-//        ]
-//
-//        let dataRquest = AF.request(url,
-//                                     method: .get,
-//                                     encoding: JSONEncoding.default,
-//                                     headers: header)
-//        dataRquest.responseData {dataResponse in
-//            switch dataResponse.result {
-//            case .success:
-//                guard let statusCode = dataResponse.response?.statusCode else {return}
-//                guard let value = dataResponse.value else {return}
-//                let networkResult = self.judgeLoginStatus(by: statusCode, value)
-//                completion(networkResult)
-//            case .failure(let err):
-//                print(err)
-//                completion(.networkFail)
-//            }
-//        }
-//
-//    }
-    
-    
     //서버통신 자체는 성공일지라도 응답 실패로 우리가 원하는 데이터를 받지 못한 상태일 때를 분기 처리하기위한 함수
     private func judgeLoginStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
         switch statusCode {

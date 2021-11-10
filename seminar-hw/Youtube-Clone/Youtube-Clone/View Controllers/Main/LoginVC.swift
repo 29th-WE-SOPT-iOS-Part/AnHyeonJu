@@ -40,8 +40,6 @@ class LoginVC: UIViewController {
     
     @IBAction func touchUpToGoWelcomeView(_ sender: Any) {
         requestLogin()
-//        getUserData()
-        
     }
     
     
@@ -62,15 +60,13 @@ class LoginVC: UIViewController {
         }
     }
     
+    
+    //🌱alert를 2가지 경우로 나눠서 했는데 이런식으로 하는게 맞을까요?
     //성공일 경우 alert 함수
     func successAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "확인", style: .default,  handler: { (action) in
             guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
-            
-            
-            //도전과제
-//            welcomeVC.name = self.nameTextField.text
             welcomeVC.modalPresentationStyle = .fullScreen
             self.present(welcomeVC, animated: true, completion: nil)
         })
@@ -81,11 +77,10 @@ class LoginVC: UIViewController {
     //실패시 alert 함수
     func failAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
         let okAction = UIAlertAction(title: "확인", style: .default)
-        
         alert.addAction(okAction)
         present(alert, animated: true)
+        setTextFieldEmpty()
     }
     
 }
@@ -101,8 +96,9 @@ extension UIViewController {
     }
 }
 
+//🌱UserDeFaults 사용
 extension LoginVC {
-    func requestLogin() { //statuscode가 200이였다면 담아져 있는 개체는 LoginResponseData지만 실살 Any타입이라 형변환을 해야한다.
+    func requestLogin() {
         UserLoginService.shared.login(email: emailTextField.text ?? "",
                                       password: passwordTextField.text ?? "") { [self] responseData in
             switch  responseData {
@@ -112,15 +108,12 @@ extension LoginVC {
                     UserDefaults.standard.set(self.nameTextField.text, forKey: "name")
                     self.successAlert(title: "로그인", message: response.message)
                 }
-                
             case .requestErr(let msg):
                 print("requestERR \(msg)")
-                
             case .pathErr(let loginResponse):
                 print("pathErr")
                 guard let response = loginResponse as? LoginResponseData else { return }
                 self.failAlert(title: "로그인", message: response.message)
-                
             case .serverErr:
                 print("serverErr")
             case .networkFail:
@@ -128,26 +121,4 @@ extension LoginVC {
             }
         }
     }
-    
-//    func getUserData() {
-//        UserLoginService.shared.readUserData(userId: 2) { responseData in
-//            switch  responseData {
-//            case .success(let loginResponse):
-//                guard let response = loginResponse as? LoginResponseData else { return }
-//                //WelcomeVC 선언
-//                guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
-//                if let userData = response.data { //이름바꾸기 WelcomeVC
-//                    welcomeVC.name = userData.name
-//                }
-//            case .requestErr(let msg):
-//                print("requestERR \(msg)")
-//            case .pathErr:
-//                print("pathErr")
-//            case .serverErr:
-//                print("serverErr")
-//            case .networkFail:
-//                print("networkFail")
-//            }
-//        }
-//    }
 }

@@ -13,7 +13,7 @@ struct UserSignUpService {
     //싱글톤 객체를 선언하여, 앱 어디에서든 접근 할 수 있도록 추가
     static let shared = UserSignUpService()
     
-    //로그인 통신 할 함수 정의
+    //회원가입때 통신 할 함수 정의
     func signUp(email: String,
                 name: String,
                password: String,

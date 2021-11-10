@@ -25,15 +25,11 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         initDataList()
         registerXib()
-        homeTableView.dataSource = self
-        homeTableView.delegate = self
-        shortsCollectionView.dataSource = self
-        shortsCollectionView.delegate = self
-        categoryCollectionView.delegate = self
-        categoryCollectionView.dataSource = self
+        makeDelegate()
     }
     
     
+    //🌱 LoginVC 앞에 있는 네비게이션 VC을 만들어서 거기에다가 modal방식으로 띄워주기를 했습니다..!
     // MARK: - @IBAction
     @IBAction func touchUpToGoLoginView(_ sender: Any) {
         let loginStoryBoard = UIStoryboard.init(name:"Main", bundle: nil)
@@ -45,6 +41,15 @@ class HomeVC: UIViewController {
     
     
     // MARK: - Custom Method
+    func makeDelegate() {
+        homeTableView.dataSource = self
+        homeTableView.delegate = self
+        shortsCollectionView.dataSource = self
+        shortsCollectionView.delegate = self
+        categoryCollectionView.delegate = self
+        categoryCollectionView.dataSource = self
+    }
+    
     func registerXib() {
         let xibName = UINib(nibName: HomeTableViewCell.identifier, bundle: nil)
         homeTableView.register(xibName, forCellReuseIdentifier: HomeTableViewCell.identifier)
@@ -83,13 +88,7 @@ class HomeVC: UIViewController {
         categoryList.append(contentsOf: [
             "전체","오늘","이어서 시청하기","시청하지 않음","실시간","게시물"
         ])
-        
-        //현규 선배꺼 보고 넣었는데 안필요하대욤.....
-//        homeTableView.reloadData()
-//        shortsCollectionView.reloadData()
-//        categoryCollectionView.reloadData()
     }
-
 }
 
 

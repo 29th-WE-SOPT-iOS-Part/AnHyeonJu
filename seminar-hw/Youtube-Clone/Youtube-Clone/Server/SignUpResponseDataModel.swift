@@ -18,8 +18,7 @@ struct SignUpResponseData: Codable {
 // MARK: - SignUpResultData
 struct SignUpResultData: Codable {
     let id: Int
-    let name: String
+    let name,email: String
 //    let password: Int
-    let email: String
 }
 

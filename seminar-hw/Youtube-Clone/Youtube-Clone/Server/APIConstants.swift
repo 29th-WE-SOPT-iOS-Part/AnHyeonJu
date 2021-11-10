@@ -16,7 +16,5 @@ struct APIConstants {
     
     //MARK: - Feature URL(SignUp)
     static let signupURL = baseURL + "/user/signup"
-    
-    //MARK: - Feature URL(Login)
-    static let readUserURL = baseURL + "/user/"
 }
+ 

@@ -36,6 +36,7 @@ class WelcomeVC: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    //🌱UserDefaults사용! --> 이전에 있전 setText관련 코드 삭제
     // MARK: - Custom Method
     func setNameInLabel() {
         if let user = UserDefaults.standard.string(forKey: "name") {
