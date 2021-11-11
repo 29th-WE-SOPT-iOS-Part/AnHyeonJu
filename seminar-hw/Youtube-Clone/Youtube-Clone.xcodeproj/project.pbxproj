@@ -11,6 +11,7 @@
 		F2077CE0273A5E41003D7FDE /* UserSignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2077CDF273A5E41003D7FDE /* UserSignUpService.swift */; };
 		F2077CE2273A5F2B003D7FDE /* SignUpResponseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2077CE1273A5F2B003D7FDE /* SignUpResponseDataModel.swift */; };
 		F20BC3C2273CDBA10006639F /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20BC3C1273CDBA10006639F /* UIViewController + Extension.swift */; };
+		F20BC3C4273CFD1F0006639F /* UserDefaults + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20BC3C3273CFD1F0006639F /* UserDefaults + Extension.swift */; };
 		F2492A68271815B400775417 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2492A67271815B400775417 /* SF-Pro-Display-Regular.otf */; };
 		F259A3D2272A7E96002F0532 /* ShortsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F259A3D0272A7E96002F0532 /* ShortsCollectionViewCell.swift */; };
 		F259A3D3272A7E96002F0532 /* ShortsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F259A3D1272A7E96002F0532 /* ShortsCollectionViewCell.xib */; };
@@ -51,6 +52,7 @@
 		F2077CDF273A5E41003D7FDE /* UserSignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignUpService.swift; sourceTree = "<group>"; };
 		F2077CE1273A5F2B003D7FDE /* SignUpResponseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponseDataModel.swift; sourceTree = "<group>"; };
 		F20BC3C1273CDBA10006639F /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		F20BC3C3273CFD1F0006639F /* UserDefaults + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults + Extension.swift"; sourceTree = "<group>"; };
 		F2492A67271815B400775417 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		F259A3D0272A7E96002F0532 /* ShortsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F259A3D1272A7E96002F0532 /* ShortsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShortsCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				F20BC3C1273CDBA10006639F /* UIViewController + Extension.swift */,
+				F20BC3C3273CFD1F0006639F /* UserDefaults + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				F281F511270D456D006EA470 /* SceneDelegate.swift in Sources */,
 				F2C197A5271D0FF5001EAB15 /* StoreVC.swift in Sources */,
 				F2C197A7271D0FF5001EAB15 /* PlusVC.swift in Sources */,
+				F20BC3C4273CFD1F0006639F /* UserDefaults + Extension.swift in Sources */,
 				F2C6FF1227358D940020E10F /* NetworkResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

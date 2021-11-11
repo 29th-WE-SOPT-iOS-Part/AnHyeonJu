@@ -39,7 +39,7 @@ class WelcomeVC: UIViewController {
     //🌱UserDefaults사용! --> 이전에 있전 setText관련 코드 삭제
     // MARK: - Custom Method
     func setNameInLabel() {
-        if let user = UserDefaults.standard.string(forKey: "name") {
+        if let user = UserDefaults.standard.string(forKey: UserDefaults.Keys.loginUserName) {
             nameLabel.text = "\(user)님 환영합니다!"
             nameLabel.sizeToFit()
         }

@@ -82,7 +82,7 @@ extension LoginVC {
             case .success(let loginResponse):
                 guard let response = loginResponse as? LoginResponseData else { return }
                 if response.data != nil {
-                    UserDefaults.standard.set(self.nameTextField.text, forKey: "name")
+                    UserDefaults.standard.set(self.nameTextField.text, forKey: UserDefaults.Keys.loginUserName)
                     self.makeAlert(title: "로그인", message: response.message, okAction: { _ in
                         guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
                         welcomeVC.modalPresentationStyle = .fullScreen

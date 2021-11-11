@@ -77,7 +77,7 @@ extension SignUpVC {
             case .success(let signupResponse):
                 guard let response = signupResponse as? SignUpResponseData else { return }
                 if response.data != nil {
-                    UserDefaults.standard.set(self.nameTextField.text, forKey: "name")
+                    UserDefaults.standard.set(self.nameTextField.text, forKey: UserDefaults.Keys.loginUserName)
                     self.makeAlert(title: "회원가입", message: response.message, okAction: { _ in
                         guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC")as? WelcomeVC else {return}
                         welcomeVC.modalPresentationStyle = .fullScreen
