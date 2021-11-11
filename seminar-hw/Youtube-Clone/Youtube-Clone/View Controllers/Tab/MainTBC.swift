@@ -25,25 +25,16 @@ class MainTBC: UITabBarController {
               let storeVC = self.storyboard?.instantiateViewController(identifier: "StoreVC")
             else { return }
         
-        homeVC.tabBarItem.title = "홈"
-        homeVC.tabBarItem.image = UIImage(named: "homeIcon")
-        homeVC.tabBarItem.selectedImage = UIImage(named: "homeIconFill")
+        homeVC.tabBarItem = UITabBarItem(title: "홈", image: UIImage(named: "homeIcon"), selectedImage: UIImage(named: "homeIconFill"))
+
+        shortsVC.tabBarItem = UITabBarItem(title: "Shorts", image: UIImage(named: "shortsIcon"), selectedImage: UIImage(named: "shortsIconFill"))
+
+        plusVC.tabBarItem = UITabBarItem(title: "추가", image: UIImage(named: "plusCircleIcon"), selectedImage: UIImage(named: "plusCircleIcon"))
         
-        shortsVC.tabBarItem.title = "Shorts"
-        shortsVC.tabBarItem.image = UIImage(named: "shortsIcon")
-        shortsVC.tabBarItem.selectedImage = UIImage(named: "shortsIconFill")
+        subscribeVC.tabBarItem = UITabBarItem(title: "구독", image: UIImage(named: "subscriptionsIcon"), selectedImage: UIImage(named: "subscriptionsIconFill"))
         
-        plusVC.tabBarItem.title = "추가"
-        plusVC.tabBarItem.image = UIImage(named: "plusCircleIcon")
-        plusVC.tabBarItem.selectedImage = UIImage(named: "plusCircleIcon")
+        storeVC.tabBarItem = UITabBarItem(title: "보관함", image: UIImage(named: "libraryIcon"), selectedImage: UIImage(named: "libraryIconFill"))
         
-        subscribeVC.tabBarItem.title = "구독"
-        subscribeVC.tabBarItem.image = UIImage(named: "subscriptionsIcon")
-        subscribeVC.tabBarItem.selectedImage = UIImage(named: "subscriptionsIconFill")
-        
-        storeVC.tabBarItem.title = "보관함"
-        storeVC.tabBarItem.image = UIImage(named: "libraryIcon")
-        storeVC.tabBarItem.selectedImage = UIImage(named: "libraryIconFill")
         
         setViewControllers([homeVC, shortsVC, plusVC, subscribeVC, storeVC], animated: true)
         
