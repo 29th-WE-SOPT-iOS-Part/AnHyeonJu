@@ -89,11 +89,15 @@ extension SignUpVC {
             case .requestErr(let signupResponse):
                 print("requestERR \(signupResponse)")
                 guard let response = signupResponse as? SignUpResponseData else { return }
-                self.makeAlert(title: "회원가입", message: response.message)
+                self.makeAlert(title: "회원가입", message: response.message ,okAction: { _ in
+                    self.setTextFieldEmpty()
+                })
             case .pathErr(let signupResponse):
                 print("pathErr")
                 guard let response = signupResponse as? SignUpResponseData else { return }
-                self.makeAlert(title: "회원가입", message: response.message)
+                self.makeAlert(title: "회원가입", message: response.message, okAction: { _ in
+                    self.setTextFieldEmpty()
+                })
             case .serverErr:
                 print("serverErr")
             case .networkFail:

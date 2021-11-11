@@ -92,11 +92,15 @@ extension LoginVC {
             case .requestErr(let loginResponse):
                 print("requestERR \(loginResponse)")
                 guard let response = loginResponse as? LoginResponseData else { return }
-                self.makeAlert(title: "로그인", message: response.message)
+                self.makeAlert(title: "로그인", message: response.message, okAction: { _ in
+                    setTextFieldEmpty()
+                })
             case .pathErr(let loginResponse):
                 print("pathErr")
                 guard let response = loginResponse as? LoginResponseData else { return }
-                self.makeAlert(title: "로그인", message: response.message)
+                self.makeAlert(title: "로그인", message: response.message, okAction: { _ in
+                    self.setTextFieldEmpty()
+                })
             case .serverErr:
                 print("serverErr")
             case .networkFail:
