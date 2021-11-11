@@ -354,11 +354,10 @@
             </objects>
             <point key="canvasLocation" x="1717.5999999999999" y="82.758620689655174"/>
         </scene>
-        <!--NavigationVC-->
+        <!--Navigation Controller-->
         <scene sceneID="WT4-Rh-G3h">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zr2-Ed-FRm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController storyboardIdentifier="NavigationVC" automaticallyAdjustsScrollViewInsets="NO" id="ghe-o0-70G" customClass="NavigationVC" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainNavi" automaticallyAdjustsScrollViewInsets="NO" id="ghe-o0-70G" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DPd-Lz-qZi">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -369,6 +368,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8hS-gd-SHC"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zr2-Ed-FRm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-956" y="83.497536945812811"/>
         </scene>

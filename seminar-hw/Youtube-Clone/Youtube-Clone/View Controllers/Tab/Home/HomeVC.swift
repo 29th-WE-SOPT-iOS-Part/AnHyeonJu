@@ -29,14 +29,14 @@ class HomeVC: UIViewController {
     }
     
     
-    //🌱 LoginVC 앞에 있는 네비게이션 VC을 만들어서 거기에다가 modal방식으로 띄워주기를 했습니다..!
+    //🌱 쌰라웃 투 듐보걸~ NavigationController에 VC을 따로 안만들고 class를 UINavigationController로, Storyboard ID만 MainNavi로 지정했답니다..!
     // MARK: - @IBAction
     @IBAction func touchUpToGoLoginView(_ sender: Any) {
         let loginStoryBoard = UIStoryboard.init(name:"Main", bundle: nil)
-        guard let navigationVC = loginStoryBoard.instantiateViewController(withIdentifier: "NavigationVC") as? NavigationVC else {return}
+        guard let navi = loginStoryBoard.instantiateViewController(withIdentifier: "MainNavi") as? UINavigationController else {return}
         
-        navigationVC.modalPresentationStyle = .fullScreen
-        self.present(navigationVC, animated: true, completion: nil)
+        navi.modalPresentationStyle = .fullScreen
+        self.present(navi, animated: true, completion: nil)
     }
     
     
