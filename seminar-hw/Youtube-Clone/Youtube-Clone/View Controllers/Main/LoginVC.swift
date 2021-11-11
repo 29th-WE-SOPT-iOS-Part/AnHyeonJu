@@ -60,29 +60,6 @@ class LoginVC: UIViewController {
         }
     }
     
-    
-    //🌱alert를 2가지 경우로 나눠서 했는데 이런식으로 하는게 맞을까요?
-    //성공일 경우 alert 함수
-    func successAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "확인", style: .default,  handler: { (action) in
-            guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
-            welcomeVC.modalPresentationStyle = .fullScreen
-            self.present(welcomeVC, animated: true, completion: nil)
-        })
-        alert.addAction(okAction)
-        present(alert, animated: true)
-    }
-    
-    //실패시 alert 함수
-    func failAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "확인", style: .default)
-        alert.addAction(okAction)
-        present(alert, animated: true)
-        setTextFieldEmpty()
-    }
-    
 }
 
 // MARK: - Extension
@@ -106,14 +83,18 @@ extension LoginVC {
                 guard let response = loginResponse as? LoginResponseData else { return }
                 if response.data != nil {
                     UserDefaults.standard.set(self.nameTextField.text, forKey: "name")
-                    self.successAlert(title: "로그인", message: response.message)
+                    self.makeAlert(title: "로그인", message: response.message, okAction: { _ in
+                        guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
+                        welcomeVC.modalPresentationStyle = .fullScreen
+                        self.present(welcomeVC, animated: true, completion: nil)
+                    })
                 }
             case .requestErr(let msg):
                 print("requestERR \(msg)")
             case .pathErr(let loginResponse):
                 print("pathErr")
                 guard let response = loginResponse as? LoginResponseData else { return }
-                self.failAlert(title: "로그인", message: response.message)
+                self.makeAlert(title: "로그인", message: response.message)
             case .serverErr:
                 print("serverErr")
             case .networkFail:

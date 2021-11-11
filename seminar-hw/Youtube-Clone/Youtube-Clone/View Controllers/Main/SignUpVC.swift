@@ -65,26 +65,6 @@ class SignUpVC: UIViewController {
         }
     }
     
-    func successAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "확인", style: .default,  handler: { (action) in
-            guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC")as? WelcomeVC else {return}
-            welcomeVC.modalPresentationStyle = .fullScreen
-            self.present(welcomeVC, animated: true, completion: {
-                self.navigationController?.popToRootViewController(animated: true)
-            })
-        })
-        alert.addAction(okAction)
-        present(alert, animated: true)
-    }
-    
-    func failAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "확인", style: .default)
-        alert.addAction(okAction)
-        present(alert, animated: true)
-        setTextFieldEmpty()
-    }
 }
 
 // MARK: - Extension
@@ -98,14 +78,21 @@ extension SignUpVC {
                 guard let response = signupResponse as? SignUpResponseData else { return }
                 if response.data != nil {
                     UserDefaults.standard.set(self.nameTextField.text, forKey: "name")
-                    self.successAlert(title: "회원가입", message: response.message)
+                    
+                    self.makeAlert(title: "회원가입", message: response.message, okAction: { _ in
+                        guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC")as? WelcomeVC else {return}
+                        welcomeVC.modalPresentationStyle = .fullScreen
+                        self.present(welcomeVC, animated: true, completion: {
+                            self.navigationController?.popToRootViewController(animated: true)
+                        })
+                    })
                 }
             case .requestErr(let msg):
                 print("requestERR \(msg)")
             case .pathErr(let signupResponse):
                 print("pathErr")
                 guard let response = signupResponse as? SignUpResponseData else { return }
-                self.failAlert(title: "회원가입", message: response.message)
+                self.makeAlert(title: "회원가입", message: response.message)
             case .serverErr:
                 print("serverErr")
             case .networkFail:
