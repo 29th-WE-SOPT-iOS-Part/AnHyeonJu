@@ -78,7 +78,6 @@ extension SignUpVC {
                 guard let response = signupResponse as? SignUpResponseData else { return }
                 if response.data != nil {
                     UserDefaults.standard.set(self.nameTextField.text, forKey: "name")
-                    
                     self.makeAlert(title: "회원가입", message: response.message, okAction: { _ in
                         guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC")as? WelcomeVC else {return}
                         welcomeVC.modalPresentationStyle = .fullScreen
@@ -87,8 +86,10 @@ extension SignUpVC {
                         })
                     })
                 }
-            case .requestErr(let msg):
-                print("requestERR \(msg)")
+            case .requestErr(let signupResponse):
+                print("requestERR \(signupResponse)")
+                guard let response = signupResponse as? SignUpResponseData else { return }
+                self.makeAlert(title: "회원가입", message: response.message)
             case .pathErr(let signupResponse):
                 print("pathErr")
                 guard let response = signupResponse as? SignUpResponseData else { return }

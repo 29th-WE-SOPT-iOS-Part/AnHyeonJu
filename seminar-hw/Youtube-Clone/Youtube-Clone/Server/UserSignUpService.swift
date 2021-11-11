@@ -83,10 +83,11 @@ struct UserSignUpService {
     //400 pathErr의 경우 메시지 경우 나눌때 사용
     private func isUsedPathErrData(data: Data) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
-        // JSON데이터를 SignUpResponseData 구조체로 데이터를 변환
+        //SignUpResponseData 형식에 맞춰 디코딩되지 않을 경우에 else문으로 빠져 pathErr를 리턴, 즉 서버로부터 SignUpResponseData 형식의 데이터가 오지 않은 것이고, 경로가 잘못된것이라고 분기처리 할 수 있다. 다른 경로를 설정해도, 아예 없는 경로를 설정해도 서버에서 맞는 형식의 데이터가 오지 않기 때문에 pathErr 로!
         guard let decodedData = try? decoder.decode(SignUpResponseData.self, from: data)
             else {return .pathErr(data)}
-        return .pathErr(decodedData)
+        // 디코딩은 성공했지만 상태코드가 400번인 경우는 클라 측의 오류이다. 요청이 잘못된 경우, 따라서 여기는 .pathErr대신 .requestErr가 적절하다.
+        return .requestErr(decodedData)
     }
     
 }

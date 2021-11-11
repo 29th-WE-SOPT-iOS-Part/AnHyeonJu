@@ -89,8 +89,10 @@ extension LoginVC {
                         self.present(welcomeVC, animated: true, completion: nil)
                     })
                 }
-            case .requestErr(let msg):
-                print("requestERR \(msg)")
+            case .requestErr(let loginResponse):
+                print("requestERR \(loginResponse)")
+                guard let response = loginResponse as? LoginResponseData else { return }
+                self.makeAlert(title: "로그인", message: response.message)
             case .pathErr(let loginResponse):
                 print("pathErr")
                 guard let response = loginResponse as? LoginResponseData else { return }
