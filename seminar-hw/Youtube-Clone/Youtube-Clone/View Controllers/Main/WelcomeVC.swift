@@ -13,7 +13,7 @@ class WelcomeVC: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var checkBtn: UIButton!
     @IBOutlet weak var anotherLoginBtn: UIButton!
-    var name : String?
+//    var name : String?
     
     
     // MARK: - Life Cycle
@@ -36,10 +36,11 @@ class WelcomeVC: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    //🌱UserDefaults사용! --> 이전에 있전 setText관련 코드 삭제
     // MARK: - Custom Method
     func setNameInLabel() {
-        if let userName = name {
-            nameLabel.text = userName + "님 환영합니다."
+        if let user = UserDefaults.standard.string(forKey: UserDefaults.Keys.loginUserName) {
+            nameLabel.text = "\(user)님 환영합니다!"
             nameLabel.sizeToFit()
         }
     }

@@ -43,16 +43,8 @@ class SignUpVC: UIViewController {
     }
     
     @IBAction func touchUpToGoWelcomeView(_ sender: Any) {
-        guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC")as? WelcomeVC else {return}
+        requestSignUp()
         
-        welcomeVC.name = nameTextField.text
-        welcomeVC.modalPresentationStyle = .fullScreen
-        
-        //샤라웃 투 지은님... 감사합니다...
-        self.present(welcomeVC, animated: true, completion: {
-            //confirmVC로 modal present와 동시에 navigation stack에서 signUpVC를 pop해줘서 rootVC로 돌아가게끔 해줍니다. (popViewController, popToRootViewController 모두 가능)
-            self.navigationController?.popToRootViewController(animated: true)
-        })
     }
     
     
@@ -72,7 +64,45 @@ class SignUpVC: UIViewController {
             $0?.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         }
     }
+    
 }
 
-
-
+// MARK: - Extension
+extension SignUpVC {
+    func requestSignUp() {
+        UserSignUpService.shared.signUp(email: emailTextField.text ?? "",
+                                        name: nameTextField.text ?? "",
+                                     password: passwordTextField.text ?? "") { responseData in
+            switch  responseData {
+            case .success(let signupResponse):
+                guard let response = signupResponse as? SignUpResponseData else { return }
+                if response.data != nil {
+                    UserDefaults.standard.set(self.nameTextField.text, forKey: UserDefaults.Keys.loginUserName)
+                    self.makeAlert(title: "회원가입", message: response.message, okAction: { _ in
+                        guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC")as? WelcomeVC else {return}
+                        welcomeVC.modalPresentationStyle = .fullScreen
+                        self.present(welcomeVC, animated: true, completion: {
+                            self.navigationController?.popToRootViewController(animated: true)
+                        })
+                    })
+                }
+            case .requestErr(let signupResponse):
+                print("requestERR \(signupResponse)")
+                guard let response = signupResponse as? SignUpResponseData else { return }
+                self.makeAlert(title: "회원가입", message: response.message ,okAction: { _ in
+                    self.setTextFieldEmpty()
+                })
+            case .pathErr(let signupResponse):
+                print("pathErr")
+                guard let response = signupResponse as? SignUpResponseData else { return }
+                self.makeAlert(title: "회원가입", message: response.message, okAction: { _ in
+                    self.setTextFieldEmpty()
+                })
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+        }
+    }
+}

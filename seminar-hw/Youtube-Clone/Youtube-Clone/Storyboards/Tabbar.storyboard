@@ -82,34 +82,39 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SearchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="pKR-sn-nb3">
                                         <rect key="frame" x="285" y="6" width="32" height="32"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wesoptProfile" translatesAutoresizingMaskIntoConstraints="NO" id="BPk-w3-p1s">
-                                        <rect key="frame" x="335" y="10" width="24" height="24"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="BPk-w3-p1s" secondAttribute="height" multiplier="1:1" id="pF9-Ix-VAy"/>
-                                        </constraints>
-                                    </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="windowSharingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="W4g-jp-oDW">
                                         <rect key="frame" x="201" y="6" width="32" height="32"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hpf-xe-15H">
+                                        <rect key="frame" x="334" y="10" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Hpf-xe-15H" secondAttribute="height" multiplier="1:1" id="xd6-Fw-vnJ"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="wesoptProfile"/>
+                                        <connections>
+                                            <action selector="touchUpToGoLoginView:" destination="6fP-B5-shv" eventType="touchUpInside" id="JDj-NZ-XnQ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="W4g-jp-oDW" secondAttribute="bottom" constant="6" id="0ya-YK-3MB"/>
                                     <constraint firstItem="W4g-jp-oDW" firstAttribute="top" secondItem="ahl-sh-JwJ" secondAttribute="top" constant="6" id="3H0-zo-xtX"/>
                                     <constraint firstItem="vrF-pg-V3y" firstAttribute="leading" secondItem="W4g-jp-oDW" secondAttribute="trailing" constant="10" id="3Vp-BA-r1K"/>
-                                    <constraint firstItem="BPk-w3-p1s" firstAttribute="leading" secondItem="pKR-sn-nb3" secondAttribute="trailing" constant="18" id="AFD-6t-iY7"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hpf-xe-15H" secondAttribute="trailing" constant="17" id="9Yu-nj-kOT"/>
                                     <constraint firstAttribute="bottom" secondItem="pKR-sn-nb3" secondAttribute="bottom" constant="6" id="Anj-JC-nPk"/>
-                                    <constraint firstAttribute="trailing" secondItem="BPk-w3-p1s" secondAttribute="trailing" constant="16" id="BbB-kW-0Bu"/>
-                                    <constraint firstItem="BPk-w3-p1s" firstAttribute="top" secondItem="ahl-sh-JwJ" secondAttribute="top" constant="10" id="D73-yF-llG"/>
                                     <constraint firstAttribute="bottom" secondItem="vrF-pg-V3y" secondAttribute="bottom" constant="6" id="D7t-eR-nBb"/>
                                     <constraint firstItem="pKR-sn-nb3" firstAttribute="leading" secondItem="vrF-pg-V3y" secondAttribute="trailing" constant="10" id="HAw-nL-zDF"/>
                                     <constraint firstItem="vrF-pg-V3y" firstAttribute="top" secondItem="ahl-sh-JwJ" secondAttribute="top" constant="6" id="Iip-uI-WXx"/>
-                                    <constraint firstAttribute="bottom" secondItem="BPk-w3-p1s" secondAttribute="bottom" constant="10" id="OLg-MS-eKu"/>
+                                    <constraint firstItem="Hpf-xe-15H" firstAttribute="leading" secondItem="pKR-sn-nb3" secondAttribute="trailing" constant="17" id="Mc9-78-C38"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hpf-xe-15H" secondAttribute="bottom" constant="10" id="OJ0-wN-1eO"/>
                                     <constraint firstAttribute="width" constant="375" id="QFH-4M-7QK"/>
                                     <constraint firstItem="jYv-fS-9M4" firstAttribute="leading" secondItem="ahl-sh-JwJ" secondAttribute="leading" constant="16" id="Rtp-Tj-GLO"/>
                                     <constraint firstItem="pKR-sn-nb3" firstAttribute="top" secondItem="ahl-sh-JwJ" secondAttribute="top" constant="6" id="fPN-vq-xzB"/>
                                     <constraint firstItem="jYv-fS-9M4" firstAttribute="top" secondItem="ahl-sh-JwJ" secondAttribute="top" constant="12" id="jJS-p9-UHz"/>
                                     <constraint firstAttribute="bottom" secondItem="jYv-fS-9M4" secondAttribute="bottom" constant="12" id="oyZ-83-GNb"/>
+                                    <constraint firstItem="Hpf-xe-15H" firstAttribute="top" secondItem="ahl-sh-JwJ" secondAttribute="top" constant="10" id="wVD-BH-Sex"/>
                                     <constraint firstAttribute="height" constant="44" id="wdR-HO-3dN"/>
                                 </constraints>
                             </view>
@@ -248,6 +253,7 @@
                     <connections>
                         <outlet property="categoryCollectionView" destination="eL9-Gn-ORv" id="9yz-S9-jyw"/>
                         <outlet property="homeTableView" destination="BZV-MB-WOG" id="76G-fH-7z8"/>
+                        <outlet property="profileBtn" destination="Hpf-xe-15H" id="Iyk-5b-f09"/>
                         <outlet property="shortsCollectionView" destination="ASF-8p-ACg" id="H0C-u1-KvJ"/>
                     </connections>
                 </viewController>
@@ -284,7 +290,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wn6-od-PWf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2426" y="114"/>
+            <point key="canvasLocation" x="3366" y="-249"/>
         </scene>
     </scenes>
     <resources>

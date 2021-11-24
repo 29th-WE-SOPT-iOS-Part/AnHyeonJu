@@ -27,6 +27,7 @@ class HomeTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+
     
     // MARK: - Custom Method
     func setData(rank: Int, appData: HomeContentData) {

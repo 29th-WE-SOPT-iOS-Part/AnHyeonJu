@@ -13,6 +13,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var homeTableView: UITableView!
     @IBOutlet weak var shortsCollectionView: UICollectionView!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
+    @IBOutlet weak var profileBtn: UIButton!
     
     var homeContentList: [HomeContentData] = []
     var shortsCollectionContentList: [ShortsCollectionContentData] = []
@@ -24,6 +25,23 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         initDataList()
         registerXib()
+        makeDelegate()
+    }
+    
+    
+    //🌱 쌰라웃 투 듐보걸~ NavigationController에 VC을 따로 안만들고 class를 UINavigationController로, Storyboard ID만 MainNavi로 지정했답니다..!
+    // MARK: - @IBAction
+    @IBAction func touchUpToGoLoginView(_ sender: Any) {
+        let loginStoryBoard = UIStoryboard.init(name:"Main", bundle: nil)
+        guard let navi = loginStoryBoard.instantiateViewController(withIdentifier: "MainNavi") as? UINavigationController else {return}
+        
+        navi.modalPresentationStyle = .fullScreen
+        self.present(navi, animated: true, completion: nil)
+    }
+    
+    
+    // MARK: - Custom Method
+    func makeDelegate() {
         homeTableView.dataSource = self
         homeTableView.delegate = self
         shortsCollectionView.dataSource = self
@@ -32,8 +50,6 @@ class HomeVC: UIViewController {
         categoryCollectionView.dataSource = self
     }
     
-    
-    // MARK: - Custom Method
     func registerXib() {
         let xibName = UINib(nibName: HomeTableViewCell.identifier, bundle: nil)
         homeTableView.register(xibName, forCellReuseIdentifier: HomeTableViewCell.identifier)
@@ -72,13 +88,7 @@ class HomeVC: UIViewController {
         categoryList.append(contentsOf: [
             "전체","오늘","이어서 시청하기","시청하지 않음","실시간","게시물"
         ])
-        
-        //현규 선배꺼 보고 넣었는데 안필요하대욤.....
-//        homeTableView.reloadData()
-//        shortsCollectionView.reloadData()
-//        categoryCollectionView.reloadData()
     }
-
 }
 
 
