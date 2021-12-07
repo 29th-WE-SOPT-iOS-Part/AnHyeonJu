@@ -126,6 +126,25 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		F272B7E8275F404B00E8D8F6 /* HomeShorts */ = {
+			isa = PBXGroup;
+			children = (
+				F259A3D1272A7E96002F0532 /* ShortsCollectionViewCell.xib */,
+				F259A3D0272A7E96002F0532 /* ShortsCollectionViewCell.swift */,
+				F259A3D4272A81BC002F0532 /* shortsCollectionDataModel.swift */,
+			);
+			path = HomeShorts;
+			sourceTree = "<group>";
+		};
+		F272B7E9275F406000E8D8F6 /* HomeCategory */ = {
+			isa = PBXGroup;
+			children = (
+				F25C6FEF272B864400967EBE /* CategoryCollectionViewCell.swift */,
+				F25C6FF0272B864400967EBE /* CategoryCollectionViewCell.xib */,
+			);
+			path = HomeCategory;
+			sourceTree = "<group>";
+		};
 		F281F502270D456D006EA470 = {
 			isa = PBXGroup;
 			children = (
@@ -189,15 +208,12 @@
 		F2A34E2F272997EB00B78517 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F272B7E9275F406000E8D8F6 /* HomeCategory */,
+				F272B7E8275F404B00E8D8F6 /* HomeShorts */,
 				F2C1979E271D0FF5001EAB15 /* HomeVC.swift */,
 				F2A34E312729981C00B78517 /* HomeTableViewCell.xib */,
 				F2A34E302729981C00B78517 /* HomeTableViewCell.swift */,
 				F28A21EF2729A20500E0319E /* homeDataModel.swift */,
-				F259A3D1272A7E96002F0532 /* ShortsCollectionViewCell.xib */,
-				F259A3D0272A7E96002F0532 /* ShortsCollectionViewCell.swift */,
-				F259A3D4272A81BC002F0532 /* shortsCollectionDataModel.swift */,
-				F25C6FF0272B864400967EBE /* CategoryCollectionViewCell.xib */,
-				F25C6FEF272B864400967EBE /* CategoryCollectionViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
