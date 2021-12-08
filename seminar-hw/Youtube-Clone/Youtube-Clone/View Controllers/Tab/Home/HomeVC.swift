@@ -41,6 +41,7 @@ class HomeVC: UIViewController {
     
     
     // MARK: - Custom Method
+    
     func makeDelegate() {
         homeTableView.dataSource = self
         homeTableView.delegate = self
@@ -89,15 +90,44 @@ class HomeVC: UIViewController {
             "전체","오늘","이어서 시청하기","시청하지 않음","실시간","게시물"
         ])
     }
+    
+    func initGesture() {
+        let tapRecognizer = UITapGestureRecognizer(target: self,
+                                                   action: #selector(tapImageView(gestureRecognizer:)))
+        let tapRecognizer2 = UITapGestureRecognizer()
+        tapRecognizer2.addTarget(self, action: #selector(tapImageView(gestureRecognizer:)))
+        
+        
+//        thumbnailImageView.addGestureRecognizer(tapRecognizer)
+    }
+    
+    
+    // MARK: - objc Method
+    @objc func tapImageView(gestureRecognizer: UIGestureRecognizer){
+        print("taptap")
+    }
 }
 
 
 // MARK: - Extension
+extension HomeVC: HomeTableViewCellDelegate {
+    func ImageViewSelected(cell: HomeTableViewCell) {
+        <#code#>
+    }
+    
+    func ImageViewUnSelected(cell: HomeTableViewCell, unselectedImage: String) {
+        <#code#>
+    }
+    
+    
+}
+
 extension HomeVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 306
     }
 }
+
 
 extension HomeVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -108,6 +138,8 @@ extension HomeVC: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier) as? HomeTableViewCell else {return UITableViewCell()}
         
         cell.setData(rank: indexPath.row, appData: homeContentList[indexPath.row])
+        cell.selectionStyle = .none
+        
         return cell
     }
 }
@@ -181,3 +213,5 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
         }
     }
 }
+
+

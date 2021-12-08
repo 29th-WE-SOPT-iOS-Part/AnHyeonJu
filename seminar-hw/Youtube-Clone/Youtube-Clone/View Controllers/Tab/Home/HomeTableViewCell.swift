@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol HomeTableViewCellDelegate{
+    func ImageViewSelected(cell: HomeTableViewCell)
+    func ImageViewUnSelected(cell: HomeTableViewCell, unselectedImage: String)
+}
+
 class HomeTableViewCell: UITableViewCell {
     
     // MARK: - Properties
@@ -17,7 +22,12 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subTitleLabel: UILabel!
     @IBOutlet weak var moreMenuImageView: UIImageView!
+    @IBOutlet weak var imageBtn: UIButton!
+    var homeTVCDelegate: HomeTableViewCellDelegate?
+    var selectedImage: Bool = false
+    var ImageViewData: [HomeContentData] = []
     
+    var presentingClosure: (() -> ())?
     
     // MARK: - Life Cycle
     override func awakeFromNib() {
@@ -28,6 +38,18 @@ class HomeTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
+    // MARK: - IBAction
+    @IBAction func touchUpToSelect(_ sender: UIButton) {
+        if selectedImage {
+            homeTVCDelegate?.ImageViewUnSelected(cell: self,unselectedImage: Image)
+        } else {
+            homeTVCDelegate?.ImageViewSelected(cell: self)
+            presentingClosure?()
+        }
+        selectedImage.toggle()
+    }
+    
+    
     
     // MARK: - Custom Method
     func setData(rank: Int, appData: HomeContentData) {
@@ -36,5 +58,7 @@ class HomeTableViewCell: UITableViewCell {
         titleLabel.text = appData.titleName
         subTitleLabel.text = appData.subTitleName
     }
+    
+    
     
 }
