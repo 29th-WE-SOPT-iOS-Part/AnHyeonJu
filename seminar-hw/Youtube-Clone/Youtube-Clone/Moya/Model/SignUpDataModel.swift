@@ -1,5 +1,5 @@
 //
-//  LoginRequest.swift
+//  SignUpRequest.swift
 //  Youtube-Clone
 //
 //  Created by 안현주 on 2021/12/10.
@@ -7,12 +7,15 @@
 
 import Foundation
 
-struct LoginRequest: Codable {
+// MARK: - Welcome
+struct SignUpDataModel: Codable {
     var email: String
+    var name: String
     var password: String
     
-    init(_ email: String, _ password: String) {
+    init(_ email: String, _ name: String ,_ password: String) {
         self.email = email
+        self.name = name
         self.password = password
     }
 }
