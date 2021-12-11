@@ -12,8 +12,8 @@ import Alamofire
 enum BaseAPI{
   case sampleAPI(sample : String)
   // 계정관련
-    case postLogin(param: LoginRequest)
-    case postSignUp(param: SignUpRequest)
+    case postLogin(email : String, password: String)
+    case postSignUp(email : String, name: String, password: String)
 }
 
 
@@ -74,13 +74,13 @@ extension BaseAPI: TargetType {
     switch self {
       case .sampleAPI:
         params[""] = ""
-      case .postLogin(let param) :
-        params["email"] = param.email
-        params["password"] = param.password
-      case .postSignUp(let param):
-        params["email"] = param.email
-        params["name"] = param.name
-        params["password"] = param.password
+      case .postLogin(let email , let password) :
+        params["email"] = email
+        params["password"] = password
+    case .postSignUp(let email ,let name, let password) :
+        params["email"] = email
+        params["name"] = name
+        params["password"] = password
       default :
         break
     }
