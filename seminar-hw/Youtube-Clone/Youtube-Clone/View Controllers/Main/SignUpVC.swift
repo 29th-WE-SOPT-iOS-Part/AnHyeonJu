@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Moya
 
 class SignUpVC: UIViewController {
 
@@ -43,8 +44,7 @@ class SignUpVC: UIViewController {
     }
     
     @IBAction func touchUpToGoWelcomeView(_ sender: Any) {
-        requestSignUp()
-        
+        postSignUpService()
     }
     
     
@@ -65,44 +65,73 @@ class SignUpVC: UIViewController {
         }
     }
     
-}
-
-// MARK: - Extension
-extension SignUpVC {
-    func requestSignUp() {
-        UserSignUpService.shared.signUp(email: emailTextField.text ?? "",
-                                        name: nameTextField.text ?? "",
-                                     password: passwordTextField.text ?? "") { responseData in
-            switch  responseData {
-            case .success(let signupResponse):
-                guard let response = signupResponse as? SignUpResponseData else { return }
-                if response.data != nil {
-                    UserDefaults.standard.set(self.nameTextField.text, forKey: UserDefaults.Keys.loginUserName)
-                    self.makeAlert(title: "회원가입", message: response.message, okAction: { _ in
-                        guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC")as? WelcomeVC else {return}
-                        welcomeVC.modalPresentationStyle = .fullScreen
-                        self.present(welcomeVC, animated: true, completion: {
-                            self.navigationController?.popToRootViewController(animated: true)
-                        })
-                    })
+    func goToWelcomeVC(){
+        UserDefaults.standard.set(self.nameTextField.text, forKey: UserDefaults.Keys.loginUserName)
+        self.makeAlert(title: "로그인", message: "로그인 실패", okAction: { _ in
+            guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
+            
+            welcomeVC.modalPresentationStyle = .fullScreen
+            self.present(welcomeVC, animated: true, completion: {
+                self.navigationController?.popToRootViewController(animated: true)
+            })
+        })
+    }
+                       
+                       
+    func postSignUpService(){
+        BaseService.default.postSignUp(email: emailTextField.text!, name: nameTextField.text!, password: passwordTextField.text! ){ result in
+            result.success { list in
+                self.goToWelcomeVC()
+                
+            }.catch{ error in
+                print("review Err")
+                if let err = error as? MoyaError{
+                  dump(err)
                 }
-            case .requestErr(let signupResponse):
-                print("requestERR \(signupResponse)")
-                guard let response = signupResponse as? SignUpResponseData else { return }
-                self.makeAlert(title: "회원가입", message: response.message ,okAction: { _ in
-                    self.setTextFieldEmpty()
-                })
-            case .pathErr(let signupResponse):
-                print("pathErr")
-                guard let response = signupResponse as? SignUpResponseData else { return }
-                self.makeAlert(title: "회원가입", message: response.message, okAction: { _ in
-                    self.setTextFieldEmpty()
-                })
-            case .serverErr:
-                print("serverErr")
-            case .networkFail:
-                print("networkFail")
+                print("엥? ")
+                dump(error)
             }
         }
     }
+    
 }
+
+//// MARK: - Extension
+//extension SignUpVC {
+//    func requestSignUp() {
+//        UserSignUpService.shared.signUp(email: emailTextField.text ?? "",
+//                                        name: nameTextField.text ?? "",
+//                                     password: passwordTextField.text ?? "") { responseData in
+//            switch  responseData {
+//            case .success(let signupResponse):
+//                guard let response = signupResponse as? SignUpResponseData else { return }
+//                if response.data != nil {
+//                    UserDefaults.standard.set(self.nameTextField.text, forKey: UserDefaults.Keys.loginUserName)
+//                    self.makeAlert(title: "회원가입", message: response.message, okAction: { _ in
+//                        guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC")as? WelcomeVC else {return}
+//                        welcomeVC.modalPresentationStyle = .fullScreen
+//                        self.present(welcomeVC, animated: true, completion: {
+//                            self.navigationController?.popToRootViewController(animated: true)
+//                        })
+//                    })
+//                }
+//            case .requestErr(let signupResponse):
+//                print("requestERR \(signupResponse)")
+//                guard let response = signupResponse as? SignUpResponseData else { return }
+//                self.makeAlert(title: "회원가입", message: response.message ,okAction: { _ in
+//                    self.setTextFieldEmpty()
+//                })
+//            case .pathErr(let signupResponse):
+//                print("pathErr")
+//                guard let response = signupResponse as? SignUpResponseData else { return }
+//                self.makeAlert(title: "회원가입", message: response.message, okAction: { _ in
+//                    self.setTextFieldEmpty()
+//                })
+//            case .serverErr:
+//                print("serverErr")
+//            case .networkFail:
+//                print("networkFail")
+//            }
+//        }
+//    }
+//}
