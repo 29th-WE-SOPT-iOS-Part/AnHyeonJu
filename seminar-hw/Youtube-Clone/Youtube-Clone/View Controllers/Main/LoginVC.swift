@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Moya
 
 class LoginVC: UIViewController {
     
@@ -39,7 +40,8 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func touchUpToGoWelcomeView(_ sender: Any) {
-        requestLogin()
+        postLoginService()
+//        requestLogin()
     }
     
     
@@ -60,6 +62,38 @@ class LoginVC: UIViewController {
         }
     }
     
+    func goToWelcomeVC(){
+        UserDefaults.standard.set(self.nameTextField.text, forKey: UserDefaults.Keys.loginUserName)
+        self.makeAlert(title: "로그인", message: "로그인 성공", okAction: { _ in
+            guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
+            
+            welcomeVC.modalPresentationStyle = .fullScreen
+            self.present(welcomeVC, animated: true, completion: nil)
+        })
+    }
+                       
+                       
+    func postLoginService(){
+            BaseService.default.postLogin(email: emailTextField.text!, password: passwordTextField.text!)  { result in
+            result.success { list in
+                self.goToWelcomeVC()
+                
+            }.catch{ error in
+                self.makeAlert(title: "로그인", message: "로그인 실패", okAction: { _ in
+                    self.setTextFieldEmpty()
+                })
+                
+//                print("review Err")
+//                if let err = error as? MoyaError{
+//                  dump(err)
+//                }
+//                print("엥? ")
+//                dump(error)
+            }
+        }
+    }
+    
+    
 }
 
 // MARK: - Extension
@@ -74,38 +108,38 @@ extension UIViewController {
 }
 
 //🌱UserDeFaults 사용
-extension LoginVC {
-    func requestLogin() {
-        UserLoginService.shared.login(email: emailTextField.text ?? "",
-                                      password: passwordTextField.text ?? "") { [self] responseData in
-            switch  responseData {
-            case .success(let loginResponse):
-                guard let response = loginResponse as? LoginResponseData else { return }
-                if response.data != nil {
-                    UserDefaults.standard.set(self.nameTextField.text, forKey: UserDefaults.Keys.loginUserName)
-                    self.makeAlert(title: "로그인", message: response.message, okAction: { _ in
-                        guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
-                        welcomeVC.modalPresentationStyle = .fullScreen
-                        self.present(welcomeVC, animated: true, completion: nil)
-                    })
-                }
-            case .requestErr(let loginResponse):
-                print("requestERR \(loginResponse)")
-                guard let response = loginResponse as? LoginResponseData else { return }
-                self.makeAlert(title: "로그인", message: response.message, okAction: { _ in
-                    setTextFieldEmpty()
-                })
-            case .pathErr(let loginResponse):
-                print("pathErr")
-                guard let response = loginResponse as? LoginResponseData else { return }
-                self.makeAlert(title: "로그인", message: response.message, okAction: { _ in
-                    self.setTextFieldEmpty()
-                })
-            case .serverErr:
-                print("serverErr")
-            case .networkFail:
-                print("networkFail")
-            }
-        }
-    }
-}
+//extension LoginVC {
+//    func requestLogin() {
+//        UserLoginService.shared.login(email: emailTextField.text ?? "",
+//                                      password: passwordTextField.text ?? "") { [self] responseData in
+//            switch  responseData {
+//            case .success(let loginResponse):
+//                guard let response = loginResponse as? LoginResponseData else { return }
+//                if response.data != nil {
+//                    UserDefaults.standard.set(self.nameTextField.text, forKey: UserDefaults.Keys.loginUserName)
+//                    self.makeAlert(title: "로그인", message: response.message, okAction: { _ in
+//                        guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
+//                        welcomeVC.modalPresentationStyle = .fullScreen
+//                        self.present(welcomeVC, animated: true, completion: nil)
+//                    })
+//                }
+//            case .requestErr(let loginResponse):
+//                print("requestERR \(loginResponse)")
+//                guard let response = loginResponse as? LoginResponseData else { return }
+//                self.makeAlert(title: "로그인", message: response.message, okAction: { _ in
+//                    setTextFieldEmpty()
+//                })
+//            case .pathErr(let loginResponse):
+//                print("pathErr")
+//                guard let response = loginResponse as? LoginResponseData else { return }
+//                self.makeAlert(title: "로그인", message: response.message, okAction: { _ in
+//                    self.setTextFieldEmpty()
+//                })
+//            case .serverErr:
+//                print("serverErr")
+//            case .networkFail:
+//                print("networkFail")
+//            }
+//        }
+//    }
+//}
