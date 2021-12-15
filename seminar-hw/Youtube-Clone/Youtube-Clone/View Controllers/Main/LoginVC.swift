@@ -79,12 +79,16 @@ class LoginVC: UIViewController {
                 self.goToWelcomeVC()
                 
             }.catch{ error in
-                print("review Err")
-                if let err = error as? MoyaError{
-                  dump(err)
-                }
-                print("엥? ")
-                dump(error)
+                self.makeAlert(title: "로그인", message: "로그인 실패", okAction: { _ in
+                    self.setTextFieldEmpty()
+                })
+                
+//                print("review Err")
+//                if let err = error as? MoyaError{
+//                  dump(err)
+//                }
+//                print("엥? ")
+//                dump(error)
             }
         }
     }
