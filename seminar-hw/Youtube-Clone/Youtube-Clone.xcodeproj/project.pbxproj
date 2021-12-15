@@ -12,6 +12,10 @@
 		F2077CE2273A5F2B003D7FDE /* SignUpResponseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2077CE1273A5F2B003D7FDE /* SignUpResponseDataModel.swift */; };
 		F20BC3C2273CDBA10006639F /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20BC3C1273CDBA10006639F /* UIViewController + Extension.swift */; };
 		F20BC3C4273CFD1F0006639F /* UserDefaults + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20BC3C3273CFD1F0006639F /* UserDefaults + Extension.swift */; };
+		F234756C27649051007A1C99 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234756B27649051007A1C99 /* BaseService.swift */; };
+		F234756F27649093007A1C99 /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234756E27649093007A1C99 /* GenericResponse.swift */; };
+		F234757227649255007A1C99 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234757127649255007A1C99 /* UserService.swift */; };
+		F23475752764931F007A1C99 /* getSuccessFailureResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23475742764931F007A1C99 /* getSuccessFailureResult.swift */; };
 		F2492A68271815B400775417 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2492A67271815B400775417 /* SF-Pro-Display-Regular.otf */; };
 		F259A3D2272A7E96002F0532 /* ShortsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F259A3D0272A7E96002F0532 /* ShortsCollectionViewCell.swift */; };
 		F259A3D3272A7E96002F0532 /* ShortsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F259A3D1272A7E96002F0532 /* ShortsCollectionViewCell.xib */; };
@@ -29,6 +33,10 @@
 		F28A21F02729A20500E0319E /* homeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28A21EF2729A20500E0319E /* homeDataModel.swift */; };
 		F2A34E322729981C00B78517 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A34E302729981C00B78517 /* HomeTableViewCell.swift */; };
 		F2A34E332729981C00B78517 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2A34E312729981C00B78517 /* HomeTableViewCell.xib */; };
+		F2BE109527623F6B00941F75 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE109427623F6B00941F75 /* BaseAPI.swift */; };
+		F2BE109727623F9A00941F75 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE109627623F9A00941F75 /* Config.swift */; };
+		F2BE1099276262D700941F75 /* SignUpDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE1098276262D700941F75 /* SignUpDataModel.swift */; };
+		F2BE109B276262F600941F75 /* LoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE109A276262F600941F75 /* LoginDataModel.swift */; };
 		F2C1979F271D0FF5001EAB15 /* SubscribeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C1979D271D0FF5001EAB15 /* SubscribeVC.swift */; };
 		F2C197A0271D0FF5001EAB15 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C19795271D0FF4001EAB15 /* LoginVC.swift */; };
 		F2C197A2271D0FF5001EAB15 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C19797271D0FF4001EAB15 /* SignUpVC.swift */; };
@@ -53,6 +61,10 @@
 		F2077CE1273A5F2B003D7FDE /* SignUpResponseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponseDataModel.swift; sourceTree = "<group>"; };
 		F20BC3C1273CDBA10006639F /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		F20BC3C3273CFD1F0006639F /* UserDefaults + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults + Extension.swift"; sourceTree = "<group>"; };
+		F234756B27649051007A1C99 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		F234756E27649093007A1C99 /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
+		F234757127649255007A1C99 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		F23475742764931F007A1C99 /* getSuccessFailureResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getSuccessFailureResult.swift; sourceTree = "<group>"; };
 		F2492A67271815B400775417 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		F259A3D0272A7E96002F0532 /* ShortsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F259A3D1272A7E96002F0532 /* ShortsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShortsCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -72,6 +84,10 @@
 		F28A21EF2729A20500E0319E /* homeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeDataModel.swift; sourceTree = "<group>"; };
 		F2A34E302729981C00B78517 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		F2A34E312729981C00B78517 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		F2BE109427623F6B00941F75 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		F2BE109627623F9A00941F75 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		F2BE1098276262D700941F75 /* SignUpDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpDataModel.swift; sourceTree = "<group>"; };
+		F2BE109A276262F600941F75 /* LoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataModel.swift; sourceTree = "<group>"; };
 		F2C19795271D0FF4001EAB15 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		F2C19796271D0FF4001EAB15 /* PlusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusVC.swift; sourceTree = "<group>"; };
 		F2C19797271D0FF4001EAB15 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
@@ -126,6 +142,33 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		F234756A27649042007A1C99 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F234756B27649051007A1C99 /* BaseService.swift */,
+				F234757127649255007A1C99 /* UserService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F234756D27649086007A1C99 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F234756E27649093007A1C99 /* GenericResponse.swift */,
+				F2BE109A276262F600941F75 /* LoginDataModel.swift */,
+				F2BE1098276262D700941F75 /* SignUpDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F23475732764930B007A1C99 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F23475742764931F007A1C99 /* getSuccessFailureResult.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		F281F502270D456D006EA470 = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +195,7 @@
 				F2A34E2D2729966800B78517 /* Utils */,
 				F20BC3C0273CDAE10006639F /* Extension */,
 				F2C197AE271D15E2001EAB15 /* Storyboards */,
+				F2BE109327623F5000941F75 /* Moya */,
 				F2C6FF0C273576D30020E10F /* Server */,
 				F2C197AA271D152E001EAB15 /* View Controllers */,
 			);
@@ -200,6 +244,18 @@
 				F25C6FEF272B864400967EBE /* CategoryCollectionViewCell.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		F2BE109327623F5000941F75 /* Moya */ = {
+			isa = PBXGroup;
+			children = (
+				F23475732764930B007A1C99 /* Utils */,
+				F234756D27649086007A1C99 /* Model */,
+				F234756A27649042007A1C99 /* Service */,
+				F2BE109427623F6B00941F75 /* BaseAPI.swift */,
+				F2BE109627623F9A00941F75 /* Config.swift */,
+			);
+			path = Moya;
 			sourceTree = "<group>";
 		};
 		F2C197AA271D152E001EAB15 /* View Controllers */ = {
@@ -382,14 +438,17 @@
 			files = (
 				F25C6FF1272B864400967EBE /* CategoryCollectionViewCell.swift in Sources */,
 				F2C6FF1627358E2E0020E10F /* UserLoginService.swift in Sources */,
+				F2BE109727623F9A00941F75 /* Config.swift in Sources */,
 				F259A3D5272A81BC002F0532 /* shortsCollectionDataModel.swift in Sources */,
 				F2C6FF1427358DED0020E10F /* LoginResponseDataModel.swift in Sources */,
 				F2C197A3271D0FF5001EAB15 /* HomeVC.swift in Sources */,
 				F2077CE2273A5F2B003D7FDE /* SignUpResponseDataModel.swift in Sources */,
 				F2C6FF0B273542A40020E10F /* NavigationVC.swift in Sources */,
 				F2C197A6271D0FF5001EAB15 /* WelcomeVC.swift in Sources */,
+				F2BE1099276262D700941F75 /* SignUpDataModel.swift in Sources */,
 				F2C197A8271D0FF5001EAB15 /* ShortsVC.swift in Sources */,
 				F2C1979F271D0FF5001EAB15 /* SubscribeVC.swift in Sources */,
+				F23475752764931F007A1C99 /* getSuccessFailureResult.swift in Sources */,
 				F20BC3C2273CDBA10006639F /* UIViewController + Extension.swift in Sources */,
 				F2C197A4271D0FF5001EAB15 /* MainTBC.swift in Sources */,
 				F2077CE0273A5E41003D7FDE /* UserSignUpService.swift in Sources */,
@@ -403,8 +462,13 @@
 				F281F511270D456D006EA470 /* SceneDelegate.swift in Sources */,
 				F2C197A5271D0FF5001EAB15 /* StoreVC.swift in Sources */,
 				F2C197A7271D0FF5001EAB15 /* PlusVC.swift in Sources */,
+				F2BE109B276262F600941F75 /* LoginDataModel.swift in Sources */,
+				F234756C27649051007A1C99 /* BaseService.swift in Sources */,
 				F20BC3C4273CFD1F0006639F /* UserDefaults + Extension.swift in Sources */,
+				F234757227649255007A1C99 /* UserService.swift in Sources */,
+				F234756F27649093007A1C99 /* GenericResponse.swift in Sources */,
 				F2C6FF1227358D940020E10F /* NetworkResult.swift in Sources */,
+				F2BE109527623F6B00941F75 /* BaseAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
