@@ -67,7 +67,7 @@ class SignUpVC: UIViewController {
     
     func goToWelcomeVC(){
         UserDefaults.standard.set(self.nameTextField.text, forKey: UserDefaults.Keys.loginUserName)
-        self.makeAlert(title: "로그인", message: "로그인 실패", okAction: { _ in
+        self.makeAlert(title: "회원가입", message: "회원가입 성공", okAction: { _ in
             guard let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as? WelcomeVC else {return}
             
             welcomeVC.modalPresentationStyle = .fullScreen
@@ -84,12 +84,18 @@ class SignUpVC: UIViewController {
                 self.goToWelcomeVC()
                 
             }.catch{ error in
-                print("review Err")
-                if let err = error as? MoyaError{
-                  dump(err)
-                }
-                print("엥? ")
-                dump(error)
+                //✅이미 존재하는 회원 입니다... 이런거는 아직 구현 못 했음...!
+                //Message를 가져와서 case에 따라 message를 다르게 하면 될텐데...
+                //어떻게 하지...?
+                self.makeAlert(title: "회원가입", message: "회원가입 실패", okAction: { _ in
+                    self.setTextFieldEmpty()
+                })
+//                print("review Err")
+//                if let err = error as? MoyaError{
+//                  dump(err)
+//                }
+//                print("엥? ")
+//                dump(error)
             }
         }
     }
