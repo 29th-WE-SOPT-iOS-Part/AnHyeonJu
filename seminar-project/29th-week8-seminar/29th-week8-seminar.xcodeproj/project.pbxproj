@@ -13,9 +13,14 @@
 		F293F3C4276DAAC500402C03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F293F3C2276DAAC500402C03 /* Main.storyboard */; };
 		F293F3C6276DAAC600402C03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F293F3C5276DAAC600402C03 /* Assets.xcassets */; };
 		F293F3C9276DAAC600402C03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F293F3C7276DAAC600402C03 /* LaunchScreen.storyboard */; };
+		F293F3D1276DB1D200402C03 /* seminar8-sample.json in Resources */ = {isa = PBXBuildFile; fileRef = F293F3D0276DB1D200402C03 /* seminar8-sample.json */; };
+		F7187C53BF7316512311F13B /* Pods_29th_week8_seminar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E2C4B5215959FA4CCC33EA /* Pods_29th_week8_seminar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14E2C4B5215959FA4CCC33EA /* Pods_29th_week8_seminar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_29th_week8_seminar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3A69211AE799CABA2F4DAE6 /* Pods-29th-week8-seminar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-29th-week8-seminar.debug.xcconfig"; path = "Target Support Files/Pods-29th-week8-seminar/Pods-29th-week8-seminar.debug.xcconfig"; sourceTree = "<group>"; };
+		E7941280C89FB4F184608B79 /* Pods-29th-week8-seminar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-29th-week8-seminar.release.xcconfig"; path = "Target Support Files/Pods-29th-week8-seminar/Pods-29th-week8-seminar.release.xcconfig"; sourceTree = "<group>"; };
 		F293F3B9276DAAC500402C03 /* 29th-week8-seminar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "29th-week8-seminar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F293F3BC276DAAC500402C03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F293F3BE276DAAC500402C03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		F293F3C5276DAAC600402C03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F293F3C8276DAAC600402C03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F293F3CA276DAAC600402C03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F293F3D0276DB1D200402C03 /* seminar8-sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "seminar8-sample.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7187C53BF7316512311F13B /* Pods_29th_week8_seminar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FD5AB13557A88290CF9DB17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3A69211AE799CABA2F4DAE6 /* Pods-29th-week8-seminar.debug.xcconfig */,
+				E7941280C89FB4F184608B79 /* Pods-29th-week8-seminar.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5C27ACF7C8A0F2CE77523263 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14E2C4B5215959FA4CCC33EA /* Pods_29th_week8_seminar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F293F3B0276DAAC500402C03 = {
 			isa = PBXGroup;
 			children = (
 				F293F3BB276DAAC500402C03 /* 29th-week8-seminar */,
 				F293F3BA276DAAC500402C03 /* Products */,
+				3FD5AB13557A88290CF9DB17 /* Pods */,
+				5C27ACF7C8A0F2CE77523263 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +86,7 @@
 				F293F3BE276DAAC500402C03 /* SceneDelegate.swift */,
 				F293F3C0276DAAC500402C03 /* ViewController.swift */,
 				F293F3C2276DAAC500402C03 /* Main.storyboard */,
+				F293F3D0276DB1D200402C03 /* seminar8-sample.json */,
 				F293F3C5276DAAC600402C03 /* Assets.xcassets */,
 				F293F3C7276DAAC600402C03 /* LaunchScreen.storyboard */,
 				F293F3CA276DAAC600402C03 /* Info.plist */,
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F293F3CD276DAAC600402C03 /* Build configuration list for PBXNativeTarget "29th-week8-seminar" */;
 			buildPhases = (
+				E8F0BA73437120D84E367ED7 /* [CP] Check Pods Manifest.lock */,
 				F293F3B5276DAAC500402C03 /* Sources */,
 				F293F3B6276DAAC500402C03 /* Frameworks */,
 				F293F3B7276DAAC500402C03 /* Resources */,
+				589826BD477918FEF623F0E2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,11 +156,54 @@
 			files = (
 				F293F3C9276DAAC600402C03 /* LaunchScreen.storyboard in Resources */,
 				F293F3C6276DAAC600402C03 /* Assets.xcassets in Resources */,
+				F293F3D1276DB1D200402C03 /* seminar8-sample.json in Resources */,
 				F293F3C4276DAAC500402C03 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		589826BD477918FEF623F0E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-29th-week8-seminar/Pods-29th-week8-seminar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-29th-week8-seminar/Pods-29th-week8-seminar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-29th-week8-seminar/Pods-29th-week8-seminar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8F0BA73437120D84E367ED7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-29th-week8-seminar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F293F3B5276DAAC500402C03 /* Sources */ = {
@@ -284,6 +356,7 @@
 		};
 		F293F3CE276DAAC600402C03 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3A69211AE799CABA2F4DAE6 /* Pods-29th-week8-seminar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +385,7 @@
 		};
 		F293F3CF276DAAC600402C03 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7941280C89FB4F184608B79 /* Pods-29th-week8-seminar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
