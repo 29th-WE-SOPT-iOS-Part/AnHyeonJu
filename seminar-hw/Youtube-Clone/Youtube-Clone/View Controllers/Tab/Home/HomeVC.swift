@@ -91,15 +91,7 @@ class HomeVC: UIViewController {
         ])
     }
     
-    func initGesture() {
-        let tapRecognizer = UITapGestureRecognizer(target: self,
-                                                   action: #selector(tapImageView(gestureRecognizer:)))
-        let tapRecognizer2 = UITapGestureRecognizer()
-        tapRecognizer2.addTarget(self, action: #selector(tapImageView(gestureRecognizer:)))
-        
-        
-//        thumbnailImageView.addGestureRecognizer(tapRecognizer)
-    }
+
     
     
     // MARK: - objc Method
@@ -110,18 +102,6 @@ class HomeVC: UIViewController {
 
 
 // MARK: - Extension
-extension HomeVC: HomeTableViewCellDelegate {
-    func ImageViewSelected(cell: HomeTableViewCell) {
-        <#code#>
-    }
-    
-    func ImageViewUnSelected(cell: HomeTableViewCell, unselectedImage: String) {
-        <#code#>
-    }
-    
-    
-}
-
 extension HomeVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 306
@@ -139,6 +119,8 @@ extension HomeVC: UITableViewDataSource {
         
         cell.setData(rank: indexPath.row, appData: homeContentList[indexPath.row])
         cell.selectionStyle = .none
+        //추가
+//        cell.delegate = self
         
         return cell
     }

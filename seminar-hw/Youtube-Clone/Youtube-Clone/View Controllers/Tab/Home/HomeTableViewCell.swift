@@ -7,46 +7,35 @@
 
 import UIKit
 
-protocol HomeTableViewCellDelegate{
-    func ImageViewSelected(cell: HomeTableViewCell)
-    func ImageViewUnSelected(cell: HomeTableViewCell, unselectedImage: String)
-}
 
 class HomeTableViewCell: UITableViewCell {
     
     // MARK: - Properties
     static let identifier = "HomeTableViewCell"
+    private var homeTVCDelegate: HomeVCDelegate?
 
     @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subTitleLabel: UILabel!
     @IBOutlet weak var moreMenuImageView: UIImageView!
-    @IBOutlet weak var imageBtn: UIButton!
-    var homeTVCDelegate: HomeTableViewCellDelegate?
-    var selectedImage: Bool = false
-    var ImageViewData: [HomeContentData] = []
     
-    var presentingClosure: (() -> ())?
+    
     
     // MARK: - Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
+        setTapGesture()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        setTapGesture()
     }
 
     // MARK: - IBAction
     @IBAction func touchUpToSelect(_ sender: UIButton) {
-        if selectedImage {
-            homeTVCDelegate?.ImageViewUnSelected(cell: self,unselectedImage: Image)
-        } else {
-            homeTVCDelegate?.ImageViewSelected(cell: self)
-            presentingClosure?()
-        }
-        selectedImage.toggle()
+        
     }
     
     
@@ -59,6 +48,13 @@ class HomeTableViewCell: UITableViewCell {
         subTitleLabel.text = appData.subTitleName
     }
     
-    
+    func setTapGesture() {
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapImageView(gestureRecognizer:)))
+        moreMenuImageView.addGestureRecognizer(tapRecognizer)
+        
+    }
+    @objc func tapImageView(gestureRecognizer: UIGestureRecognizer){
+             self.homeTVCDelegate?.tapToGoNextVC(image: moreMenuImageView.image ?? UIImage(), title: titleLabel.text ?? "", description: subTitleLabel.text ?? "")
+    }
     
 }
