@@ -81,7 +81,7 @@ extension BaseAPI: TargetType {
         params["email"] = email
         params["name"] = name
         params["password"] = password
-      default :
+    default:
         break
     }
     return params

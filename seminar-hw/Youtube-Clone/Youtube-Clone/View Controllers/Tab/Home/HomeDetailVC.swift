@@ -18,13 +18,16 @@ class HomeDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func touchUPToGoBack(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
+    func setData(image: UIImage, title: String, description: String) {
+        detailImageView?.image = image
+        detailTitleLabel?.text = title
+        detailDescriptionLabel?.text = description
+    }
 
 }

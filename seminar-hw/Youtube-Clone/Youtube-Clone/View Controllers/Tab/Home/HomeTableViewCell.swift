@@ -66,11 +66,15 @@ extension UIViewController: HomeVCDelegate {
         
         homeDetailVC.modalPresentationStyle = .fullScreen
         
-        homeDetailVC.detailTitleLabel.text = title
-        homeDetailVC.detailImageView.image = image
-        homeDetailVC.detailDescriptionLabel.text = description
+//        데이터 전달이 안된당..! 아우 아직 데이터 전달 선배 잘 모르겠다!
+//        setData 하고 present 하면 데이터 전달과정이 안보일줄 알았는데 보인다
+        homeDetailVC.setData(image: image, title: title, description: description)
         
-        self.present(homeDetailVC, animated: true, completion: nil)
+        
+        
+        self.present(homeDetailVC, animated: true){
+            homeDetailVC.setData(image: image, title: title, description: description)
+        }
         
     }
 }
