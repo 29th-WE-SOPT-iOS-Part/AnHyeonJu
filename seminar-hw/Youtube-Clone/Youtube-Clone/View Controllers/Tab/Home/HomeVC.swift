@@ -120,7 +120,7 @@ extension HomeVC: UITableViewDataSource {
         cell.setData(rank: indexPath.row, appData: homeContentList[indexPath.row])
         cell.selectionStyle = .none
         //추가
-//        cell.delegate = self
+        cell.homeTVCDelegate = self
         
         return cell
     }

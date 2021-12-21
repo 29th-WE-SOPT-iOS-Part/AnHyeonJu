@@ -7,12 +7,16 @@
 
 import UIKit
 
+protocol HomeVCDelegate {
+    func tapToGoNextVC(image: UIImage, title: String, description: String)
+}
 
 class HomeTableViewCell: UITableViewCell {
     
     // MARK: - Properties
     static let identifier = "HomeTableViewCell"
-    private var homeTVCDelegate: HomeVCDelegate?
+    
+    var homeTVCDelegate: HomeVCDelegate?
 
     @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var profileImageView: UIImageView!
@@ -32,13 +36,6 @@ class HomeTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         setTapGesture()
     }
-
-    // MARK: - IBAction
-    @IBAction func touchUpToSelect(_ sender: UIButton) {
-        
-    }
-    
-    
     
     // MARK: - Custom Method
     func setData(rank: Int, appData: HomeContentData) {
@@ -50,11 +47,30 @@ class HomeTableViewCell: UITableViewCell {
     
     func setTapGesture() {
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapImageView(gestureRecognizer:)))
-        moreMenuImageView.addGestureRecognizer(tapRecognizer)
+    
+        thumbnailImageView.addGestureRecognizer(tapRecognizer)
         
     }
     @objc func tapImageView(gestureRecognizer: UIGestureRecognizer){
-             self.homeTVCDelegate?.tapToGoNextVC(image: moreMenuImageView.image ?? UIImage(), title: titleLabel.text ?? "", description: subTitleLabel.text ?? "")
+             self.homeTVCDelegate?.tapToGoNextVC(image: thumbnailImageView.image ?? UIImage(), title: titleLabel.text ?? "", description: subTitleLabel.text ?? "")
     }
     
+}
+
+
+extension UIViewController: HomeVCDelegate {
+    func tapToGoNextVC(image: UIImage, title: String, description: String) {
+        let detailStoryboard = UIStoryboard.init(name: "Tabbar", bundle: nil)
+        
+        guard let homeDetailVC = detailStoryboard.instantiateViewController(withIdentifier: HomeDetailVC.identifier) as? HomeDetailVC else {return}
+        
+        homeDetailVC.modalPresentationStyle = .fullScreen
+        
+        homeDetailVC.detailTitleLabel.text = title
+        homeDetailVC.detailImageView.image = image
+        homeDetailVC.detailDescriptionLabel.text = description
+        
+        self.present(homeDetailVC, animated: true, completion: nil)
+        
+    }
 }

@@ -56,6 +56,14 @@
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJU-Gh-VRs">
+                                <rect key="frame" x="12" y="54" width="13" height="22"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="chevron.left" catalog="system"/>
+                                <connections>
+                                    <action selector="touchUPToGoBack:" destination="sWu-aL-CE8" eventType="touchUpInside" id="C08-3V-4dz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bjA-lx-aVg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -66,10 +74,17 @@
                             <constraint firstItem="e2v-D7-9Pe" firstAttribute="leading" secondItem="GWV-RF-RMh" secondAttribute="leading" id="5cb-iC-Ctq"/>
                             <constraint firstItem="bjA-lx-aVg" firstAttribute="trailing" secondItem="GWV-RF-RMh" secondAttribute="trailing" constant="16" id="HIo-5M-Coh"/>
                             <constraint firstItem="GWV-RF-RMh" firstAttribute="top" secondItem="YaO-ux-gnv" secondAttribute="bottom" constant="12" id="Nbi-bV-2a9"/>
+                            <constraint firstItem="IJU-Gh-VRs" firstAttribute="leading" secondItem="bjA-lx-aVg" secondAttribute="leading" constant="12" id="RSB-iW-GYa"/>
                             <constraint firstItem="e2v-D7-9Pe" firstAttribute="top" secondItem="GWV-RF-RMh" secondAttribute="bottom" constant="12" id="Xk0-Hv-JoE"/>
                             <constraint firstItem="YaO-ux-gnv" firstAttribute="leading" secondItem="bjA-lx-aVg" secondAttribute="leading" id="w5Z-MU-4Lt"/>
+                            <constraint firstItem="IJU-Gh-VRs" firstAttribute="top" secondItem="bjA-lx-aVg" secondAttribute="top" constant="10" id="yz2-gC-YpM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="detailDescriptionLabel" destination="e2v-D7-9Pe" id="DfA-ij-xhZ"/>
+                        <outlet property="detailImageView" destination="YaO-ux-gnv" id="2ha-bu-VxB"/>
+                        <outlet property="detailTitleLabel" destination="GWV-RF-RMh" id="BYt-s7-P09"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZaZ-Mu-WmB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -256,7 +271,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BZV-MB-WOG">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BZV-MB-WOG">
                                 <rect key="frame" x="0.0" y="240" width="375" height="538"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -341,6 +356,7 @@
     <resources>
         <image name="LibraryIcon" width="32.333332061767578" height="32.333332061767578"/>
         <image name="SearchIcon" width="32.333332061767578" height="32"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="homeIcon" width="32.333332061767578" height="32.333332061767578"/>
         <image name="homeIconFill" width="32.333332061767578" height="32.333332061767578"/>
         <image name="libraryIconFill" width="32.333332061767578" height="32.333332061767578"/>

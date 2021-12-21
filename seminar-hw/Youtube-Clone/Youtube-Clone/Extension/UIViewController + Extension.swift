@@ -8,6 +8,9 @@
 import Foundation
 import UIKit
 
+
+
+
 extension UIViewController {
 
     func makeAlert(title : String,
@@ -25,20 +28,4 @@ extension UIViewController {
     }
 }
 
-extension UIViewController: HomeVCDelegate {
-    func tapToGoNextVC(image: UIImage, title: String, description: String) {
-        guard let homeDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeDetailVC") as? HomeDetailVC else {return}
-        homeDetailVC.modalPresentationStyle = .fullScreen
-        self.present(homeDetailVC, animated: true, completion: {
-            homeDetailVC.detailTitleLabel.text = title
-            homeDetailVC.detailImageView.image = image
-            homeDetailVC.detailDescriptionLabel.text = description
-        })
-        
-        
-    }
-}
 
-protocol HomeVCDelegate {
-    func tapToGoNextVC(image: UIImage, title: String, description: String)
-}

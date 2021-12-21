@@ -26,7 +26,7 @@ class WelcomeVC: UIViewController {
     // MARK: - @IBAction
     @IBAction func touchUpToGoTabBarView(_ sender: Any) {
         let tabbar = UIStoryboard.init(name: "Tabbar", bundle: nil)
-        guard let tabBarController = tabbar.instantiateViewController(withIdentifier: "MainTBC")as? MainTBC else {return}
+        guard let tabBarController = tabbar.instantiateViewController(withIdentifier: "MainTBC") as? MainTBC else {return}
         
         tabBarController.modalPresentationStyle = .fullScreen
         self.present(tabBarController, animated: true, completion: nil)
