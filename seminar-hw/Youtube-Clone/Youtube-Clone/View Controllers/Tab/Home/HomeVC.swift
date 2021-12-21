@@ -91,13 +91,7 @@ class HomeVC: UIViewController {
         ])
     }
     
-
-    
-    
-    // MARK: - objc Method
-    @objc func tapImageView(gestureRecognizer: UIGestureRecognizer){
-        print("taptap")
-    }
+ 
 }
 
 
