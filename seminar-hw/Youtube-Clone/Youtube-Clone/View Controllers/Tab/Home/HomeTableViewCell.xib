@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,8 +21,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="306"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wesoptiOSPart" translatesAutoresizingMaskIntoConstraints="NO" id="dhe-uW-uqk">
+                    <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wesoptiOSPart" translatesAutoresizingMaskIntoConstraints="NO" id="dhe-uW-uqk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="212"/>
+                        <gestureRecognizers/>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wesoptProfile" translatesAutoresizingMaskIntoConstraints="NO" id="P3u-r5-wpU">
                         <rect key="frame" x="12" y="223" width="36" height="36"/>
@@ -70,7 +71,7 @@
                 <outlet property="moreMenuImageView" destination="0mr-yO-MgQ" id="ziz-m4-GGf"/>
                 <outlet property="profileImageView" destination="P3u-r5-wpU" id="Pdp-gs-Wcf"/>
                 <outlet property="subTitleLabel" destination="gpE-hH-4eh" id="q4c-iK-vWf"/>
-                <outlet property="thumbnailImageView" destination="dhe-uW-uqk" id="LU3-op-Q3x"/>
+                <outlet property="thumbnailImageView" destination="dhe-uW-uqk" id="Mpa-ct-tYj"/>
                 <outlet property="titleLabel" destination="aAo-ND-GQN" id="wm9-xU-3Ez"/>
             </connections>
             <point key="canvasLocation" x="131.15942028985509" y="89.732142857142847"/>

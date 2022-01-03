@@ -41,6 +41,7 @@ class HomeVC: UIViewController {
     
     
     // MARK: - Custom Method
+    
     func makeDelegate() {
         homeTableView.dataSource = self
         homeTableView.delegate = self
@@ -89,6 +90,8 @@ class HomeVC: UIViewController {
             "전체","오늘","이어서 시청하기","시청하지 않음","실시간","게시물"
         ])
     }
+    
+ 
 }
 
 
@@ -99,6 +102,7 @@ extension HomeVC: UITableViewDelegate {
     }
 }
 
+
 extension HomeVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return homeContentList.count
@@ -108,6 +112,10 @@ extension HomeVC: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier) as? HomeTableViewCell else {return UITableViewCell()}
         
         cell.setData(rank: indexPath.row, appData: homeContentList[indexPath.row])
+        cell.selectionStyle = .none
+        //추가
+        cell.homeTVCDelegate = self
+        
         return cell
     }
 }
@@ -181,3 +189,5 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
         }
     }
 }
+
+

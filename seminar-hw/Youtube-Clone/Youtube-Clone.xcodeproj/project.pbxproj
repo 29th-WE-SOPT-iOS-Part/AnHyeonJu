@@ -16,6 +16,7 @@
 		F234756F27649093007A1C99 /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234756E27649093007A1C99 /* GenericResponse.swift */; };
 		F234757227649255007A1C99 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234757127649255007A1C99 /* UserService.swift */; };
 		F23475752764931F007A1C99 /* getSuccessFailureResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23475742764931F007A1C99 /* getSuccessFailureResult.swift */; };
+		F23F1487276F6FC60071E22E /* HomeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23F1486276F6FC60071E22E /* HomeDetailVC.swift */; };
 		F2492A68271815B400775417 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2492A67271815B400775417 /* SF-Pro-Display-Regular.otf */; };
 		F259A3D2272A7E96002F0532 /* ShortsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F259A3D0272A7E96002F0532 /* ShortsCollectionViewCell.swift */; };
 		F259A3D3272A7E96002F0532 /* ShortsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F259A3D1272A7E96002F0532 /* ShortsCollectionViewCell.xib */; };
@@ -65,6 +66,7 @@
 		F234756E27649093007A1C99 /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
 		F234757127649255007A1C99 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		F23475742764931F007A1C99 /* getSuccessFailureResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getSuccessFailureResult.swift; sourceTree = "<group>"; };
+		F23F1486276F6FC60071E22E /* HomeDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailVC.swift; sourceTree = "<group>"; };
 		F2492A67271815B400775417 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		F259A3D0272A7E96002F0532 /* ShortsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F259A3D1272A7E96002F0532 /* ShortsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShortsCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -169,6 +171,25 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		F272B7E8275F404B00E8D8F6 /* HomeShorts */ = {
+			isa = PBXGroup;
+			children = (
+				F259A3D1272A7E96002F0532 /* ShortsCollectionViewCell.xib */,
+				F259A3D0272A7E96002F0532 /* ShortsCollectionViewCell.swift */,
+				F259A3D4272A81BC002F0532 /* shortsCollectionDataModel.swift */,
+			);
+			path = HomeShorts;
+			sourceTree = "<group>";
+		};
+		F272B7E9275F406000E8D8F6 /* HomeCategory */ = {
+			isa = PBXGroup;
+			children = (
+				F25C6FEF272B864400967EBE /* CategoryCollectionViewCell.swift */,
+				F25C6FF0272B864400967EBE /* CategoryCollectionViewCell.xib */,
+			);
+			path = HomeCategory;
+			sourceTree = "<group>";
+		};
 		F281F502270D456D006EA470 = {
 			isa = PBXGroup;
 			children = (
@@ -233,15 +254,13 @@
 		F2A34E2F272997EB00B78517 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F272B7E9275F406000E8D8F6 /* HomeCategory */,
+				F272B7E8275F404B00E8D8F6 /* HomeShorts */,
 				F2C1979E271D0FF5001EAB15 /* HomeVC.swift */,
+				F23F1486276F6FC60071E22E /* HomeDetailVC.swift */,
 				F2A34E312729981C00B78517 /* HomeTableViewCell.xib */,
 				F2A34E302729981C00B78517 /* HomeTableViewCell.swift */,
 				F28A21EF2729A20500E0319E /* homeDataModel.swift */,
-				F259A3D1272A7E96002F0532 /* ShortsCollectionViewCell.xib */,
-				F259A3D0272A7E96002F0532 /* ShortsCollectionViewCell.swift */,
-				F259A3D4272A81BC002F0532 /* shortsCollectionDataModel.swift */,
-				F25C6FF0272B864400967EBE /* CategoryCollectionViewCell.xib */,
-				F25C6FEF272B864400967EBE /* CategoryCollectionViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -464,6 +483,7 @@
 				F2C197A7271D0FF5001EAB15 /* PlusVC.swift in Sources */,
 				F2BE109B276262F600941F75 /* LoginDataModel.swift in Sources */,
 				F234756C27649051007A1C99 /* BaseService.swift in Sources */,
+				F23F1487276F6FC60071E22E /* HomeDetailVC.swift in Sources */,
 				F20BC3C4273CFD1F0006639F /* UserDefaults + Extension.swift in Sources */,
 				F234757227649255007A1C99 /* UserService.swift in Sources */,
 				F234756F27649093007A1C99 /* GenericResponse.swift in Sources */,
